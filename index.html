@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ClassChain | با هم، مدرسه می‌سازیم</title>
+  <style>
+    :root{
+      --bg:#f7f7f3;--surface:#fff;--ink:#17201d;--muted:#68736e;
+      --primary:#1d6b55;--primary-dark:#15513f;--accent:#d9a441;
+      --line:#dfe5e1;--person:#d9a441;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Tahoma,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.8}
+    a{text-decoration:none;color:inherit}
+    .wrap{max-width:1180px;margin:auto;padding:0 24px}
+    header{position:sticky;top:0;z-index:20;background:rgba(247,247,243,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-size:24px;font-weight:800;letter-spacing:-.5px}
+    .navlinks{display:flex;gap:28px;color:var(--muted);font-size:14px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 22px;border-radius:12px;border:1px solid var(--primary);font-weight:700;font-size:14px}
+    .btn.primary{background:var(--primary);color:#fff}
+    .btn.secondary{background:transparent;color:var(--primary)}
+    .hero{padding:92px 0 70px}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}
+    .eyebrow{color:var(--primary);font-weight:800;font-size:14px}
+    h1{font-size:clamp(40px,5vw,70px);line-height:1.18;margin:14px 0 22px;letter-spacing:-2px}
+    .lead{font-size:19px;color:var(--muted);max-width:620px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+    .hero-art{min-height:430px;position:relative;border-radius:28px;background:var(--surface);border:1px solid var(--line);overflow:hidden}
+    .hero-art:before{content:"";position:absolute;inset:15% 12%;background:radial-gradient(circle,rgba(29,107,85,.10),transparent 62%)}
+    .hero-card{position:absolute;left:10%;right:10%;bottom:10%;padding:22px;border-radius:20px;background:rgba(255,255,255,.9);border:1px solid var(--line)}
+    .hero-card strong{display:block;font-size:19px}
+    section{padding:85px 0}
+    .section-head{max-width:700px;margin-bottom:38px}
+    h2{font-size:36px;line-height:1.3;margin:0 0 12px}
+    .section-head p{color:var(--muted);margin:0}
+    .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .project{background:var(--surface);border:1px solid var(--line);border-radius:22px;overflow:hidden}
+    .project-img{height:190px;background:linear-gradient(135deg,#dfe8e2,#f0e8d4)}
+    .project-body{padding:22px}
+    .project-body h3{margin:0 0 8px;font-size:20px}
+    .project-body p{margin:0 0 20px;color:var(--muted);font-size:14px}
+    .project-link{color:var(--primary);font-weight:800;font-size:14px}
+    .community{background:#eef3ef}
+    .network{height:470px;position:relative;background:var(--surface);border:1px solid var(--line);border-radius:28px;overflow:hidden}
+    .network svg{position:absolute;inset:0;width:100%;height:100%}
+    .network .school{fill:var(--primary)}
+    .network .person{fill:var(--person)}
+    .network .edge{stroke:#b9c9c1;stroke-width:2}
+    .legend{position:absolute;right:24px;bottom:20px;background:rgba(255,255,255,.9);padding:12px 15px;border-radius:14px;border:1px solid var(--line);font-size:13px}
+    .dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-left:6px}
+    .trust{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+    .steps{display:grid;gap:14px}
+    .step{padding:20px;border:1px solid var(--line);background:var(--surface);border-radius:18px}
+    .step b{display:block;margin-bottom:4px}
+    .step span{color:var(--muted);font-size:14px}
+    .roles{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .role{padding:25px;background:var(--surface);border:1px solid var(--line);border-radius:18px}
+    .role h3{margin:0 0 8px;font-size:18px}
+    .role p{margin:0;color:var(--muted);font-size:14px}
+    .cta{padding:80px 24px;text-align:center;background:var(--primary);color:#fff;border-radius:30px}
+    .cta p{opacity:.85;max-width:620px;margin:12px auto 25px}
+    .cta .btn{background:#fff;color:var(--primary);border-color:#fff}
+    footer{padding:35px 0;color:var(--muted);font-size:13px}
+    @media(max-width:850px){
+      .navlinks{display:none}.hero-grid,.trust{grid-template-columns:1fr}
+      .projects{grid-template-columns:1fr}.roles{grid-template-columns:1fr 1fr}
+      .hero{padding-top:55px}section{padding:60px 0}
+    }
+    @media(max-width:520px){.roles{grid-template-columns:1fr}h2{font-size:29px}.hero-art{min-height:350px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav>
+      <div class="logo">ClassChain</div>
+      <div class="navlinks">
+        <a href="#projects">پروژه‌ها</a>
+        <a href="#community">جامعه</a>
+        <a href="#trust">شفافیت</a>
+        <a href="WebGIS.html">نقشه پروژه‌ها</a>
+      </div>
+      <a class="btn primary" href="#join">مشارکت</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">ساختن آینده، با مشارکت همه</div>
+        <h1>با هم، مدرسه می‌سازیم.</h1>
+        <p class="lead">ClassChain راهی شفاف برای مشارکت در ساخت فضاهای آموزشی است؛ جایی که هر مشارکت، بخشی از یک حرکت جمعی برای ساختن آینده‌ای بهتر می‌شود.</p>
+        <div class="actions">
+          <a class="btn primary" href="#projects">در ساخت یک مدرسه سهیم شو</a>
+          <a class="btn secondary" href="WebGIS.html">مشاهده پروژه‌ها روی نقشه</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="تصویر مفهومی ساخت مدرسه">
+        <div class="hero-card">
+          <strong>یک مشارکت کوچک، یک قدم واقعی برای ساختن.</strong>
+          <span>پروژه‌ها و مسیر مشارکت را خودت ببین.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>پروژه‌هایی که می‌توانی در ساختنشان سهیم باشی</h2>
+        <p>به‌جای نمایش عددهای غیرواقعی، تمرکز را روی پروژه‌های واقعی و قابل مشاهده می‌گذاریم.</p>
+      </div>
+      <div class="projects">
+        <article class="project"><div class="project-img"></div><div class="project-body"><h3>پروژه آموزشی ۱</h3><p>معرفی کوتاه پروژه و نیاز آموزشی آن.</p><a class="project-link" href="WebGIS.html">مشاهده پروژه →</a></div></article>
+        <article class="project"><div class="project-img"></div><div class="project-body"><h3>پروژه آموزشی ۲</h3><p>معرفی کوتاه پروژه و نیاز آموزشی آن.</p><a class="project-link" href="WebGIS.html">مشاهده پروژه →</a></div></article>
+        <article class="project"><div class="project-img"></div><div class="project-body"><h3>پروژه آموزشی ۳</h3><p>معرفی کوتاه پروژه و نیاز آموزشی آن.</p><a class="project-link" href="WebGIS.html">مشاهده پروژه →</a></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="community" class="community">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>وقتی مشارکت‌ها به هم می‌رسند، یک جامعه شکل می‌گیرد.</h2>
+        <p>هر نقطه می‌تواند یک پروژه یا یک مشارکت‌کننده باشد؛ اتصال آنها تصویر ساده‌ای از جامعه ClassChain می‌سازد.</p>
+      </div>
+      <div class="network">
+        <svg viewBox="0 0 1000 470" role="img" aria-label="شبکه مفهومی پروژه‌ها و مشارکت‌کنندگان">
+          <g class="edge" fill="none">
+            <path d="M180 180 L110 105 M180 180 L105 260 M180 180 L235 80 M180 180 L285 225"/>
+            <path d="M510 135 L445 70 M510 135 L610 65 M510 135 L650 170 M510 135 L470 235"/>
+            <path d="M770 315 L700 250 M770 315 L850 220 M770 315 L900 365 M770 315 L680 385"/>
+            <path d="M285 225 L470 235 M650 170 L850 220"/>
+          </g>
+          <g class="school">
+            <circle cx="180" cy="180" r="18"/><circle cx="510" cy="135" r="18"/><circle cx="770" cy="315" r="18"/>
+          </g>
+          <g class="person">
+            <circle cx="110" cy="105" r="8"/><circle cx="105" cy="260" r="8"/><circle cx="235" cy="80" r="8"/><circle cx="285" cy="225" r="8"/>
+            <circle cx="445" cy="70" r="8"/><circle cx="610" cy="65" r="8"/><circle cx="650" cy="170" r="8"/><circle cx="470" cy="235" r="8"/>
+            <circle cx="700" cy="250" r="8"/><circle cx="850" cy="220" r="8"/><circle cx="900" cy="365" r="8"/><circle cx="680" cy="385" r="8"/>
+          </g>
+        </svg>
+        <div class="legend">
+          <span><i class="dot" style="background:var(--primary)"></i>پروژه</span>
+          &nbsp;&nbsp;
+          <span><i class="dot" style="background:var(--person)"></i>مشارکت‌کننده</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="trust">
+    <div class="wrap trust">
+      <div>
+        <div class="eyebrow">اعتماد از مشاهده شروع می‌شود</div>
+        <h2>مشارکت کن، مسیر را ببین، نتیجه را دنبال کن.</h2>
+        <p class="lead">شفافیت را به‌عنوان یک ادعا بیان نمی‌کنیم؛ مسیر پروژه‌ها و گزارش آنها باید برای مشارکت‌کننده قابل مشاهده باشد.</p>
+        <div class="actions"><a class="btn primary" href="WebGIS.html">مشاهده WebGIS</a></div>
+      </div>
+      <div class="steps">
+        <div class="step"><b>۱. انتخاب پروژه</b><span>پروژه‌ای را که می‌خواهی در آن سهیم باشی پیدا کن.</span></div>
+        <div class="step"><b>۲. مشارکت</b><span>سهم خودت را به ساخت یک فضای آموزشی اختصاص بده.</span></div>
+        <div class="step"><b>۳. مشاهده مسیر</b><span>پیشرفت پروژه و گزارش‌های آن را دنبال کن.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head"><h2>ClassChain فقط برای یک نوع مشارکت‌کننده نیست.</h2><p>هرکس می‌تواند به شکلی در این حرکت نقش داشته باشد.</p></div>
+      <div class="roles">
+        <div class="role"><h3>همراه یک پروژه</h3><p>در ساخت یک مدرسه همراه دیگران سهیم شو.</p></div>
+        <div class="role"><h3>مشارکت از خارج کشور</h3><p>از هر جای دنیا در ساخت آینده آموزشی ایران مشارکت کن.</p></div>
+        <div class="role"><h3>همراه جامعه</h3><p>مشارکتت را به بخشی از یک حرکت جمعی تبدیل کن.</p></div>
+        <div class="role"><h3>معرفی ClassChain</h3><p>این فرصت را با دیگران به اشتراک بگذار.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="join">
+    <div class="wrap">
+      <div class="cta">
+        <h2>مدرسه بعدی می‌تواند با مشارکت تو ساخته شود.</h2>
+        <p>به ساختن آینده‌ای بهتر برای کودکان کمک کن؛ شفاف، جمعی و قابل مشاهده.</p>
+        <a class="btn" href="#projects">شروع مشارکت</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© ClassChain — ساختن آینده با مشارکت همه</div>
+</footer>
+</body>
+</html>
