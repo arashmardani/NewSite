@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClassChain | ساخت مدرسه، ساخت آینده</title>
+  <meta name="description" content="ClassChain — پروتکل تأمین مالی شفاف و غیرمتمرکز برای ساخت مدارس در مناطق محروم ایران. مشارکت مستقیم با USDT، گواهی NFT و نقشه زنده پروژه‌ها.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">CC</span>
+        <span class="logo-text">ClassChain</span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#impact" data-i18n="nav.impact">تأثیر ما</a>
+        <a href="#how" data-i18n="nav.how">چگونه کار می‌کند</a>
+        <a href="WebGIS.html" data-i18n="nav.map">نقشه پروژه‌ها</a>
+        <a href="#trust" data-i18n="nav.trust">چرا اعتماد کنیم</a>
+        <a href="#cta" class="nav-cta" data-i18n="nav.donate">مشارکت کنید</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-switcher" id="langSwitcher">
+          <button type="button" class="lang-btn active" data-lang="fa" aria-label="فارسی">FA</button>
+          <button type="button" class="lang-btn" data-lang="en" aria-label="English">EN</button>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="منو">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="container hero-content">
+      <p class="hero-badge" data-i18n="hero.badge">پروتکل تأمین مالی شفاف مدرسه‌سازی</p>
+      <h1 class="hero-title" data-i18n="hero.title">ساخت مدرسه، ساخت آینده</h1>
+      <p class="hero-subtitle" data-i18n="hero.subtitle">
+        با مشارکت مستقیم و شفاف، به کودکان مناطق محروم ایران فرصت یادگیری بدهید.
+        هر کمک شما روی نقشه زنده قابل پیگیری است.
+      </p>
+      <div class="hero-actions">
+        <a href="#cta" class="btn btn-primary" data-i18n="hero.ctaPrimary">همین حالا مشارکت کنید</a>
+        <a href="WebGIS.html" class="btn btn-secondary" data-i18n="hero.ctaSecondary">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          نقشه زنده پروژه‌ها
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Stats -->
+  <section class="impact" id="impact">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-i18n="impact.title">تأثیر واقعی، قابل اندازه‌گیری</h2>
+        <p data-i18n="impact.desc">هر عدد پشت یک کودک و یک آینده است</p>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number" data-target="12">0</div>
+          <div class="stat-label" data-i18n="impact.schools">مدرسه در حال ساخت / برنامه‌ریزی</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-target="480">0</div>
+          <div class="stat-label" data-i18n="impact.donors">خیر و مشارکت‌کننده</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-target="1850">0</div>
+          <div class="stat-suffix">K+</div>
+          <div class="stat-label" data-i18n="impact.children">کودک تحت پوشش هدف</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-target="100">0</div>
+          <div class="stat-suffix">%</div>
+          <div class="stat-label" data-i18n="impact.transparency">شفافیت مالی و عمرانی</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it Works -->
+  <section class="how" id="how">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-i18n="how.title">چگونه مشارکت کنید؟</h2>
+        <p data-i18n="how.desc">چهار گام ساده تا تبدیل کمک شما به کلاس درس</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num" data-i18n="how.s1num">۱</div>
+          <h3 data-i18n="how.s1title">پروژه را انتخاب کنید</h3>
+          <p data-i18n="how.s1desc">یک مدرسه مشخص را حمایت کنید یا به صندوق عمومی کمک کنید تا منابع به اولویت‌های جامعه برسد.</p>
+        </div>
+        <div class="step">
+          <div class="step-num" data-i18n="how.s2num">۲</div>
+          <h3 data-i18n="how.s2title">با USDT مشارکت کنید</h3>
+          <p data-i18n="how.s2desc">مستقیم و بدون واسطه، از کیف‌پول خود کمک کنید. پشتیبانی از شبکه‌های مختلف برای راحتی شما.</p>
+        </div>
+        <div class="step">
+          <div class="step-num" data-i18n="how.s3num">۳</div>
+          <h3 data-i18n="how.s3title">گواهی مشارکت دریافت کنید</h3>
+          <p data-i18n="how.s3desc">NFT اختصاصی به‌عنوان سند مشارکت و حق رأی در تصمیم‌گیری‌های جمعی به شما تعلق می‌گیرد.</p>
+        </div>
+        <div class="step">
+          <div class="step-num" data-i18n="how.s4num">۴</div>
+          <h3 data-i18n="how.s4title">پیشرفت را زنده ببینید</h3>
+          <p data-i18n="how.s4desc">روی نقشه WebGIS وضعیت ساخت، عکس‌ها، گزارش‌ها و تراکنش‌ها را در لحظه دنبال کنید.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Teaser -->
+  <section class="map-teaser">
+    <div class="container map-teaser-inner">
+      <div class="map-teaser-text">
+        <h2 data-i18n="map.title">نقشه زنده پروژه‌ها</h2>
+        <p data-i18n="map.desc">
+          هر پروژه روی نقشه ایران قابل مشاهده است. پیشرفت عملیات عمرانی، عکس‌های واقعی و جریان مالی شفاف — بدون نیاز به اعتماد کور.
+        </p>
+        <a href="WebGIS.html" class="btn btn-primary" data-i18n="map.cta">ورود به نقشه کامل</a>
+      </div>
+      <div class="map-teaser-visual">
+        <div class="map-preview">
+          <div class="map-preview-overlay">
+            <span data-i18n="map.preview">مشاهده وضعیت زنده مدارس</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust -->
+  <section class="trust" id="trust">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-i18n="trust.title">چرا می‌توانید اعتماد کنید؟</h2>
+        <p data-i18n="trust.desc">شفافیت، مشارکت جمعی و ماهیت خیریه — سه ستون اصلی ClassChain</p>
+      </div>
+      <div class="trust-grid">
+        <div class="trust-card">
+          <div class="trust-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3 data-i18n="trust.t1title">شفافیت کامل</h3>
+          <p data-i18n="trust.t1desc">تمام تراکنش‌ها روی بلاک‌چین ثبت می‌شود و وضعیت ساخت روی نقشه زنده قابل مشاهده است. پول شما تا مدرسه قابل پیگیری است.</p>
+        </div>
+        <div class="trust-card">
+          <div class="trust-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3 data-i18n="trust.t2title">تصمیم‌گیری جمعی</h3>
+          <p data-i18n="trust.t2desc">هر خیر با گواهی NFT خود حق رأی دارد. محل پروژه‌ها، تخصیص منابع و حتی نام مدارس با مشارکت جامعه تعیین می‌شود.</p>
+        </div>
+        <div class="trust-card">
+          <div class="trust-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </div>
+          <h3 data-i18n="trust.t3title">ماهیت خیریه</h3>
+          <p data-i18n="trust.t3desc">هیچ توکن سفته‌بازی وجود ندارد. مشارکت صرفاً کمک مالی مستقیم با استیبل‌کوین است. ClassChain یک پروژه غیرانتفاعی برای عدالت آموزشی است.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final-cta" id="cta">
+    <div class="container">
+      <h2 data-i18n="cta.title">این فقط یک پروژه نیست</h2>
+      <p class="cta-lead" data-i18n="cta.lead">روایتی جدید از اعتماد، عدالت و ساختن وطن</p>
+      <p data-i18n="cta.desc">
+        اگر شما یک خیر، یک ایرانی مقیم خارج، یک نهاد آموزشی یا یک دانش‌آموز دغدغه‌مند هستید —
+        ClassChain به حضور شما نیاز دارد.
+      </p>
+      <div class="cta-actions">
+        <a href="WebGIS.html" class="btn btn-primary btn-lg" data-i18n="cta.btn1">مشاهده پروژه‌ها و مشارکت</a>
+        <a href="#how" class="btn btn-outline btn-lg" data-i18n="cta.btn2">بیشتر بدانید</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-mark">CC</span>
+        <span>ClassChain</span>
+        <p data-i18n="footer.tagline">پل بین نوآوری مالی و عدالت اجتماعی</p>
+      </div>
+      <div class="footer-links">
+        <a href="WebGIS.html" data-i18n="footer.map">نقشه پروژه‌ها</a>
+        <a href="#trust" data-i18n="footer.trust">شفافیت</a>
+        <a href="#how" data-i18n="footer.how">راهنما</a>
+      </div>
+      <p class="footer-note" data-i18n="footer.note">
+        ClassChain یک پروژه خیریه و غیرانتفاعی است. کاربران موظف‌اند قوانین محلی کشور خود را رعایت کنند.
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
