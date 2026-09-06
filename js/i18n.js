@@ -1,13 +1,13 @@
 /**
  * ClassChain i18n — FA (default) + EN
- * Extend easily for more languages (add key to translations + button in HTML).
+ * Extend easily for more languages.
  */
 const translations = {
   fa: {
     "meta.title": "ClassChain | ساخت مدرسه، ساخت آینده",
     "meta.desc": "ClassChain — پروتکل تأمین مالی شفاف و غیرمتمرکز برای ساخت مدارس در مناطق محروم ایران. مشارکت مستقیم با USDT، گواهی NFT و نقشه زنده پروژه‌ها.",
 
-    "nav.impact": "تأثیر ما",
+    "nav.network": "شبکه ما",
     "nav.how": "چگونه کار می‌کند",
     "nav.map": "نقشه پروژه‌ها",
     "nav.trust": "چرا اعتماد کنیم",
@@ -15,17 +15,24 @@ const translations = {
 
     "hero.badge": "پروتکل تأمین مالی شفاف مدرسه‌سازی",
     "hero.title": "ساخت مدرسه، ساخت آینده",
-    "hero.subtitle": "با مشارکت مستقیم و شفاف، به کودکان مناطق محروم ایران فرصت یادگیری بدهید. هر کمک شما روی نقشه زنده قابل پیگیری است.",
+    "hero.subtitle": "با مشارکت مستقیم و شفاف، به کودکان مناطق محروم ایران فرصت یادگیری بدهید. هر کمک شما بخشی از یک شبکه زنده است.",
     "hero.ctaPrimary": "همین حالا مشارکت کنید",
     "hero.ctaSecondary": "نقشه زنده پروژه‌ها",
+    "hero.ctaSecondaryText": "نقشه زنده پروژه‌ها",
 
-    "impact.title": "تأثیر واقعی، قابل اندازه‌گیری",
-    "impact.desc": "هر عدد پشت یک کودک و یک آینده است",
-    "impact.schools": "مدرسه در حال ساخت / برنامه‌ریزی",
-    "impact.donors": "خیر و مشارکت‌کننده",
-    "impact.children": "کودک تحت پوشش هدف",
-    "impact.transparency": "شفافیت مالی و عمرانی",
+    "network.eyebrow": "جامعه متصل",
+    "network.title": "ما یک شبکه‌ایم",
+    "network.desc": "مدارس و خیرین در یک گراف زنده به هم وصل می‌شوند. هر نقطه یک داستان است؛ هر خط، یک تعهد مشترک.",
+    "network.legendSchool": "مدرسه / پروژه",
+    "network.legendDonor": "خیر و مشارکت‌کننده",
+    "network.p1title": "چندین مدرسه، یک هدف",
+    "network.p1desc": "هر مدرسه یک گره مستقل است. منابع و تصمیم‌ها به صورت شفاف بین پروژه‌ها جریان پیدا می‌کند.",
+    "network.p2title": "خیرین متصل",
+    "network.p2desc": "هر مشارکت‌کننده به پروژه‌ای که حمایت کرده وصل می‌شود و بخشی از تصمیم‌گیری جمعی باقی می‌ماند.",
+    "network.p3title": "قدرت جامعه",
+    "network.p3desc": "شبکه فقط نمایش نیست؛ ساختار حکمرانی است. رأی‌ها، اولویت‌ها و نام‌گذاری مدارس از دل همین اتصال شکل می‌گیرد.",
 
+    "how.eyebrow": "مسیر مشارکت",
     "how.title": "چگونه مشارکت کنید؟",
     "how.desc": "چهار گام ساده تا تبدیل کمک شما به کلاس درس",
     "how.s1num": "۱",
@@ -41,13 +48,15 @@ const translations = {
     "how.s4title": "پیشرفت را زنده ببینید",
     "how.s4desc": "روی نقشه WebGIS وضعیت ساخت، عکس‌ها، گزارش‌ها و تراکنش‌ها را در لحظه دنبال کنید.",
 
+    "map.eyebrow": "شفافیت روی نقشه",
     "map.title": "نقشه زنده پروژه‌ها",
     "map.desc": "هر پروژه روی نقشه ایران قابل مشاهده است. پیشرفت عملیات عمرانی، عکس‌های واقعی و جریان مالی شفاف — بدون نیاز به اعتماد کور.",
     "map.cta": "ورود به نقشه کامل",
     "map.preview": "مشاهده وضعیت زنده مدارس",
 
+    "trust.eyebrow": "سه ستون اصلی",
     "trust.title": "چرا می‌توانید اعتماد کنید؟",
-    "trust.desc": "شفافیت، مشارکت جمعی و ماهیت خیریه — سه ستون اصلی ClassChain",
+    "trust.desc": "شفافیت، مشارکت جمعی و ماهیت خیریه — پایه و اساس ClassChain",
     "trust.t1title": "شفافیت کامل",
     "trust.t1desc": "تمام تراکنش‌ها روی بلاک‌چین ثبت می‌شود و وضعیت ساخت روی نقشه زنده قابل مشاهده است. پول شما تا مدرسه قابل پیگیری است.",
     "trust.t2title": "تصمیم‌گیری جمعی",
@@ -65,6 +74,7 @@ const translations = {
     "footer.map": "نقشه پروژه‌ها",
     "footer.trust": "شفافیت",
     "footer.how": "راهنما",
+    "footer.network": "شبکه",
     "footer.note": "ClassChain یک پروژه خیریه و غیرانتفاعی است. کاربران موظف‌اند قوانین محلی کشور خود را رعایت کنند."
   },
 
@@ -72,7 +82,7 @@ const translations = {
     "meta.title": "ClassChain | Build a School, Build the Future",
     "meta.desc": "ClassChain — A transparent, decentralized funding protocol for school construction in underserved regions of Iran. Direct USDT contributions, NFT certificates and live project map.",
 
-    "nav.impact": "Our Impact",
+    "nav.network": "Our Network",
     "nav.how": "How It Works",
     "nav.map": "Project Map",
     "nav.trust": "Why Trust Us",
@@ -80,17 +90,24 @@ const translations = {
 
     "hero.badge": "Transparent School Funding Protocol",
     "hero.title": "Build a School, Build the Future",
-    "hero.subtitle": "Give children in underserved regions of Iran the chance to learn through direct, transparent contributions. Every donation is trackable on the live map.",
+    "hero.subtitle": "Give children in underserved regions of Iran the chance to learn through direct, transparent contributions. Every donation becomes part of a living network.",
     "hero.ctaPrimary": "Contribute Now",
     "hero.ctaSecondary": "Live Project Map",
+    "hero.ctaSecondaryText": "Live Project Map",
 
-    "impact.title": "Real Impact, Measurable",
-    "impact.desc": "Every number stands for a child and a future",
-    "impact.schools": "Schools under construction / planned",
-    "impact.donors": "Donors & participants",
-    "impact.children": "Children targeted",
-    "impact.transparency": "Financial & construction transparency",
+    "network.eyebrow": "Connected Community",
+    "network.title": "We Are a Network",
+    "network.desc": "Schools and donors form a living graph. Every node is a story; every link is a shared commitment.",
+    "network.legendSchool": "School / Project",
+    "network.legendDonor": "Donor & Participant",
+    "network.p1title": "Multiple Schools, One Purpose",
+    "network.p1desc": "Each school is an independent node. Resources and decisions flow transparently across projects.",
+    "network.p2title": "Connected Donors",
+    "network.p2desc": "Every contributor is linked to the project they support and remains part of collective decision-making.",
+    "network.p3title": "Community Power",
+    "network.p3desc": "The network is not just a visual — it is the governance structure. Votes, priorities and school names emerge from these connections.",
 
+    "how.eyebrow": "Path to Participation",
     "how.title": "How to Participate",
     "how.desc": "Four simple steps to turn your contribution into a classroom",
     "how.s1num": "1",
@@ -106,13 +123,15 @@ const translations = {
     "how.s4title": "Track progress live",
     "how.s4desc": "Follow construction status, photos, reports and transactions in real time on the WebGIS map.",
 
+    "map.eyebrow": "Transparency on the Map",
     "map.title": "Live Project Map",
     "map.desc": "Every project is visible on the map of Iran. Construction progress, real photos and transparent fund flow — no blind trust required.",
     "map.cta": "Open Full Map",
     "map.preview": "View live school status",
 
+    "trust.eyebrow": "Three Pillars",
     "trust.title": "Why You Can Trust Us",
-    "trust.desc": "Transparency, collective governance and a pure charity model — the three pillars of ClassChain",
+    "trust.desc": "Transparency, collective governance and a pure charity model — the foundation of ClassChain",
     "trust.t1title": "Full Transparency",
     "trust.t1desc": "All transactions are recorded on-chain and construction status is visible on the live map. Your money is traceable all the way to the school.",
     "trust.t2title": "Collective Decision-Making",
@@ -130,6 +149,7 @@ const translations = {
     "footer.map": "Project Map",
     "footer.trust": "Transparency",
     "footer.how": "Guide",
+    "footer.network": "Network",
     "footer.note": "ClassChain is a charitable, non-profit project. Users are responsible for complying with the laws of their country of residence."
   }
 };
@@ -141,7 +161,6 @@ function setLanguage(lang) {
   html.lang = lang;
   html.dir = lang === "fa" ? "rtl" : "ltr";
 
-  // Update page title & meta description
   if (dict["meta.title"]) document.title = dict["meta.title"];
   const metaDesc = document.querySelector('meta[name="description"]');
   if (metaDesc && dict["meta.desc"]) metaDesc.setAttribute("content", dict["meta.desc"]);
@@ -149,24 +168,35 @@ function setLanguage(lang) {
   document.querySelectorAll("[data-i18n]").forEach(el => {
     const key = el.getAttribute("data-i18n");
     if (dict[key] !== undefined) {
-      // Preserve child icons (e.g. SVG in buttons)
       const icon = el.querySelector("svg");
-      if (icon) {
-        el.innerHTML = "";
-        el.appendChild(icon);
-        el.append(" " + dict[key]);
+      if (icon && el.children.length > 0) {
+        // Keep structure for buttons that contain both svg and span
+        const span = el.querySelector("span[data-i18n], span");
+        if (span && span.hasAttribute("data-i18n")) {
+          span.textContent = dict[key];
+        } else if (span) {
+          span.textContent = dict[key];
+        } else {
+          el.innerHTML = "";
+          el.appendChild(icon);
+          el.append(" " + dict[key]);
+        }
       } else {
         el.textContent = dict[key];
       }
     }
   });
 
-  // Update active language button
+  // Also update nested spans that have their own data-i18n
+  document.querySelectorAll("span[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if (dict[key] !== undefined) el.textContent = dict[key];
+  });
+
   document.querySelectorAll(".lang-btn").forEach(btn => {
     btn.classList.toggle("active", btn.dataset.lang === lang);
   });
 
-  // Persist preference
   try {
     localStorage.setItem("cc-lang", lang);
   } catch (e) {}
