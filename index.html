@@ -20,7 +20,7 @@
       </a>
 
       <nav class="nav" id="nav">
-        <a href="#impact" data-i18n="nav.impact">تأثیر ما</a>
+        <a href="#network" data-i18n="nav.network">شبکه ما</a>
         <a href="#how" data-i18n="nav.how">چگونه کار می‌کند</a>
         <a href="WebGIS.html" data-i18n="nav.map">نقشه پروژه‌ها</a>
         <a href="#trust" data-i18n="nav.trust">چرا اعتماد کنیم</a>
@@ -41,52 +41,79 @@
 
   <!-- Hero -->
   <section class="hero">
-    <div class="hero-bg"></div>
+    <canvas id="networkCanvas" class="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-overlay"></div>
     <div class="container hero-content">
       <p class="hero-badge" data-i18n="hero.badge">پروتکل تأمین مالی شفاف مدرسه‌سازی</p>
       <h1 class="hero-title" data-i18n="hero.title">ساخت مدرسه، ساخت آینده</h1>
       <p class="hero-subtitle" data-i18n="hero.subtitle">
         با مشارکت مستقیم و شفاف، به کودکان مناطق محروم ایران فرصت یادگیری بدهید.
-        هر کمک شما روی نقشه زنده قابل پیگیری است.
+        هر کمک شما بخشی از یک شبکه زنده است.
       </p>
       <div class="hero-actions">
         <a href="#cta" class="btn btn-primary" data-i18n="hero.ctaPrimary">همین حالا مشارکت کنید</a>
-        <a href="WebGIS.html" class="btn btn-secondary" data-i18n="hero.ctaSecondary">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <a href="WebGIS.html" class="btn btn-secondary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
             <circle cx="12" cy="10" r="3"/>
           </svg>
-          نقشه زنده پروژه‌ها
+          <span data-i18n="hero.ctaSecondaryText">نقشه زنده پروژه‌ها</span>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Impact Stats -->
-  <section class="impact" id="impact">
+  <!-- Network / Community -->
+  <section class="network" id="network">
     <div class="container">
       <div class="section-header">
-        <h2 data-i18n="impact.title">تأثیر واقعی، قابل اندازه‌گیری</h2>
-        <p data-i18n="impact.desc">هر عدد پشت یک کودک و یک آینده است</p>
+        <p class="section-eyebrow" data-i18n="network.eyebrow">جامعه متصل</p>
+        <h2 data-i18n="network.title">ما یک شبکه‌ایم</h2>
+        <p data-i18n="network.desc">مدارس و خیرین در یک گراف زنده به هم وصل می‌شوند. هر نقطه یک داستان است؛ هر خط، یک تعهد مشترک.</p>
       </div>
-      <div class="stats-grid">
-        <div class="stat-card">
-          <div class="stat-number" data-target="12">0</div>
-          <div class="stat-label" data-i18n="impact.schools">مدرسه در حال ساخت / برنامه‌ریزی</div>
+
+      <div class="network-visual-wrap">
+        <canvas id="communityCanvas" class="community-canvas" aria-hidden="true"></canvas>
+        <div class="network-legend">
+          <div class="legend-item">
+            <span class="legend-dot school"></span>
+            <span data-i18n="network.legendSchool">مدرسه / پروژه</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot donor"></span>
+            <span data-i18n="network.legendDonor">خیر و مشارکت‌کننده</span>
+          </div>
         </div>
-        <div class="stat-card">
-          <div class="stat-number" data-target="480">0</div>
-          <div class="stat-label" data-i18n="impact.donors">خیر و مشارکت‌کننده</div>
+      </div>
+
+      <div class="network-points">
+        <div class="network-point">
+          <div class="np-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <h3 data-i18n="network.p1title">چندین مدرسه، یک هدف</h3>
+          <p data-i18n="network.p1desc">هر مدرسه یک گره مستقل است. منابع و تصمیم‌ها به صورت شفاف بین پروژه‌ها جریان پیدا می‌کند.</p>
         </div>
-        <div class="stat-card">
-          <div class="stat-number" data-target="1850">0</div>
-          <div class="stat-suffix">K+</div>
-          <div class="stat-label" data-i18n="impact.children">کودک تحت پوشش هدف</div>
+        <div class="network-point">
+          <div class="np-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.5-7 8-7s8 3 8 7"/>
+            </svg>
+          </div>
+          <h3 data-i18n="network.p2title">خیرین متصل</h3>
+          <p data-i18n="network.p2desc">هر مشارکت‌کننده به پروژه‌ای که حمایت کرده وصل می‌شود و بخشی از تصمیم‌گیری جمعی باقی می‌ماند.</p>
         </div>
-        <div class="stat-card">
-          <div class="stat-number" data-target="100">0</div>
-          <div class="stat-suffix">%</div>
-          <div class="stat-label" data-i18n="impact.transparency">شفافیت مالی و عمرانی</div>
+        <div class="network-point">
+          <div class="np-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3 data-i18n="network.p3title">قدرت جامعه</h3>
+          <p data-i18n="network.p3desc">شبکه فقط نمایش نیست؛ ساختار حکمرانی است. رأی‌ها، اولویت‌ها و نام‌گذاری مدارس از دل همین اتصال شکل می‌گیرد.</p>
         </div>
       </div>
     </div>
@@ -96,6 +123,7 @@
   <section class="how" id="how">
     <div class="container">
       <div class="section-header">
+        <p class="section-eyebrow" data-i18n="how.eyebrow">مسیر مشارکت</p>
         <h2 data-i18n="how.title">چگونه مشارکت کنید؟</h2>
         <p data-i18n="how.desc">چهار گام ساده تا تبدیل کمک شما به کلاس درس</p>
       </div>
@@ -128,6 +156,7 @@
   <section class="map-teaser">
     <div class="container map-teaser-inner">
       <div class="map-teaser-text">
+        <p class="section-eyebrow light" data-i18n="map.eyebrow">شفافیت روی نقشه</p>
         <h2 data-i18n="map.title">نقشه زنده پروژه‌ها</h2>
         <p data-i18n="map.desc">
           هر پروژه روی نقشه ایران قابل مشاهده است. پیشرفت عملیات عمرانی، عکس‌های واقعی و جریان مالی شفاف — بدون نیاز به اعتماد کور.
@@ -148,13 +177,14 @@
   <section class="trust" id="trust">
     <div class="container">
       <div class="section-header">
+        <p class="section-eyebrow" data-i18n="trust.eyebrow">سه ستون اصلی</p>
         <h2 data-i18n="trust.title">چرا می‌توانید اعتماد کنید؟</h2>
-        <p data-i18n="trust.desc">شفافیت، مشارکت جمعی و ماهیت خیریه — سه ستون اصلی ClassChain</p>
+        <p data-i18n="trust.desc">شفافیت، مشارکت جمعی و ماهیت خیریه — پایه و اساس ClassChain</p>
       </div>
       <div class="trust-grid">
         <div class="trust-card">
           <div class="trust-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
             </svg>
           </div>
@@ -163,7 +193,7 @@
         </div>
         <div class="trust-card">
           <div class="trust-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
               <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
               <circle cx="9" cy="7" r="4"/>
               <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
@@ -175,7 +205,7 @@
         </div>
         <div class="trust-card">
           <div class="trust-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
               <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
             </svg>
           </div>
@@ -214,6 +244,7 @@
         <a href="WebGIS.html" data-i18n="footer.map">نقشه پروژه‌ها</a>
         <a href="#trust" data-i18n="footer.trust">شفافیت</a>
         <a href="#how" data-i18n="footer.how">راهنما</a>
+        <a href="#network" data-i18n="footer.network">شبکه</a>
       </div>
       <p class="footer-note" data-i18n="footer.note">
         ClassChain یک پروژه خیریه و غیرانتفاعی است. کاربران موظف‌اند قوانین محلی کشور خود را رعایت کنند.
