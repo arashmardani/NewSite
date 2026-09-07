@@ -1,200 +1,2383 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>ClassChain | با هم، مدرسه می‌سازیم</title>
-  <style>
-    :root{
-      --bg:#f7f7f3;--surface:#fff;--ink:#17201d;--muted:#68736e;
-      --primary:#1d6b55;--primary-dark:#15513f;--accent:#d9a441;
-      --line:#dfe5e1;--person:#d9a441;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Tahoma,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.8}
-    a{text-decoration:none;color:inherit}
-    .wrap{max-width:1180px;margin:auto;padding:0 24px}
-    header{position:sticky;top:0;z-index:20;background:rgba(247,247,243,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-    nav{height:76px;display:flex;align-items:center;justify-content:space-between}
-    .logo{font-size:24px;font-weight:800;letter-spacing:-.5px}
-    .navlinks{display:flex;gap:28px;color:var(--muted);font-size:14px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 22px;border-radius:12px;border:1px solid var(--primary);font-weight:700;font-size:14px}
-    .btn.primary{background:var(--primary);color:#fff}
-    .btn.secondary{background:transparent;color:var(--primary)}
-    .hero{padding:92px 0 70px}
-    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}
-    .eyebrow{color:var(--primary);font-weight:800;font-size:14px}
-    h1{font-size:clamp(40px,5vw,70px);line-height:1.18;margin:14px 0 22px;letter-spacing:-2px}
-    .lead{font-size:19px;color:var(--muted);max-width:620px}
-    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
-    .hero-art{min-height:430px;position:relative;border-radius:28px;background:var(--surface);border:1px solid var(--line);overflow:hidden}
-    .hero-art:before{content:"";position:absolute;inset:15% 12%;background:radial-gradient(circle,rgba(29,107,85,.10),transparent 62%)}
-    .hero-card{position:absolute;left:10%;right:10%;bottom:10%;padding:22px;border-radius:20px;background:rgba(255,255,255,.9);border:1px solid var(--line)}
-    .hero-card strong{display:block;font-size:19px}
-    section{padding:85px 0}
-    .section-head{max-width:700px;margin-bottom:38px}
-    h2{font-size:36px;line-height:1.3;margin:0 0 12px}
-    .section-head p{color:var(--muted);margin:0}
-    .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .project{background:var(--surface);border:1px solid var(--line);border-radius:22px;overflow:hidden}
-    .project-img{height:190px;background:linear-gradient(135deg,#dfe8e2,#f0e8d4)}
-    .project-body{padding:22px}
-    .project-body h3{margin:0 0 8px;font-size:20px}
-    .project-body p{margin:0 0 20px;color:var(--muted);font-size:14px}
-    .project-link{color:var(--primary);font-weight:800;font-size:14px}
-    .community{background:#eef3ef}
-    .network{height:470px;position:relative;background:var(--surface);border:1px solid var(--line);border-radius:28px;overflow:hidden}
-    .network svg{position:absolute;inset:0;width:100%;height:100%}
-    .network .school{fill:var(--primary)}
-    .network .person{fill:var(--person)}
-    .network .edge{stroke:#b9c9c1;stroke-width:2}
-    .legend{position:absolute;right:24px;bottom:20px;background:rgba(255,255,255,.9);padding:12px 15px;border-radius:14px;border:1px solid var(--line);font-size:13px}
-    .dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-left:6px}
-    .trust{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
-    .steps{display:grid;gap:14px}
-    .step{padding:20px;border:1px solid var(--line);background:var(--surface);border-radius:18px}
-    .step b{display:block;margin-bottom:4px}
-    .step span{color:var(--muted);font-size:14px}
-    .roles{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-    .role{padding:25px;background:var(--surface);border:1px solid var(--line);border-radius:18px}
-    .role h3{margin:0 0 8px;font-size:18px}
-    .role p{margin:0;color:var(--muted);font-size:14px}
-    .cta{padding:80px 24px;text-align:center;background:var(--primary);color:#fff;border-radius:30px}
-    .cta p{opacity:.85;max-width:620px;margin:12px auto 25px}
-    .cta .btn{background:#fff;color:var(--primary);border-color:#fff}
-    footer{padding:35px 0;color:var(--muted);font-size:13px}
-    @media(max-width:850px){
-      .navlinks{display:none}.hero-grid,.trust{grid-template-columns:1fr}
-      .projects{grid-template-columns:1fr}.roles{grid-template-columns:1fr 1fr}
-      .hero{padding-top:55px}section{padding:60px 0}
-    }
-    @media(max-width:520px){.roles{grid-template-columns:1fr}h2{font-size:29px}.hero-art{min-height:350px}}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ClassChain | جامعه خیرین دیجیتال</title>
+
+    <meta name="description"
+          content="کلاس‌چین؛ جامعه خیرین دیجیتال برای ساختن آینده، کلاس به کلاس.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <style>
+        /* =========================================================
+           CLASSCHAIN LANDING PAGE
+           Mobile First / RTL / LTR / Responsive
+           ========================================================= */
+
+        :root {
+            --green-950: #12372d;
+            --green-900: #17483a;
+            --green-800: #1d5a48;
+            --green-700: #28735b;
+            --green-500: #4b9675;
+
+            --cream: #f7f3e9;
+            --cream-dark: #eee8d9;
+            --white: #ffffff;
+
+            --gold: #c89b3c;
+            --gold-light: #ead9a8;
+
+            --coral: #d9785d;
+
+            --text: #18342b;
+            --text-soft: #5c6d65;
+            --border: rgba(24, 52, 43, 0.11);
+
+            --shadow-sm: 0 8px 25px rgba(18, 55, 45, .07);
+            --shadow-md: 0 20px 50px rgba(18, 55, 45, .10);
+            --shadow-lg: 0 30px 80px rgba(18, 55, 45, .15);
+
+            --radius-sm: 12px;
+            --radius-md: 20px;
+            --radius-lg: 32px;
+
+            --container: 1180px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Vazirmatn", sans-serif;
+            background: var(--cream);
+            color: var(--text);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button {
+            font-family: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: min(var(--container), calc(100% - 32px));
+            margin-inline: auto;
+        }
+
+        /* =========================================================
+           HEADER
+           ========================================================= */
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(247, 243, 233, .92);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(24, 52, 43, .07);
+        }
+
+        .nav {
+            min-height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 800;
+            color: var(--green-900);
+            white-space: nowrap;
+        }
+
+        .brand-mark {
+            width: 38px;
+            height: 38px;
+            border-radius: 12px;
+            background: var(--green-900);
+            color: white;
+            display: grid;
+            place-items: center;
+            font-weight: 800;
+            position: relative;
+        }
+
+        .brand-mark::after {
+            content: "";
+            position: absolute;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: var(--gold);
+            bottom: 6px;
+            left: 6px;
+        }
+
+        .brand-text {
+            font-size: 1.05rem;
+        }
+
+        .desktop-nav {
+            display: none;
+            align-items: center;
+            gap: 26px;
+        }
+
+        .desktop-nav a {
+            font-size: .9rem;
+            color: var(--text-soft);
+            transition: color .2s ease;
+        }
+
+        .desktop-nav a:hover {
+            color: var(--green-800);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .language-switcher {
+            position: relative;
+        }
+
+        .language-button {
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--green-900);
+            min-width: 42px;
+            height: 40px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .language-menu {
+            position: absolute;
+            top: calc(100% + 8px);
+            inset-inline-end: 0;
+            width: 130px;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            box-shadow: var(--shadow-md);
+            padding: 6px;
+            display: none;
+        }
+
+        .language-menu.open {
+            display: block;
+        }
+
+        .language-menu button {
+            width: 100%;
+            border: 0;
+            background: transparent;
+            padding: 9px 10px;
+            border-radius: 9px;
+            text-align: start;
+            cursor: pointer;
+        }
+
+        .language-menu button:hover {
+            background: var(--cream);
+        }
+
+        .mobile-menu-button {
+            width: 42px;
+            height: 40px;
+            border: 1px solid var(--border);
+            background: transparent;
+            border-radius: 10px;
+            cursor: pointer;
+            display: grid;
+            place-items: center;
+            color: var(--green-900);
+            font-size: 1.2rem;
+        }
+
+        .mobile-menu {
+            display: none;
+            padding: 10px 0 18px;
+            border-top: 1px solid var(--border);
+        }
+
+        .mobile-menu.open {
+            display: block;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 10px 0;
+            color: var(--text-soft);
+        }
+
+        /* =========================================================
+           BUTTONS
+           ========================================================= */
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            min-height: 48px;
+            padding: 0 20px;
+            border-radius: 13px;
+            border: 1px solid transparent;
+            cursor: pointer;
+            font-size: .92rem;
+            font-weight: 700;
+            transition:
+                transform .2s ease,
+                box-shadow .2s ease,
+                background .2s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: var(--green-900);
+            color: white;
+            box-shadow: 0 12px 28px rgba(23, 72, 58, .18);
+        }
+
+        .btn-primary:hover {
+            background: var(--green-800);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--green-900);
+            border-color: var(--border);
+        }
+
+        .btn-light {
+            background: rgba(255,255,255,.12);
+            color: white;
+            border-color: rgba(255,255,255,.2);
+        }
+
+        /* =========================================================
+           HERO
+           ========================================================= */
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 64px 0 70px;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 360px;
+            height: 360px;
+            border-radius: 50%;
+            background: var(--gold-light);
+            opacity: .24;
+            top: -150px;
+            inset-inline-end: -180px;
+        }
+
+        .hero-grid {
+            display: grid;
+            gap: 45px;
+            align-items: center;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--green-700);
+            font-size: .82rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .eyebrow-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--gold);
+            border-radius: 50%;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.1rem, 8vw, 4.6rem);
+            line-height: 1.2;
+            letter-spacing: -.04em;
+            color: var(--green-950);
+            margin-bottom: 22px;
+        }
+
+        .hero h1 span {
+            color: var(--green-700);
+        }
+
+        .hero-lead {
+            max-width: 680px;
+            color: var(--text-soft);
+            font-size: 1.02rem;
+            line-height: 2;
+            margin-bottom: 28px;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .hero-note {
+            margin-top: 15px;
+            font-size: .78rem;
+            color: var(--text-soft);
+        }
+
+        /* Visual */
+
+        .hero-visual {
+            position: relative;
+            min-height: 330px;
+            display: grid;
+            place-items: center;
+        }
+
+        .community-card {
+            width: min(100%, 460px);
+            min-height: 310px;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+            padding: 28px;
+        }
+
+        .community-card::before {
+            content: "";
+            position: absolute;
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background: var(--gold-light);
+            opacity: .25;
+            top: -100px;
+            left: -80px;
+        }
+
+        .school {
+            position: absolute;
+            left: 50%;
+            bottom: 45px;
+            transform: translateX(-50%);
+            width: 240px;
+        }
+
+        .school-roof {
+            width: 0;
+            height: 0;
+            border-left: 125px solid transparent;
+            border-right: 125px solid transparent;
+            border-bottom: 70px solid var(--green-800);
+            margin: auto;
+        }
+
+        .school-body {
+            height: 125px;
+            background: var(--cream);
+            border: 4px solid var(--green-800);
+            border-top: 0;
+            border-radius: 0 0 10px 10px;
+            position: relative;
+        }
+
+        .school-door {
+            position: absolute;
+            width: 38px;
+            height: 68px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--green-800);
+            border-radius: 8px 8px 0 0;
+        }
+
+        .school-window {
+            position: absolute;
+            width: 38px;
+            height: 38px;
+            background: white;
+            border: 3px solid var(--green-800);
+            top: 27px;
+            border-radius: 5px;
+        }
+
+        .school-window.one {
+            right: 25px;
+        }
+
+        .school-window.two {
+            left: 25px;
+        }
+
+        .people {
+            position: absolute;
+            inset-inline: 28px;
+            bottom: 22px;
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+        }
+
+        .person {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: var(--green-700);
+            position: relative;
+        }
+
+        .person::after {
+            content: "";
+            position: absolute;
+            width: 48px;
+            height: 38px;
+            background: var(--green-700);
+            border-radius: 22px 22px 5px 5px;
+            top: 28px;
+            left: -7px;
+        }
+
+        .person:nth-child(2) {
+            background: var(--coral);
+        }
+
+        .person:nth-child(2)::after {
+            background: var(--coral);
+        }
+
+        .person:nth-child(3) {
+            background: var(--gold);
+        }
+
+        .person:nth-child(3)::after {
+            background: var(--gold);
+        }
+
+        .person:nth-child(4) {
+            background: var(--green-900);
+        }
+
+        .person:nth-child(4)::after {
+            background: var(--green-900);
+        }
+
+        /* =========================================================
+           GENERAL SECTIONS
+           ========================================================= */
+
+        section {
+            padding: 72px 0;
+        }
+
+        .section-header {
+            max-width: 700px;
+            margin-bottom: 38px;
+        }
+
+        .section-kicker {
+            color: var(--green-700);
+            font-weight: 800;
+            font-size: .82rem;
+            margin-bottom: 8px;
+        }
+
+        .section-title {
+            color: var(--green-950);
+            font-size: clamp(1.7rem, 5vw, 2.8rem);
+            line-height: 1.35;
+            letter-spacing: -.025em;
+            margin-bottom: 13px;
+        }
+
+        .section-description {
+            color: var(--text-soft);
+            line-height: 1.95;
+        }
+
+        /* =========================================================
+           WHY
+           ========================================================= */
+
+        .why-section {
+            background: white;
+        }
+
+        .cards {
+            display: grid;
+            gap: 16px;
+        }
+
+        .info-card {
+            padding: 28px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            background: white;
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            display: grid;
+            place-items: center;
+            background: var(--cream);
+            color: var(--green-800);
+            font-size: 1.25rem;
+            margin-bottom: 18px;
+        }
+
+        .info-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 9px;
+            color: var(--green-950);
+        }
+
+        .info-card p {
+            color: var(--text-soft);
+            font-size: .9rem;
+            line-height: 1.9;
+        }
+
+        /* =========================================================
+           PROCESS
+           ========================================================= */
+
+        .process {
+            display: grid;
+            gap: 16px;
+            counter-reset: process;
+        }
+
+        .process-item {
+            position: relative;
+            padding: 28px;
+            border-radius: var(--radius-md);
+            background: var(--green-900);
+            color: white;
+            overflow: hidden;
+        }
+
+        .process-item::before {
+            counter-increment: process;
+            content: "0" counter(process);
+            font-size: 4rem;
+            line-height: 1;
+            position: absolute;
+            left: 18px;
+            top: 12px;
+            opacity: .08;
+            font-weight: 800;
+        }
+
+        .process-item h3 {
+            margin-bottom: 9px;
+            font-size: 1.15rem;
+        }
+
+        .process-item p {
+            color: rgba(255,255,255,.78);
+            font-size: .9rem;
+        }
+
+        /* =========================================================
+           COMMUNITY
+           ========================================================= */
+
+        .community-section {
+            background: var(--cream-dark);
+        }
+
+        .community-layout {
+            display: grid;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .community-text p {
+            color: var(--text-soft);
+            margin-bottom: 18px;
+        }
+
+        .community-list {
+            list-style: none;
+            display: grid;
+            gap: 13px;
+            margin-top: 22px;
+        }
+
+        .community-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: .92rem;
+        }
+
+        .check {
+            flex: 0 0 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--green-800);
+            color: white;
+            display: grid;
+            place-items: center;
+            font-size: .7rem;
+            margin-top: 3px;
+        }
+
+        .community-quote {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 35px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border);
+        }
+
+        .community-quote-mark {
+            font-size: 4rem;
+            line-height: .8;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .community-quote p {
+            font-size: 1.2rem;
+            line-height: 1.9;
+            font-weight: 600;
+            color: var(--green-950);
+        }
+
+        /* =========================================================
+           PARTICIPATION
+           ========================================================= */
+
+        .participation-grid {
+            display: grid;
+            gap: 16px;
+        }
+
+        .participation-card {
+            padding: 30px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            background: white;
+        }
+
+        .participation-card.featured {
+            background: var(--green-900);
+            color: white;
+        }
+
+        .participation-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .participation-card p {
+            color: var(--text-soft);
+            font-size: .9rem;
+        }
+
+        .participation-card.featured p {
+            color: rgba(255,255,255,.75);
+        }
+
+        .participation-card .btn {
+            margin-top: 22px;
+        }
+
+        /* =========================================================
+           TRANSPARENCY
+           ========================================================= */
+
+        .transparency {
+            background: white;
+        }
+
+        .transparency-box {
+            background: var(--green-950);
+            color: white;
+            border-radius: var(--radius-lg);
+            padding: 35px;
+            display: grid;
+            gap: 30px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .transparency-box::after {
+            content: "";
+            position: absolute;
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            border: 1px solid rgba(255,255,255,.08);
+            right: -100px;
+            bottom: -130px;
+        }
+
+        .transparency-box h2 {
+            font-size: clamp(1.6rem, 5vw, 2.5rem);
+            line-height: 1.4;
+            margin-bottom: 12px;
+        }
+
+        .transparency-box p {
+            color: rgba(255,255,255,.72);
+            max-width: 650px;
+        }
+
+        .map-preview {
+            min-height: 220px;
+            background:
+                linear-gradient(135deg, transparent 49%, rgba(255,255,255,.07) 50%, transparent 51%),
+                linear-gradient(45deg, transparent 49%, rgba(255,255,255,.07) 50%, transparent 51%);
+            background-size: 55px 55px;
+            border: 1px solid rgba(255,255,255,.1);
+            border-radius: 20px;
+            position: relative;
+            display: grid;
+            place-items: center;
+        }
+
+        .map-point {
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--gold);
+            box-shadow: 0 0 0 8px rgba(200,155,60,.12);
+        }
+
+        .map-point:nth-child(1) {
+            top: 35%;
+            right: 25%;
+        }
+
+        .map-point:nth-child(2) {
+            top: 55%;
+            right: 53%;
+        }
+
+        .map-point:nth-child(3) {
+            top: 30%;
+            left: 25%;
+        }
+
+        .map-label {
+            background: rgba(255,255,255,.1);
+            border: 1px solid rgba(255,255,255,.12);
+            padding: 8px 14px;
+            border-radius: 30px;
+            font-size: .78rem;
+        }
+
+        /* =========================================================
+           DASHBOARD / CONTINUE
+           ========================================================= */
+
+        .after-donation {
+            display: grid;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .after-donation-content {
+            max-width: 650px;
+        }
+
+        .after-donation-content p {
+            color: var(--text-soft);
+            margin-bottom: 20px;
+        }
+
+        .dashboard-card {
+            background: var(--cream);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            border: 1px solid var(--border);
+        }
+
+        .dashboard-card-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 13px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .dashboard-card-row:last-child {
+            border-bottom: 0;
+        }
+
+        .dashboard-dot {
+            width: 10px;
+            height: 10px;
+            background: var(--green-700);
+            border-radius: 50%;
+        }
+
+        .dashboard-card-row span:last-child {
+            margin-inline-start: auto;
+            font-size: .75rem;
+            color: var(--text-soft);
+        }
+
+        /* =========================================================
+           FINAL CTA
+           ========================================================= */
+
+        .final-cta {
+            background: var(--green-900);
+            color: white;
+            text-align: center;
+        }
+
+        .final-cta-inner {
+            max-width: 760px;
+            margin: auto;
+        }
+
+        .final-cta h2 {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            line-height: 1.35;
+            margin-bottom: 17px;
+        }
+
+        .final-cta p {
+            color: rgba(255,255,255,.75);
+            margin-bottom: 25px;
+        }
+
+        /* =========================================================
+           FOOTER
+           ========================================================= */
+
+        footer {
+            background: #102e26;
+            color: white;
+            padding: 48px 0 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+            gap: 35px;
+            padding-bottom: 35px;
+        }
+
+        .footer-brand p {
+            color: rgba(255,255,255,.58);
+            font-size: .82rem;
+            margin-top: 13px;
+            max-width: 360px;
+        }
+
+        .footer-links h4 {
+            font-size: .9rem;
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            display: block;
+            color: rgba(255,255,255,.58);
+            font-size: .8rem;
+            margin-bottom: 7px;
+            transition: color .2s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,.09);
+            color: rgba(255,255,255,.42);
+            font-size: .72rem;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        /* =========================================================
+           LANGUAGE DIRECTION
+           ========================================================= */
+
+        html[dir="ltr"] .process-item::before {
+            right: 18px;
+            left: auto;
+        }
+
+        html[dir="ltr"] .school-window.one {
+            left: 25px;
+            right: auto;
+        }
+
+        html[dir="ltr"] .school-window.two {
+            right: 25px;
+            left: auto;
+        }
+
+        /* =========================================================
+           TABLET
+           ========================================================= */
+
+        @media (min-width: 600px) {
+
+            .container {
+                width: min(var(--container), calc(100% - 48px));
+            }
+
+            .hero {
+                padding: 80px 0 90px;
+            }
+
+            .hero-actions {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .participation-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 2fr 1fr 1fr 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+
+        /* =========================================================
+           DESKTOP
+           ========================================================= */
+
+        @media (min-width: 900px) {
+
+            .container {
+                width: min(var(--container), calc(100% - 64px));
+            }
+
+            .desktop-nav {
+                display: flex;
+            }
+
+            .mobile-menu-button {
+                display: none;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1.08fr .92fr;
+                gap: 70px;
+            }
+
+            .hero-content {
+                padding-inline-start: 10px;
+            }
+
+            .hero-actions {
+                gap: 12px;
+            }
+
+            .hero-visual {
+                min-height: 470px;
+            }
+
+            .community-card {
+                min-height: 390px;
+            }
+
+            .school {
+                transform: translateX(-50%) scale(1.12);
+                bottom: 70px;
+            }
+
+            section {
+                padding: 100px 0;
+            }
+
+            .cards {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .community-layout {
+                grid-template-columns: 1.1fr .9fr;
+                gap: 80px;
+            }
+
+            .transparency-box {
+                grid-template-columns: 1fr .8fr;
+                align-items: center;
+                padding: 55px;
+            }
+
+            .after-donation {
+                grid-template-columns: 1.2fr .8fr;
+                gap: 80px;
+            }
+        }
+
+        /* =========================================================
+           LARGE DESKTOP
+           ========================================================= */
+
+        @media (min-width: 1200px) {
+
+            .hero {
+                min-height: 680px;
+                display: grid;
+                align-items: center;
+            }
+
+            .hero h1 {
+                font-size: 4.6rem;
+            }
+
+            .hero-lead {
+                font-size: 1.08rem;
+            }
+        }
+
+        /* =========================================================
+           REDUCED MOTION
+           ========================================================= */
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition: none !important;
+            }
+        }
+    </style>
 </head>
+
 <body>
-<header>
-  <div class="wrap">
-    <nav>
-      <div class="logo">ClassChain</div>
-      <div class="navlinks">
-        <a href="#projects">پروژه‌ها</a>
-        <a href="#community">جامعه</a>
-        <a href="#trust">شفافیت</a>
-        <a href="WebGIS.html">نقشه پروژه‌ها</a>
-      </div>
-      <a class="btn primary" href="#join">مشارکت</a>
-    </nav>
-  </div>
+
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+
+<header class="site-header">
+    <div class="container">
+
+        <nav class="nav">
+
+            <a href="#top" class="brand" aria-label="ClassChain">
+                <span class="brand-mark">ک</span>
+                <span class="brand-text">کلاس‌چین</span>
+            </a>
+
+            <div class="desktop-nav">
+                <a href="#why" data-i18n="nav.why">چرا کلاس‌چین؟</a>
+                <a href="#how" data-i18n="nav.how">چطور کار می‌کند؟</a>
+                <a href="#community" data-i18n="nav.community">جامعه خیرین</a>
+                <a href="#transparency" data-i18n="nav.transparency">شفافیت</a>
+            </div>
+
+            <div class="nav-actions">
+
+                <div class="language-switcher">
+                    <button
+                        class="language-button"
+                        id="languageButton"
+                        aria-label="Language"
+                        aria-expanded="false">
+                        FA
+                    </button>
+
+                    <div class="language-menu" id="languageMenu">
+                        <button data-lang="fa">فارسی</button>
+                        <button data-lang="en">English</button>
+                        <button data-lang="ar">العربية</button>
+                    </div>
+                </div>
+
+                <a
+                    href="frontend/donate.html"
+                    class="btn btn-primary"
+                    data-i18n="nav.cta">
+                    مشارکت
+                </a>
+
+                <button
+                    class="mobile-menu-button"
+                    id="mobileMenuButton"
+                    aria-label="Menu">
+                    ☰
+                </button>
+
+            </div>
+        </nav>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#why" data-i18n="nav.why">چرا کلاس‌چین؟</a>
+            <a href="#how" data-i18n="nav.how">چطور کار می‌کند؟</a>
+            <a href="#community" data-i18n="nav.community">جامعه خیرین</a>
+            <a href="#transparency" data-i18n="nav.transparency">شفافیت</a>
+            <a href="WebGIS.html" data-i18n="nav.webgis">نقشه پروژه‌ها</a>
+            <a href="frontend/dashboard.html" data-i18n="nav.dashboard">داشبورد من</a>
+        </div>
+
+    </div>
 </header>
 
-<main>
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <div>
-        <div class="eyebrow">ساختن آینده، با مشارکت همه</div>
-        <h1>با هم، مدرسه می‌سازیم.</h1>
-        <p class="lead">ClassChain راهی شفاف برای مشارکت در ساخت فضاهای آموزشی است؛ جایی که هر مشارکت، بخشی از یک حرکت جمعی برای ساختن آینده‌ای بهتر می‌شود.</p>
-        <div class="actions">
-          <a class="btn primary" href="#projects">در ساخت یک مدرسه سهیم شو</a>
-          <a class="btn secondary" href="WebGIS.html">مشاهده پروژه‌ها روی نقشه</a>
+
+<main id="top">
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <section class="hero">
+
+        <div class="container hero-grid">
+
+            <div class="hero-content">
+
+                <div class="eyebrow">
+                    <span class="eyebrow-dot"></span>
+                    <span data-i18n="hero.eyebrow">
+                        جامعه خیرین دیجیتال
+                    </span>
+                </div>
+
+                <h1 data-i18n="hero.title">
+                    با هم، آینده را می‌سازیم؛
+                    <span>کلاس به کلاس.</span>
+                </h1>
+
+                <p class="hero-lead" data-i18n="hero.description">
+                    کلاس‌چین پلی است میان خیرین، مردم و پروژه‌های مدرسه‌سازی؛
+                    جایی که هرکس می‌تواند به اندازه توان خود در ساختن
+                    محیطی بهتر برای آموزش کودکان مشارکت کند.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a
+                        href="frontend/donate.html"
+                        class="btn btn-primary"
+                        data-i18n="hero.primary">
+                        من هم می‌خواهم کمک کنم
+                    </a>
+
+                    <a
+                        href="#how"
+                        class="btn btn-secondary"
+                        data-i18n="hero.secondary">
+                        چطور کار می‌کند؟
+                    </a>
+
+                </div>
+
+                <p class="hero-note" data-i18n="hero.note">
+                    مشارکت شما بخشی از یک جامعه است؛ نه فقط یک پرداخت.
+                </p>
+
+            </div>
+
+
+            <div class="hero-visual" aria-hidden="true">
+
+                <div class="community-card">
+
+                    <div class="school">
+
+                        <div class="school-roof"></div>
+
+                        <div class="school-body">
+
+                            <div class="school-window one"></div>
+                            <div class="school-window two"></div>
+
+                            <div class="school-door"></div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="people">
+                        <div class="person"></div>
+                        <div class="person"></div>
+                        <div class="person"></div>
+                        <div class="person"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
-      </div>
-      <div class="hero-art" aria-label="تصویر مفهومی ساخت مدرسه">
-        <div class="hero-card">
-          <strong>یک مشارکت کوچک، یک قدم واقعی برای ساختن.</strong>
-          <span>پروژه‌ها و مسیر مشارکت را خودت ببین.</span>
+
+    </section>
+
+
+    <!-- =====================================================
+         WHY CLASSCHAIN
+         ===================================================== -->
+
+    <section class="why-section" id="why">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <div class="section-kicker"
+                     data-i18n="why.kicker">
+                    چرا کلاس‌چین؟
+                </div>
+
+                <h2 class="section-title"
+                    data-i18n="why.title">
+                    خیر بودن می‌تواند ساده‌تر، شفاف‌تر و امروزی‌تر باشد.
+                </h2>
+
+                <p class="section-description"
+                   data-i18n="why.description">
+                    کلاس‌چین تلاش می‌کند تجربه مشارکت در مدرسه‌سازی را
+                    برای نسل امروز قابل دسترس و قابل مشاهده کند.
+                </p>
+
+            </div>
+
+
+            <div class="cards">
+
+                <article class="info-card">
+
+                    <div class="icon">⌖</div>
+
+                    <h3 data-i18n="why.card1.title">
+                        می‌بینید
+                    </h3>
+
+                    <p data-i18n="why.card1.text">
+                        می‌توانید پروژه‌ها و محل اجرای آن‌ها را ببینید
+                        و بدانید مشارکت شما در چه مسیری قرار گرفته است.
+                    </p>
+
+                </article>
+
+
+                <article class="info-card">
+
+                    <div class="icon">◎</div>
+
+                    <h3 data-i18n="why.card2.title">
+                        مشارکت می‌کنید
+                    </h3>
+
+                    <p data-i18n="why.card2.text">
+                        لازم نیست سرمایه بزرگی داشته باشید.
+                        هر مشارکت، بخشی از حرکت جمعی برای ساختن آینده است.
+                    </p>
+
+                </article>
+
+
+                <article class="info-card">
+
+                    <div class="icon">♧</div>
+
+                    <h3 data-i18n="why.card3.title">
+                        همراه می‌مانید
+                    </h3>
+
+                    <p data-i18n="why.card3.text">
+                        مشارکت با پرداخت تمام نمی‌شود؛
+                        شما بخشی از جامعه‌ای می‌شوید که مسیر پروژه‌ها را دنبال می‌کند.
+                    </p>
+
+                </article>
+
+            </div>
+
         </div>
-      </div>
-    </div>
-  </section>
 
-  <section id="projects">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>پروژه‌هایی که می‌توانی در ساختنشان سهیم باشی</h2>
-        <p>به‌جای نمایش عددهای غیرواقعی، تمرکز را روی پروژه‌های واقعی و قابل مشاهده می‌گذاریم.</p>
-      </div>
-      <div class="projects">
-        <article class="project"><div class="project-img"></div><div class="project-body"><h3>پروژه آموزشی ۱</h3><p>معرفی کوتاه پروژه و نیاز آموزشی آن.</p><a class="project-link" href="WebGIS.html">مشاهده پروژه →</a></div></article>
-        <article class="project"><div class="project-img"></div><div class="project-body"><h3>پروژه آموزشی ۲</h3><p>معرفی کوتاه پروژه و نیاز آموزشی آن.</p><a class="project-link" href="WebGIS.html">مشاهده پروژه →</a></div></article>
-        <article class="project"><div class="project-img"></div><div class="project-body"><h3>پروژه آموزشی ۳</h3><p>معرفی کوتاه پروژه و نیاز آموزشی آن.</p><a class="project-link" href="WebGIS.html">مشاهده پروژه →</a></div></article>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="community" class="community">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>وقتی مشارکت‌ها به هم می‌رسند، یک جامعه شکل می‌گیرد.</h2>
-        <p>هر نقطه می‌تواند یک پروژه یا یک مشارکت‌کننده باشد؛ اتصال آنها تصویر ساده‌ای از جامعه ClassChain می‌سازد.</p>
-      </div>
-      <div class="network">
-        <svg viewBox="0 0 1000 470" role="img" aria-label="شبکه مفهومی پروژه‌ها و مشارکت‌کنندگان">
-          <g class="edge" fill="none">
-            <path d="M180 180 L110 105 M180 180 L105 260 M180 180 L235 80 M180 180 L285 225"/>
-            <path d="M510 135 L445 70 M510 135 L610 65 M510 135 L650 170 M510 135 L470 235"/>
-            <path d="M770 315 L700 250 M770 315 L850 220 M770 315 L900 365 M770 315 L680 385"/>
-            <path d="M285 225 L470 235 M650 170 L850 220"/>
-          </g>
-          <g class="school">
-            <circle cx="180" cy="180" r="18"/><circle cx="510" cy="135" r="18"/><circle cx="770" cy="315" r="18"/>
-          </g>
-          <g class="person">
-            <circle cx="110" cy="105" r="8"/><circle cx="105" cy="260" r="8"/><circle cx="235" cy="80" r="8"/><circle cx="285" cy="225" r="8"/>
-            <circle cx="445" cy="70" r="8"/><circle cx="610" cy="65" r="8"/><circle cx="650" cy="170" r="8"/><circle cx="470" cy="235" r="8"/>
-            <circle cx="700" cy="250" r="8"/><circle cx="850" cy="220" r="8"/><circle cx="900" cy="365" r="8"/><circle cx="680" cy="385" r="8"/>
-          </g>
-        </svg>
-        <div class="legend">
-          <span><i class="dot" style="background:var(--primary)"></i>پروژه</span>
-          &nbsp;&nbsp;
-          <span><i class="dot" style="background:var(--person)"></i>مشارکت‌کننده</span>
+
+    <!-- =====================================================
+         HOW IT WORKS
+         ===================================================== -->
+
+    <section id="how">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <div class="section-kicker"
+                     data-i18n="how.kicker">
+                    فرآیند ساده است
+                </div>
+
+                <h2 class="section-title"
+                    data-i18n="how.title">
+                    سه قدم برای اینکه بخشی از ساختن باشید.
+                </h2>
+
+                <p class="section-description"
+                   data-i18n="how.description">
+                    قرار نیست فناوری مسیر خیرخواهی را پیچیده کند؛
+                    فناوری باید کمک کند مسیر مشارکت روشن‌تر باشد.
+                </p>
+
+            </div>
+
+
+            <div class="process">
+
+                <article class="process-item">
+
+                    <h3 data-i18n="how.step1.title">
+                        انتخاب کنید
+                    </h3>
+
+                    <p data-i18n="how.step1.text">
+                        پروژه‌ای را که با آن ارتباط دارید پیدا کنید
+                        یا به جامعه عمومی خیرین بپیوندید.
+                    </p>
+
+                </article>
+
+
+                <article class="process-item">
+
+                    <h3 data-i18n="how.step2.title">
+                        مشارکت کنید
+                    </h3>
+
+                    <p data-i18n="how.step2.text">
+                        به اندازه‌ای که برایتان ممکن است مشارکت کنید.
+                        کوچک یا بزرگ بودن مشارکت، اصل ماجرا نیست؛
+                        همراه شدن مهم است.
+                    </p>
+
+                </article>
+
+
+                <article class="process-item">
+
+                    <h3 data-i18n="how.step3.title">
+                        همراه بمانید
+                    </h3>
+
+                    <p data-i18n="how.step3.text">
+                        مسیر پروژه و اثر مشارکت جامعه را دنبال کنید
+                        و در شکل‌گیری آینده این حرکت سهیم باشید.
+                    </p>
+
+                </article>
+
+            </div>
+
         </div>
-      </div>
-    </div>
-  </section>
 
-  <section id="trust">
-    <div class="wrap trust">
-      <div>
-        <div class="eyebrow">اعتماد از مشاهده شروع می‌شود</div>
-        <h2>مشارکت کن، مسیر را ببین، نتیجه را دنبال کن.</h2>
-        <p class="lead">شفافیت را به‌عنوان یک ادعا بیان نمی‌کنیم؛ مسیر پروژه‌ها و گزارش آنها باید برای مشارکت‌کننده قابل مشاهده باشد.</p>
-        <div class="actions"><a class="btn primary" href="WebGIS.html">مشاهده WebGIS</a></div>
-      </div>
-      <div class="steps">
-        <div class="step"><b>۱. انتخاب پروژه</b><span>پروژه‌ای را که می‌خواهی در آن سهیم باشی پیدا کن.</span></div>
-        <div class="step"><b>۲. مشارکت</b><span>سهم خودت را به ساخت یک فضای آموزشی اختصاص بده.</span></div>
-        <div class="step"><b>۳. مشاهده مسیر</b><span>پیشرفت پروژه و گزارش‌های آن را دنبال کن.</span></div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section>
-    <div class="wrap">
-      <div class="section-head"><h2>ClassChain فقط برای یک نوع مشارکت‌کننده نیست.</h2><p>هرکس می‌تواند به شکلی در این حرکت نقش داشته باشد.</p></div>
-      <div class="roles">
-        <div class="role"><h3>همراه یک پروژه</h3><p>در ساخت یک مدرسه همراه دیگران سهیم شو.</p></div>
-        <div class="role"><h3>مشارکت از خارج کشور</h3><p>از هر جای دنیا در ساخت آینده آموزشی ایران مشارکت کن.</p></div>
-        <div class="role"><h3>همراه جامعه</h3><p>مشارکتت را به بخشی از یک حرکت جمعی تبدیل کن.</p></div>
-        <div class="role"><h3>معرفی ClassChain</h3><p>این فرصت را با دیگران به اشتراک بگذار.</p></div>
-      </div>
-    </div>
-  </section>
 
-  <section id="join">
-    <div class="wrap">
-      <div class="cta">
-        <h2>مدرسه بعدی می‌تواند با مشارکت تو ساخته شود.</h2>
-        <p>به ساختن آینده‌ای بهتر برای کودکان کمک کن؛ شفاف، جمعی و قابل مشاهده.</p>
-        <a class="btn" href="#projects">شروع مشارکت</a>
-      </div>
-    </div>
-  </section>
+    <!-- =====================================================
+         COMMUNITY
+         ===================================================== -->
+
+    <section class="community-section" id="community">
+
+        <div class="container community-layout">
+
+            <div class="community-text">
+
+                <div class="section-kicker"
+                     data-i18n="community.kicker">
+                    فراتر از یک سایت
+                </div>
+
+                <h2 class="section-title"
+                    data-i18n="community.title">
+                    ما نمی‌خواهیم فقط کمک جمع کنیم؛
+                    می‌خواهیم یک جامعه بسازیم.
+                </h2>
+
+                <p data-i18n="community.description">
+                    جامعه خیرین مدرسه‌ساز سرمایه ارزشمندی است.
+                    کلاس‌چین می‌خواهد همین فرهنگ ارزشمند را با ابزارهای
+                    دیجیتال به نسل جدید و ایرانیان سراسر جهان نزدیک‌تر کند.
+                </p>
+
+                <ul class="community-list">
+
+                    <li>
+                        <span class="check">✓</span>
+                        <span data-i18n="community.item1">
+                            برای خیرین داخل و خارج از کشور قابل دسترس باشد.
+                        </span>
+                    </li>
+
+                    <li>
+                        <span class="check">✓</span>
+                        <span data-i18n="community.item2">
+                            مشارکت‌های کوچک را در کنار مشارکت‌های بزرگ معنا کند.
+                        </span>
+                    </li>
+
+                    <li>
+                        <span class="check">✓</span>
+                        <span data-i18n="community.item3">
+                            ارتباط خیرین با پروژه‌ها و جامعه را حفظ کند.
+                        </span>
+                    </li>
+
+                    <li>
+                        <span class="check">✓</span>
+                        <span data-i18n="community.item4">
+                            شفافیت را به بخشی طبیعی از تجربه خیرخواهی تبدیل کند.
+                        </span>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <aside class="community-quote">
+
+                <div class="community-quote-mark">“</div>
+
+                <p data-i18n="community.quote">
+                    آینده آموزش را فقط با ساختن ساختمان نمی‌سازیم؛
+                    با ساختن جامعه‌ای که برای آینده مسئولیت می‌پذیرد،
+                    آن را می‌سازیم.
+                </p>
+
+            </aside>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PARTICIPATION
+         ===================================================== -->
+
+    <section>
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <div class="section-kicker"
+                     data-i18n="participation.kicker">
+                    راه مشارکت شما
+                </div>
+
+                <h2 class="section-title"
+                    data-i18n="participation.title">
+                    شما انتخاب می‌کنید چگونه همراه شوید.
+                </h2>
+
+            </div>
+
+
+            <div class="participation-grid">
+
+                <article class="participation-card featured">
+
+                    <h3 data-i18n="participation.project.title">
+                        حمایت از یک پروژه
+                    </h3>
+
+                    <p data-i18n="participation.project.text">
+                        اگر پروژه یا منطقه‌ای برای شما اهمیت ویژه دارد،
+                        می‌توانید مستقیماً در همان پروژه مشارکت کنید.
+                    </p>
+
+                    <a
+                        href="frontend/donate.html"
+                        class="btn btn-light"
+                        data-i18n="participation.project.button">
+                        مشاهده پروژه‌ها
+                    </a>
+
+                </article>
+
+
+                <article class="participation-card">
+
+                    <h3 data-i18n="participation.community.title">
+                        پیوستن به جامعه
+                    </h3>
+
+                    <p data-i18n="participation.community.text">
+                        اگر ترجیح می‌دهید بخشی از یک حرکت جمعی باشید،
+                        می‌توانید در صندوق عمومی جامعه مشارکت کنید.
+                    </p>
+
+                    <a
+                        href="frontend/donate.html"
+                        class="btn btn-secondary"
+                        data-i18n="participation.community.button">
+                        عضویت و مشارکت
+                    </a>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         TRANSPARENCY / WEBGIS
+         ===================================================== -->
+
+    <section class="transparency" id="transparency">
+
+        <div class="container">
+
+            <div class="transparency-box">
+
+                <div>
+
+                    <div class="section-kicker"
+                         style="color: var(--gold-light);"
+                         data-i18n="transparency.kicker">
+                        شفافیت
+                    </div>
+
+                    <h2 data-i18n="transparency.title">
+                        شفافیت نباید یک وعده باشد؛
+                        باید قابل مشاهده باشد.
+                    </h2>
+
+                    <p data-i18n="transparency.description">
+                        WebGIS کلاس‌چین کمک می‌کند پروژه‌ها را روی نقشه ببینید،
+                        موقعیت آن‌ها را بشناسید و اطلاعات پروژه‌ها را دنبال کنید.
+                    </p>
+
+                    <a
+                        href="WebGIS.html"
+                        class="btn btn-light"
+                        style="margin-top:22px;"
+                        data-i18n="transparency.button">
+                        مشاهده نقشه پروژه‌ها
+                    </a>
+
+                </div>
+
+
+                <div class="map-preview">
+
+                    <span class="map-point"></span>
+                    <span class="map-point"></span>
+                    <span class="map-point"></span>
+
+                    <span class="map-label"
+                          data-i18n="transparency.map">
+                        پروژه‌ها روی نقشه
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         AFTER DONATION / DASHBOARD
+         ===================================================== -->
+
+    <section>
+
+        <div class="container after-donation">
+
+            <div class="after-donation-content">
+
+                <div class="section-kicker"
+                     data-i18n="dashboard.kicker">
+                    مشارکت شما پایان داستان نیست
+                </div>
+
+                <h2 class="section-title"
+                    data-i18n="dashboard.title">
+                    بعد از مشارکت، می‌توانید همراه مسیر بمانید.
+                </h2>
+
+                <p data-i18n="dashboard.description">
+                    داشبورد شخصی شما برای دنبال کردن مشارکت‌ها و
+                    ارتباط با پروژه‌هایی است که در آن‌ها همراه شده‌اید.
+                </p>
+
+                <a
+                    href="frontend/dashboard.html"
+                    class="btn btn-primary"
+                    data-i18n="dashboard.button">
+                    ورود به داشبورد
+                </a>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <div class="dashboard-card-row">
+                    <span class="dashboard-dot"></span>
+                    <span data-i18n="dashboard.row1">مشارکت شما</span>
+                    <span data-i18n="dashboard.status">ثبت شده</span>
+                </div>
+
+                <div class="dashboard-card-row">
+                    <span class="dashboard-dot"></span>
+                    <span data-i18n="dashboard.row2">پروژه انتخابی</span>
+                    <span data-i18n="dashboard.follow">در حال پیگیری</span>
+                </div>
+
+                <div class="dashboard-card-row">
+                    <span class="dashboard-dot"></span>
+                    <span data-i18n="dashboard.row3">جامعه خیرین</span>
+                    <span data-i18n="dashboard.follow">همراه</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FINAL CTA
+         ===================================================== -->
+
+    <section class="final-cta">
+
+        <div class="container final-cta-inner">
+
+            <h2 data-i18n="final.title">
+                اگر آینده کودکان برایتان مهم است،
+                جای شما در این جامعه خالی است.
+            </h2>
+
+            <p data-i18n="final.description">
+                لازم نیست کار بزرگی را به تنهایی انجام دهید.
+                کافی است سهم خودتان را به یک حرکت جمعی اضافه کنید.
+            </p>
+
+            <a
+                href="frontend/donate.html"
+                class="btn btn-light"
+                data-i18n="final.button">
+                من چطور می‌توانم کمک کنم؟
+            </a>
+
+        </div>
+
+    </section>
+
 </main>
 
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
 <footer>
-  <div class="wrap">© ClassChain — ساختن آینده با مشارکت همه</div>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div class="footer-brand">
+
+                <div class="brand">
+                    <span class="brand-mark">ک</span>
+                    <span class="brand-text" style="color:white;">
+                        کلاس‌چین
+                    </span>
+                </div>
+
+                <p data-i18n="footer.description">
+                    جامعه خیرین دیجیتال برای ساختن آینده،
+                    کلاس به کلاس.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4 data-i18n="footer.platform">
+                    کلاس‌چین
+                </h4>
+
+                <a href="#why" data-i18n="nav.why">
+                    چرا کلاس‌چین؟
+                </a>
+
+                <a href="#how" data-i18n="nav.how">
+                    چطور کار می‌کند؟
+                </a>
+
+                <a href="#community" data-i18n="nav.community">
+                    جامعه خیرین
+                </a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4 data-i18n="footer.tools">
+                    ابزارها
+                </h4>
+
+                <a href="WebGIS.html" data-i18n="nav.webgis">
+                    WebGIS
+                </a>
+
+                <a href="frontend/dashboard.html"
+                   data-i18n="nav.dashboard">
+                    داشبورد
+                </a>
+
+                <a href="frontend/donate.html"
+                   data-i18n="nav.cta">
+                    مشارکت
+                </a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4 data-i18n="footer.more">
+                    اطلاعات بیشتر
+                </h4>
+
+                <a href="ClassChain_WhitePaper_Updated.docx"
+                   data-i18n="footer.whitepaper">
+                    White Paper
+                </a>
+
+                <a href="Admin/index.html"
+                   data-i18n="footer.admin">
+                    پنل مدیریت
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span data-i18n="footer.copy">
+                © ClassChain — همه حقوق محفوظ است.
+            </span>
+
+            <span data-i18n="footer.motto">
+                با هم، آینده را می‌سازیم؛ کلاس به کلاس.
+            </span>
+
+        </div>
+
+    </div>
+
 </footer>
+
+
+<script>
+    /* =========================================================
+       CLASSCHAIN LANGUAGE SYSTEM
+       ========================================================= */
+
+    const translations = {
+
+        fa: {
+            dir: "rtl",
+            langName: "FA",
+
+            "nav.why": "چرا کلاس‌چین؟",
+            "nav.how": "چطور کار می‌کند؟",
+            "nav.community": "جامعه خیرین",
+            "nav.transparency": "شفافیت",
+            "nav.webgis": "نقشه پروژه‌ها",
+            "nav.dashboard": "داشبورد من",
+            "nav.cta": "مشارکت",
+
+            "hero.eyebrow": "جامعه خیرین دیجیتال",
+            "hero.title": "با هم، آینده را می‌سازیم؛ کلاس به کلاس.",
+            "hero.description":
+                "کلاس‌چین پلی است میان خیرین، مردم و پروژه‌های مدرسه‌سازی؛ جایی که هرکس می‌تواند به اندازه توان خود در ساختن محیطی بهتر برای آموزش کودکان مشارکت کند.",
+            "hero.primary": "من هم می‌خواهم کمک کنم",
+            "hero.secondary": "چطور کار می‌کند؟",
+            "hero.note": "مشارکت شما بخشی از یک جامعه است؛ نه فقط یک پرداخت.",
+
+            "why.kicker": "چرا کلاس‌چین؟",
+            "why.title": "خیر بودن می‌تواند ساده‌تر، شفاف‌تر و امروزی‌تر باشد.",
+            "why.description":
+                "کلاس‌چین تلاش می‌کند تجربه مشارکت در مدرسه‌سازی را برای نسل امروز قابل دسترس و قابل مشاهده کند.",
+
+            "why.card1.title": "می‌بینید",
+            "why.card1.text":
+                "می‌توانید پروژه‌ها و محل اجرای آن‌ها را ببینید و بدانید مشارکت شما در چه مسیری قرار گرفته است.",
+
+            "why.card2.title": "مشارکت می‌کنید",
+            "why.card2.text":
+                "لازم نیست سرمایه بزرگی داشته باشید. هر مشارکت، بخشی از حرکت جمعی برای ساختن آینده است.",
+
+            "why.card3.title": "همراه می‌مانید",
+            "why.card3.text":
+                "مشارکت با پرداخت تمام نمی‌شود؛ شما بخشی از جامعه‌ای می‌شوید که مسیر پروژه‌ها را دنبال می‌کند.",
+
+            "how.kicker": "فرآیند ساده است",
+            "how.title": "سه قدم برای اینکه بخشی از ساختن باشید.",
+            "how.description":
+                "قرار نیست فناوری مسیر خیرخواهی را پیچیده کند؛ فناوری باید کمک کند مسیر مشارکت روشن‌تر باشد.",
+
+            "how.step1.title": "انتخاب کنید",
+            "how.step1.text":
+                "پروژه‌ای را که با آن ارتباط دارید پیدا کنید یا به جامعه عمومی خیرین بپیوندید.",
+
+            "how.step2.title": "مشارکت کنید",
+            "how.step2.text":
+                "به اندازه‌ای که برایتان ممکن است مشارکت کنید. کوچک یا بزرگ بودن مشارکت، اصل ماجرا نیست؛ همراه شدن مهم است.",
+
+            "how.step3.title": "همراه بمانید",
+            "how.step3.text":
+                "مسیر پروژه و اثر مشارکت جامعه را دنبال کنید و در شکل‌گیری آینده این حرکت سهیم باشید.",
+
+            "community.kicker": "فراتر از یک سایت",
+            "community.title":
+                "ما نمی‌خواهیم فقط کمک جمع کنیم؛ می‌خواهیم یک جامعه بسازیم.",
+            "community.description":
+                "جامعه خیرین مدرسه‌ساز سرمایه ارزشمندی است. کلاس‌چین می‌خواهد همین فرهنگ ارزشمند را با ابزارهای دیجیتال به نسل جدید و ایرانیان سراسر جهان نزدیک‌تر کند.",
+
+            "community.item1":
+                "برای خیرین داخل و خارج از کشور قابل دسترس باشد.",
+            "community.item2":
+                "مشارکت‌های کوچک را در کنار مشارکت‌های بزرگ معنا کند.",
+            "community.item3":
+                "ارتباط خیرین با پروژه‌ها و جامعه را حفظ کند.",
+            "community.item4":
+                "شفافیت را به بخشی طبیعی از تجربه خیرخواهی تبدیل کند.",
+
+            "community.quote":
+                "آینده آموزش را فقط با ساختن ساختمان نمی‌سازیم؛ با ساختن جامعه‌ای که برای آینده مسئولیت می‌پذیرد، آن را می‌سازیم.",
+
+            "participation.kicker": "راه مشارکت شما",
+            "participation.title": "شما انتخاب می‌کنید چگونه همراه شوید.",
+
+            "participation.project.title": "حمایت از یک پروژه",
+            "participation.project.text":
+                "اگر پروژه یا منطقه‌ای برای شما اهمیت ویژه دارد، می‌توانید مستقیماً در همان پروژه مشارکت کنید.",
+            "participation.project.button": "مشاهده پروژه‌ها",
+
+            "participation.community.title": "پیوستن به جامعه",
+            "participation.community.text":
+                "اگر ترجیح می‌دهید بخشی از یک حرکت جمعی باشید، می‌توانید در صندوق عمومی جامعه مشارکت کنید.",
+            "participation.community.button": "عضویت و مشارکت",
+
+            "transparency.kicker": "شفافیت",
+            "transparency.title":
+                "شفافیت نباید یک وعده باشد؛ باید قابل مشاهده باشد.",
+            "transparency.description":
+                "WebGIS کلاس‌چین کمک می‌کند پروژه‌ها را روی نقشه ببینید، موقعیت آن‌ها را بشناسید و اطلاعات پروژه‌ها را دنبال کنید.",
+            "transparency.button": "مشاهده نقشه پروژه‌ها",
+            "transparency.map": "پروژه‌ها روی نقشه",
+
+            "dashboard.kicker": "مشارکت شما پایان داستان نیست",
+            "dashboard.title":
+                "بعد از مشارکت، می‌توانید همراه مسیر بمانید.",
+            "dashboard.description":
+                "داشبورد شخصی شما برای دنبال کردن مشارکت‌ها و ارتباط با پروژه‌هایی است که در آن‌ها همراه شده‌اید.",
+            "dashboard.button": "ورود به داشبورد",
+            "dashboard.row1": "مشارکت شما",
+            "dashboard.row2": "پروژه انتخابی",
+            "dashboard.row3": "جامعه خیرین",
+            "dashboard.status": "ثبت شده",
+            "dashboard.follow": "همراه",
+
+            "final.title":
+                "اگر آینده کودکان برایتان مهم است، جای شما در این جامعه خالی است.",
+            "final.description":
+                "لازم نیست کار بزرگی را به تنهایی انجام دهید. کافی است سهم خودتان را به یک حرکت جمعی اضافه کنید.",
+            "final.button": "من چطور می‌توانم کمک کنم؟",
+
+            "footer.description":
+                "جامعه خیرین دیجیتال برای ساختن آینده، کلاس به کلاس.",
+            "footer.platform": "کلاس‌چین",
+            "footer.tools": "ابزارها",
+            "footer.more": "اطلاعات بیشتر",
+            "footer.whitepaper": "White Paper",
+            "footer.admin": "پنل مدیریت",
+            "footer.copy": "© ClassChain — همه حقوق محفوظ است.",
+            "footer.motto": "با هم، آینده را می‌سازیم؛ کلاس به کلاس."
+        },
+
+
+        en: {
+            dir: "ltr",
+            langName: "EN",
+
+            "nav.why": "Why ClassChain?",
+            "nav.how": "How it works",
+            "nav.community": "Donor Community",
+            "nav.transparency": "Transparency",
+            "nav.webgis": "Project Map",
+            "nav.dashboard": "My Dashboard",
+            "nav.cta": "Contribute",
+
+            "hero.eyebrow": "A Digital Donor Community",
+            "hero.title": "Together, we build the future — one classroom at a time.",
+            "hero.description":
+                "ClassChain connects donors, people and school-building projects, making it possible for everyone to contribute according to their ability.",
+            "hero.primary": "I want to help",
+            "hero.secondary": "How does it work?",
+            "hero.note": "Your contribution becomes part of a community — not just a payment.",
+
+            "why.kicker": "Why ClassChain?",
+            "why.title": "Giving can be simpler, clearer and more connected to today's world.",
+            "why.description":
+                "ClassChain makes participation in school-building more accessible and visible for today's generation.",
+
+            "why.card1.title": "See",
+            "why.card1.text":
+                "Explore projects and their locations and understand where your contribution is going.",
+
+            "why.card2.title": "Contribute",
+            "why.card2.text":
+                "You do not need a large amount of capital. Every contribution becomes part of a collective movement.",
+
+            "why.card3.title": "Stay involved",
+            "why.card3.text":
+                "Participation does not end with a payment. You become part of a community that follows projects.",
+
+            "how.kicker": "A simple process",
+            "how.title": "Three steps to become part of building the future.",
+            "how.description":
+                "Technology should not complicate generosity. It should make participation clearer.",
+
+            "how.step1.title": "Choose",
+            "how.step1.text":
+                "Find a project that matters to you or join the wider donor community.",
+
+            "how.step2.title": "Contribute",
+            "how.step2.text":
+                "Contribute whatever amount is possible for you. What matters is joining the movement.",
+
+            "how.step3.title": "Stay connected",
+            "how.step3.text":
+                "Follow the project's journey and take part in shaping the future of the community.",
+
+            "community.kicker": "More than a website",
+            "community.title":
+                "We are not only collecting donations. We are building a community.",
+            "community.description":
+                "The school-building donor community is a valuable social asset. ClassChain aims to connect this culture with younger generations and Iranians around the world through digital tools.",
+
+            "community.item1":
+                "Accessible to donors inside and outside the country.",
+            "community.item2":
+                "Giving small contributions meaning alongside larger ones.",
+            "community.item3":
+                "Keeping donors connected to projects and the wider community.",
+            "community.item4":
+                "Making transparency a natural part of giving.",
+
+            "community.quote":
+                "We do not build the future of education only by building schools; we build it by building a community that takes responsibility for the future.",
+
+            "participation.kicker": "Your way to contribute",
+            "participation.title": "You choose how you want to take part.",
+
+            "participation.project.title": "Support a project",
+            "participation.project.text":
+                "If a specific project or region matters to you, you can contribute directly to that project.",
+            "participation.project.button": "View projects",
+
+            "participation.community.title": "Join the community",
+            "participation.community.text":
+                "If you prefer to be part of a collective movement, you can contribute to the community pool.",
+            "participation.community.button": "Join & contribute",
+
+            "transparency.kicker": "Transparency",
+            "transparency.title":
+                "Transparency should not be a promise. It should be visible.",
+            "transparency.description":
+                "ClassChain WebGIS lets you explore projects on the map, discover their locations and follow project information.",
+            "transparency.button": "Explore project map",
+            "transparency.map": "Projects on the map",
+
+            "dashboard.kicker": "Your contribution is not the end",
+            "dashboard.title":
+                "Stay connected after you contribute.",
+            "dashboard.description":
+                "Your personal dashboard helps you follow your contributions and the projects you support.",
+            "dashboard.button": "Open dashboard",
+            "dashboard.row1": "Your contribution",
+            "dashboard.row2": "Selected project",
+            "dashboard.row3": "Donor community",
+            "dashboard.status": "Recorded",
+            "dashboard.follow": "Connected",
+
+            "final.title":
+                "If the future of children matters to you, there is a place for you in this community.",
+            "final.description":
+                "You do not have to do something huge alone. Just add your part to a collective movement.",
+            "final.button": "How can I help?",
+
+            "footer.description":
+                "A digital donor community building the future, one classroom at a time.",
+            "footer.platform": "ClassChain",
+            "footer.tools": "Tools",
+            "footer.more": "More",
+            "footer.whitepaper": "White Paper",
+            "footer.admin": "Admin Panel",
+            "footer.copy": "© ClassChain — All rights reserved.",
+            "footer.motto":
+                "Together, we build the future — one classroom at a time."
+        },
+
+
+        ar: {
+            dir: "rtl",
+            langName: "AR",
+
+            "nav.why": "لماذا كلاس تشين؟",
+            "nav.how": "كيف يعمل؟",
+            "nav.community": "مجتمع المتبرعين",
+            "nav.transparency": "الشفافية",
+            "nav.webgis": "خريطة المشاريع",
+            "nav.dashboard": "لوحتي",
+            "nav.cta": "ساهم الآن",
+
+            "hero.eyebrow": "مجتمع رقمي للمتبرعين",
+            "hero.title": "معًا نبني المستقبل، فصلًا دراسيًا بعد فصل.",
+            "hero.description":
+                "تربط كلاس تشين بين المتبرعين والأفراد ومشاريع بناء المدارس، بحيث يستطيع الجميع المساهمة وفق قدراتهم.",
+            "hero.primary": "أريد المساعدة",
+            "hero.secondary": "كيف يعمل؟",
+            "hero.note": "مساهمتك تصبح جزءًا من مجتمع، وليست مجرد عملية دفع.",
+
+            "why.kicker": "لماذا كلاس تشين؟",
+            "why.title": "يمكن أن يكون العطاء أبسط وأكثر وضوحًا وارتباطًا بعالم اليوم.",
+            "why.description":
+                "تعمل كلاس تشين على جعل المشاركة في بناء المدارس أكثر سهولة ووضوحًا للجيل الجديد.",
+
+            "why.card1.title": "شاهد",
+            "why.card1.text":
+                "استكشف المشاريع ومواقعها واعرف أين تتجه مساهمتك.",
+
+            "why.card2.title": "ساهم",
+            "why.card2.text":
+                "لا تحتاج إلى رأس مال كبير. كل مساهمة تصبح جزءًا من حركة جماعية.",
+
+            "why.card3.title": "ابقَ على اتصال",
+            "why.card3.text":
+                "المشاركة لا تنتهي بالدفع؛ بل تصبح جزءًا من مجتمع يتابع المشاريع.",
+
+            "how.kicker": "عملية بسيطة",
+            "how.title": "ثلاث خطوات لتصبح جزءًا من بناء المستقبل.",
+            "how.description":
+                "التكنولوجيا لا ينبغي أن تعقد العطاء، بل أن تجعل المشاركة أكثر وضوحًا.",
+
+            "how.step1.title": "اختر",
+            "how.step1.text":
+                "اختر مشروعًا يهمك أو انضم إلى مجتمع المتبرعين.",
+
+            "how.step2.title": "ساهم",
+            "how.step2.text":
+                "ساهم بالمقدار الذي تستطيع. المهم هو أن تكون جزءًا من الحركة.",
+
+            "how.step3.title": "ابقَ متابعًا",
+            "how.step3.text":
+                "تابع مسار المشروع وكن جزءًا من تشكيل مستقبل المجتمع.",
+
+            "community.kicker": "أكثر من مجرد موقع",
+            "community.title":
+                "نحن لا نجمع التبرعات فقط؛ نحن نبني مجتمعًا.",
+            "community.description":
+                "مجتمع المتبرعين لبناء المدارس قيمة اجتماعية مهمة. وتسعى كلاس تشين إلى ربط هذه الثقافة بالجيل الجديد وبالإيرانيين حول العالم من خلال الأدوات الرقمية.",
+
+            "community.item1":
+                "متاح للمتبرعين داخل وخارج البلاد.",
+            "community.item2":
+                "إعطاء المساهمات الصغيرة معنى إلى جانب المساهمات الكبيرة.",
+            "community.item3":
+                "الحفاظ على ارتباط المتبرعين بالمشاريع والمجتمع.",
+            "community.item4":
+                "جعل الشفافية جزءًا طبيعيًا من تجربة العطاء.",
+
+            "community.quote":
+                "لا نبني مستقبل التعليم ببناء المدارس فقط؛ بل نبنيه ببناء مجتمع يتحمل مسؤولية المستقبل.",
+
+            "participation.kicker": "طريقتك للمساهمة",
+            "participation.title": "أنت تختار كيف تريد أن تشارك.",
+
+            "participation.project.title": "دعم مشروع",
+            "participation.project.text":
+                "إذا كان مشروع أو منطقة معينة مهمة بالنسبة لك، يمكنك المساهمة مباشرة فيه.",
+            "participation.project.button": "مشاهدة المشاريع",
+
+            "participation.community.title": "انضم إلى المجتمع",
+            "participation.community.text":
+                "إذا كنت تفضل أن تكون جزءًا من حركة جماعية، يمكنك المساهمة في الصندوق العام.",
+            "participation.community.button": "انضم وساهم",
+
+            "transparency.kicker": "الشفافية",
+            "transparency.title":
+                "الشفافية ليست وعدًا؛ يجب أن تكون قابلة للرؤية.",
+            "transparency.description":
+                "تتيح لك WebGIS استكشاف المشاريع على الخريطة ومعرفة مواقعها ومتابعة معلوماتها.",
+            "transparency.button": "استكشاف خريطة المشاريع",
+            "transparency.map": "المشاريع على الخريطة",
+
+            "dashboard.kicker": "مساهمتك ليست النهاية",
+            "dashboard.title":
+                "ابقَ متصلًا بعد مساهمتك.",
+            "dashboard.description":
+                "تساعدك لوحتك الشخصية على متابعة مساهماتك والمشاريع التي تدعمها.",
+            "dashboard.button": "فتح لوحة التحكم",
+            "dashboard.row1": "مساهمتك",
+            "dashboard.row2": "المشروع المختار",
+            "dashboard.row3": "مجتمع المتبرعين",
+            "dashboard.status": "مسجلة",
+            "dashboard.follow": "متصل",
+
+            "final.title":
+                "إذا كان مستقبل الأطفال مهمًا بالنسبة لك، فمكانك موجود في هذا المجتمع.",
+            "final.description":
+                "لا تحتاج إلى القيام بشيء ضخم بمفردك؛ أضف مساهمتك إلى حركة جماعية.",
+            "final.button": "كيف يمكنني المساعدة؟",
+
+            "footer.description":
+                "مجتمع رقمي للمتبرعين لبناء المستقبل، فصلًا بعد فصل.",
+            "footer.platform": "كلاس تشين",
+            "footer.tools": "الأدوات",
+            "footer.more": "المزيد",
+            "footer.whitepaper": "الورقة البيضاء",
+            "footer.admin": "لوحة الإدارة",
+            "footer.copy": "© ClassChain — جميع الحقوق محفوظة.",
+            "footer.motto": "معًا نبني المستقبل، فصلًا دراسيًا بعد فصل."
+        }
+    };
+
+
+    /* =========================================================
+       LANGUAGE ENGINE
+       ========================================================= */
+
+    const languageButton = document.getElementById("languageButton");
+    const languageMenu = document.getElementById("languageMenu");
+
+    function applyLanguage(lang) {
+
+        if (!translations[lang]) {
+            lang = "fa";
+        }
+
+        const dictionary = translations[lang];
+
+        document.documentElement.lang = lang;
+        document.documentElement.dir = dictionary.dir;
+
+        document.querySelectorAll("[data-i18n]").forEach(element => {
+
+            const key = element.dataset.i18n;
+
+            if (dictionary[key] !== undefined) {
+                element.textContent = dictionary[key];
+            }
+
+        });
+
+        languageButton.textContent = dictionary.langName;
+
+        localStorage.setItem("classchain-language", lang);
+
+        languageMenu.classList.remove("open");
+        languageButton.setAttribute("aria-expanded", "false");
+
+        document.title =
+            lang === "fa"
+                ? "ClassChain | جامعه خیرین دیجیتال"
+                : lang === "en"
+                    ? "ClassChain | Digital Donor Community"
+                    : "ClassChain | مجتمع المتبرعين الرقمي";
+
+        /*
+         * اگر بعداً فایل‌های زبان جداگانه ایجاد شد،
+         * فقط همین تابع کافی است که به آن‌ها متصل شود.
+         */
+    }
+
+
+    document.querySelectorAll("[data-lang]").forEach(button => {
+
+        button.addEventListener("click", () => {
+            applyLanguage(button.dataset.lang);
+        });
+
+    });
+
+
+    languageButton.addEventListener("click", event => {
+
+        event.stopPropagation();
+
+        const isOpen =
+            languageMenu.classList.toggle("open");
+
+        languageButton.setAttribute(
+            "aria-expanded",
+            String(isOpen)
+        );
+
+    });
+
+
+    document.addEventListener("click", () => {
+        languageMenu.classList.remove("open");
+        languageButton.setAttribute("aria-expanded", "false");
+    });
+
+
+    /* =========================================================
+       MOBILE MENU
+       ========================================================= */
+
+    const mobileMenuButton =
+        document.getElementById("mobileMenuButton");
+
+    const mobileMenu =
+        document.getElementById("mobileMenu");
+
+    mobileMenuButton.addEventListener("click", () => {
+
+        mobileMenu.classList.toggle("open");
+
+    });
+
+
+    document.querySelectorAll(".mobile-menu a").forEach(link => {
+
+        link.addEventListener("click", () => {
+            mobileMenu.classList.remove("open");
+        });
+
+    });
+
+
+    /* =========================================================
+       INITIAL LANGUAGE
+       ========================================================= */
+
+    const savedLanguage =
+        localStorage.getItem("classchain-language");
+
+    const browserLanguage =
+        navigator.language
+            ? navigator.language.toLowerCase()
+            : "fa";
+
+    let initialLanguage = savedLanguage;
+
+    if (!initialLanguage) {
+
+        if (browserLanguage.startsWith("en")) {
+            initialLanguage = "en";
+        }
+        else if (browserLanguage.startsWith("ar")) {
+            initialLanguage = "ar";
+        }
+        else {
+            initialLanguage = "fa";
+        }
+
+    }
+
+    applyLanguage(initialLanguage);
+
+</script>
+
 </body>
 </html>
