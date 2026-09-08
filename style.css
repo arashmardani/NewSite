@@ -284,22 +284,22 @@ img {
     min-height: 70vh;
     display: flex;
     align-items: center;
+    background: var(--cream);
 }
 
-.hero::before {
-    content: "";
+.hero-network {
     position: absolute;
-    width: 420px;
-    height: 420px;
-    border-radius: 50%;
-    background: var(--gold-light);
-    opacity: .22;
-    top: -180px;
-    inset-inline-end: -160px;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
 }
 
 .hero-grid {
     width: 100%;
+    position: relative;
+    z-index: 2;
 }
 
 .hero-content {

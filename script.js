@@ -416,11 +416,6 @@ function applyLanguage(lang) {
             : lang === "en"
                 ? "ClassChain | Digital Donor Community"
                 : "ClassChain | مجتمع المتبرعين الرقمي";
-
-    /*
-     * اگر بعداً فایل‌های زبان جداگانه ایجاد شد،
-     * فقط همین تابع کافی است که به آن‌ها متصل شود.
-     */
 }
 
 
@@ -509,3 +504,147 @@ if (!initialLanguage) {
 }
 
 applyLanguage(initialLanguage);
+
+
+/* =========================================================
+   HERO NETWORK BACKGROUND (light theme)
+   Floating points + connections
+   ========================================================= */
+
+(function initHeroNetwork() {
+    const canvas = document.getElementById("heroNetwork");
+    if (!canvas) return;
+
+    const ctx = canvas.getContext("2d");
+    let width = 0;
+    let height = 0;
+    let particles = [];
+    let animationId = null;
+    let dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+    const config = {
+        particleCount: 55,
+        connectionDistance: 140,
+        particleSpeed: 0.35,
+        particleRadius: 2.2,
+        lineWidth: 0.9,
+        // Colors adapted to cream / green / gold palette
+        particleColor: "rgba(40, 115, 91, 0.55)",
+        particleCore: "rgba(200, 155, 60, 0.7)",
+        lineColor: "rgba(23, 72, 58, 0.12)",
+        glowColor: "rgba(200, 155, 60, 0.15)"
+    };
+
+    function resize() {
+        const rect = canvas.parentElement.getBoundingClientRect();
+        width = rect.width;
+        height = rect.height;
+        canvas.width = Math.floor(width * dpr);
+        canvas.height = Math.floor(height * dpr);
+        canvas.style.width = width + "px";
+        canvas.style.height = height + "px";
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+        const count = Math.max(35, Math.floor((width * height) / 18000));
+        config.particleCount = Math.min(count, 80);
+        createParticles();
+    }
+
+    function createParticles() {
+        particles = [];
+        for (let i = 0; i < config.particleCount; i++) {
+            particles.push({
+                x: Math.random() * width,
+                y: Math.random() * height,
+                vx: (Math.random() - 0.5) * config.particleSpeed,
+                vy: (Math.random() - 0.5) * config.particleSpeed,
+                r: config.particleRadius * (0.7 + Math.random() * 0.8),
+                isAccent: Math.random() < 0.18
+            });
+        }
+    }
+
+    function draw() {
+        ctx.clearRect(0, 0, width, height);
+
+        const gradient = ctx.createRadialGradient(
+            width * 0.85, height * 0.15, 0,
+            width * 0.85, height * 0.15, width * 0.45
+        );
+        gradient.addColorStop(0, "rgba(234, 217, 168, 0.18)");
+        gradient.addColorStop(1, "rgba(234, 217, 168, 0)");
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, width, height);
+
+        for (let i = 0; i < particles.length; i++) {
+            for (let j = i + 1; j < particles.length; j++) {
+                const a = particles[i];
+                const b = particles[j];
+                const dx = a.x - b.x;
+                const dy = a.y - b.y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+
+                if (dist < config.connectionDistance) {
+                    const alpha = 1 - dist / config.connectionDistance;
+                    ctx.beginPath();
+                    ctx.moveTo(a.x, a.y);
+                    ctx.lineTo(b.x, b.y);
+                    ctx.strokeStyle = `rgba(23, 72, 58, ${0.08 + alpha * 0.14})`;
+                    ctx.lineWidth = config.lineWidth;
+                    ctx.stroke();
+                }
+            }
+        }
+
+        for (const p of particles) {
+            if (p.isAccent) {
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.r * 3.5, 0, Math.PI * 2);
+                ctx.fillStyle = config.glowColor;
+                ctx.fill();
+            }
+
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+            ctx.fillStyle = p.isAccent ? config.particleCore : config.particleColor;
+            ctx.fill();
+        }
+    }
+
+    function update() {
+        for (const p of particles) {
+            p.x += p.vx;
+            p.y += p.vy;
+
+            if (p.x < 0 || p.x > width) p.vx *= -1;
+            if (p.y < 0 || p.y > height) p.vy *= -1;
+
+            p.x = Math.max(0, Math.min(width, p.x));
+            p.y = Math.max(0, Math.min(height, p.y));
+        }
+    }
+
+    function loop() {
+        update();
+        draw();
+        animationId = requestAnimationFrame(loop);
+    }
+
+    function start() {
+        resize();
+        if (animationId) cancelAnimationFrame(animationId);
+        loop();
+    }
+
+    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (prefersReduced.matches) {
+        resize();
+        draw();
+    } else {
+        start();
+        window.addEventListener("resize", () => {
+            clearTimeout(window.__heroNetResize);
+            window.__heroNetResize = setTimeout(start, 120);
+        });
+    }
+})();
