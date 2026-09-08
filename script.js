@@ -1,73 +1,270 @@
-/* CLASSCHAIN */
-const translations={
-fa:{dir:"rtl",langName:"FA",
-"nav.why":"چرا کلاس‌چِین؟","nav.how":"چطور کار می‌کند؟","nav.community":"جامعه خیرین","nav.participation":"راه مشارکت","nav.transparency":"شفافیت","nav.webgis":"نقشه پروژه‌ها","nav.cta":"مشارکت",
-"hero.eyebrow":"جامعه خیرین دیجیتال","hero.title":"با هم، آینده را می‌سازیم؛ کلاس به کلاس.","hero.description":"کلاس‌چِین پلی است میان خیرین، مردم و پروژه‌های مدرسه‌سازی؛ جایی که هرکس می‌تواند به اندازه توان خود در ساختن محیطی بهتر برای آموزش کودکان مشارکت کند.","hero.primary":"به خزانه عمومی کمک می‌کنم","hero.project":"انتخاب پروژه و مشارکت","hero.secondary":"چطور کار می‌کند؟","hero.note":"مشارکت شما بخشی از یک جامعه است؛ نه فقط یک پرداخت.",
-"why.kicker":"چرا کلاس‌چِین؟","why.title":"خیر بودن می‌تواند ساده‌تر، شفاف‌تر و امروزی‌تر باشد.","why.description":"کلاس‌چِین تلاش می‌کند تجربه مشارکت در مدرسه‌سازی را برای نسل امروز قابل دسترس و قابل مشاهده کند.",
-"why.card1.title":"می‌بینید","why.card1.text":"می‌توانید پروژه‌ها و محل اجرای آن‌ها را ببینید و بدانید مشارکت شما در چه مسیری قرار گرفته است…","why.card2.title":"مشارکت می‌کنید","why.card2.text":"لازم نیست سرمایه بزرگی داشته باشید. هر مشارکت، بخشی از حرکت جمعی برای ساختن آینده است…","why.card3.title":"همراه می‌مانید","why.card3.text":"مشارکت با پرداخت تمام نمی‌شود؛ شما بخشی از جامعه‌ای می‌شوید که مسیر پروژه‌ها را دنبال می‌کند…",
-"why.more":"بیشتر بدانید","why.less":"بستن",
-"why.card1.more":"وضعیت پروژه‌ها روی نقشه WebGIS و جریان مالی روی زنجیره بلاک‌چین قابل مشاهده است؛ بدون وابستگی به گزارش‌های مبهم.","why.card2.more":"مشارکت با واریز مستقیم USDT انجام می‌شود؛ بدون توکن بومی و بدون نیاز به خرید ارز اختصاصی. مبلغ شما مستقیم به صندوق پروژه یا خزانه عمومی می‌رود.","why.card3.more":"پس از مشارکت، گواهی دیجیتال (NFT) به‌عنوان سند مشارکت و حق رأی صادر می‌شود تا در تصمیم‌گیری‌های جامعه (DAO) همراه بمانید.",
-"how.kicker":"فرآیند ساده است","how.title":"سه قدم برای اینکه بخشی از ساختن باشید.","how.description":"قرار نیست فناوری مسیر خیرخواهی را پیچیده کند؛ فناوری باید کمک کند مسیر مشارکت روشن‌تر باشد.",
-"how.step1.title":"انتخاب کنید","how.step1.text":"دو مسیر دارید: حمایت مستقیم از یک پروژه مشخص، یا پیوستن به <a href=\"frontend/donate.html\" class=\"inline-link\">خزانه عمومی جامعه</a>…","how.step1.more":"مسیر اول: انتخاب یک پروژه مشخص مدرسه‌سازی — روی نقشه <a href=\"WebGIS.html\" class=\"inline-link\">WebGIS</a> پروژه‌ها را ببینید، موقعیت و نیاز هر کدام را بشناسید و مستقیماً همان پروژه را حمایت کنید. مسیر دوم: پیوستن به <a href=\"frontend/donate.html\" class=\"inline-link\">خزانه عمومی جامعه</a> — اگر ترجیح می‌دهید تصمیم تخصیص را به جمع بسپارید، مشارکت شما وارد صندوق مشترک می‌شود و جامعه دارندگان گواهی، از طریق رأی، پروژه‌های بعدی را انتخاب می‌کند. در هر دو حالت، انتخاب با شماست.",
-"how.step2.title":"مشارکت کنید","how.step2.text":"مشارکت با واریز مستقیم USDT روی شبکه‌های پشتیبانی‌شده انجام می‌شود…","how.step2.more":"مشارکت با واریز مستقیم استیبل‌کوین (USDT) انجام می‌شود؛ نیازی به خرید توکن بومی نیست. پلتفرم چندزنجیره‌ای است و هم‌اکنون روی شبکه ترون (TRON) و پالیگان (Polygon) راه‌اندازی شده است؛ در آینده شبکه‌های دیگر نیز اضافه خواهند شد تا با کیف‌پول و زنجیره دلخواه خود راحت‌تر همراه شوید. می‌توانید از کیف‌پول‌های سازگار (مانند TronLink، MetaMask و اتصال WalletConnect) استفاده کنید. مبلغ، کوچک یا بزرگ، مستقیم به کیف‌پول اختصاصی همان پروژه یا به خزانه عمومی واریز می‌شود و روی زنجیره قابل ردیابی است.",
-"how.step3.title":"همراه بمانید","how.step3.text":"با گواهی دیجیتال (NFT) عضو جامعه تصمیم‌گیر می‌شوید و در مسیر پروژه نقش دارید…","how.step3.more":"پس از مشارکت، گواهی دیجیتال (NFT) به‌عنوان سند مشارکت و حق رأی برای شما صادر می‌شود و شما عضو جامعه تصمیم‌گیر (DAO) می‌شوید. این جامعه فقط تماشاگر نیست: در نام‌گذاری مدرسه، انتخاب و اولویت محل پروژه‌ها، مشاهده صورت‌وضعیت‌ها، تصاویر و گزارش‌های حین اجرا، و گزارش‌های تیم مجری و نظارت نقش دارد و رأی و نظر شما اثر مستقیم می‌گذارد. مشارکت با یک تراکنش تمام نمی‌شود؛ شما بخشی از مسیر ساخت و شفافیت آن می‌مانید.",
-"community.kicker":"فراتر از یک سایت","community.title":"ما نمی‌خواهیم فقط کمک جمع کنیم؛ می‌خواهیم یک جامعه بسازیم.","community.description":"جامعه خیرین مدرسه‌ساز سرمایه ارزشمندی است. کلاس‌چِین می‌خواهد همین فرهنگ ارزشمند را با ابزارهای دیجیتال به نسل جدید و ایرانیان سراسر جهان نزدیک‌تر کند.",
-"community.item1":"برای خیرین داخل و خارج از کشور قابل دسترس باشد.","community.item2":"مشارکت‌های کوچک را در کنار مشارکت‌های بزرگ معنا کند.","community.item3":"ارتباط خیرین با پروژه‌ها و جامعه را حفظ کند.","community.item4":"شفافیت را به بخشی طبیعی از تجربه خیرخواهی تبدیل کند.","community.quote":"آینده آموزش را فقط با ساختن ساختمان نمی‌سازیم؛ با ساختن جامعه‌ای که برای آینده مسئولیت می‌پذیرد، آن را می‌سازیم.",
-"participation.kicker":"راه مشارکت شما","participation.title":"شما انتخاب می‌کنید چگونه همراه شوید.","participation.project.title":"حمایت از یک پروژه","participation.project.text":"اگر پروژه یا منطقه‌ای برای شما اهمیت ویژه دارد، می‌توانید مستقیماً در همان پروژه مشارکت کنید.","participation.project.button":"مشاهده پروژه‌ها","participation.community.title":"پیوستن به جامعه","participation.community.text":"اگر ترجیح می‌دهید بخشی از یک حرکت جمعی باشید، می‌توانید در صندوق عمومی جامعه مشارکت کنید.","participation.community.button":"عضویت و مشارکت",
-"transparency.kicker":"شفافیت","transparency.title":"شفافیت روی زنجیره است؛ نه در وعده و گزارش کاغذی.","transparency.description":"قلب کلاس‌چِین قراردادهای هوشمند است: وجوه در حساب شخصی افراد نگهداری نمی‌شود. هر واریز و هر برداشت روی زنجیره (On-chain) ثبت و قابل مشاهده است تا جریان مالی پروژه از لحظه مشارکت تا هزینه ساخت شفاف بماند.","transparency.item1":"پایش کامل تراکنش‌ها — واریز و برداشت — به‌صورت On-chain و قابل ردیابی برای همه","transparency.item2":"مدیریت وجوه با قرارداد هوشمند؛ بدون حساب شخصی و بدون واسطه مبهم","transparency.item3":"دسترسی به صورت‌وضعیت‌ها، مستندات مالی و تصاویر پیشرفت پروژه","transparency.item4":"نمایش موقعیت و وضعیت پروژه‌ها روی نقشه WebGIS در کنار داده مالی","transparency.button":"مشاهده نقشه و وضعیت پروژه‌ها","transparency.map":"پروژه‌ها روی نقشه",
-"dashboard.kicker":"مشارکت شما پایان داستان نیست","dashboard.title":"بعد از مشارکت، می‌توانید همراه مسیر بمانید.","dashboard.description":"می‌توانید مسیر پروژه‌ها، گزارش‌ها و اثر مشارکت خود را دنبال کنید و با جامعه همراه بمانید.","dashboard.button":"مشاهده پروژه‌ها","dashboard.row1":"مشارکت شما","dashboard.row2":"پروژه انتخابی","dashboard.row3":"جامعه خیرین","dashboard.status":"ثبت شده","dashboard.follow":"همراه",
-"final.title":"اگر آینده کودکان برایتان مهم است، جای شما در این جامعه خالی است.","final.description":"لازم نیست کار بزرگی را به تنهایی انجام دهید. کافی است سهم خودتان را به یک حرکت جمعی اضافه کنید.","final.button":"من چطور می‌توانم کمک کنم؟",
-"footer.description":"جامعه خیرین دیجیتال برای ساختن آینده، کلاس به کلاس.","footer.platform":"کلاس‌چِین","footer.tools":"ابزارها","footer.more":"اطلاعات بیشتر","footer.whitepaper":"White Paper","footer.adminCol":"پنل مدیریت","footer.signerDashboard":"Dashboard","footer.admin":"Admin","footer.copy":"© ClassChain — همه حقوق محفوظ است.","footer.motto":"با هم، آینده را می‌سازیم؛ کلاس به کلاس."
-},
-en:{dir:"ltr",langName:"EN",
-"nav.why":"Why ClassChain?","nav.how":"How it works","nav.community":"Donor Community","nav.participation":"Ways to contribute","nav.transparency":"Transparency","nav.webgis":"Project Map","nav.cta":"Contribute",
-"hero.eyebrow":"A Digital Donor Community","hero.title":"Together, we build the future — one classroom at a time.","hero.description":"ClassChain connects donors, people and school-building projects, making it possible for everyone to contribute according to their ability.","hero.primary":"Contribute to the common fund","hero.project":"Choose a project & contribute","hero.secondary":"How does it work?","hero.note":"Your contribution becomes part of a community — not just a payment.",
-"why.kicker":"Why ClassChain?","why.title":"Giving can be simpler, clearer and more connected to today's world.","why.description":"ClassChain makes participation in school-building more accessible and visible for today's generation.",
-"why.card1.title":"See","why.card1.text":"Explore projects and their locations and understand where your contribution is going…","why.card2.title":"Contribute","why.card2.text":"You do not need a large amount of capital. Every contribution becomes part of a collective movement…","why.card3.title":"Stay involved","why.card3.text":"Participation does not end with a payment. You become part of a community that follows projects…",
-"why.more":"Learn more","why.less":"Show less",
-"why.card1.more":"Project status is visible on the WebGIS map and financial flows are recorded on-chain — no opaque reports.","why.card2.more":"You contribute with direct USDT transfers — no native token to buy. Funds go straight to a project wallet or the common pool.","why.card3.more":"After contributing, a digital certificate (NFT) is issued as proof of participation and voting rights in the community (DAO).",
-"how.kicker":"A simple process","how.title":"Three steps to become part of building the future.","how.description":"Technology should not complicate generosity. It should make participation clearer.",
-"how.step1.title":"Choose","how.step1.text":"Two paths: support a specific project directly, or join the <a href=\"frontend/donate.html\" class=\"inline-link\">common community fund</a>…","how.step1.more":"Path one: pick a specific school project — explore projects on the <a href=\"WebGIS.html\" class=\"inline-link\">WebGIS</a> map, see location and needs, and support that project directly. Path two: join the <a href=\"frontend/donate.html\" class=\"inline-link\">common community fund</a> — if you prefer collective allocation, your contribution goes into the shared pool and certificate holders vote on which projects are funded next. Either way, the choice is yours.",
-"how.step2.title":"Contribute","how.step2.text":"Contribute with a direct USDT transfer on supported networks…","how.step2.more":"You contribute with a direct stablecoin (USDT) transfer — no native token to buy. The platform is multi-chain and currently live on TRON and Polygon; more networks will be added so you can use the wallet and chain you prefer (e.g. TronLink, MetaMask, WalletConnect). Small or large amounts go straight to that project's dedicated wallet or the common pool and are trackable on-chain.",
-"how.step3.title":"Stay connected","how.step3.text":"With a digital certificate (NFT) you join the decision-making community and stay involved…","how.step3.more":"After you contribute, a digital certificate (NFT) is issued as proof of participation and voting rights, and you join the decision-making community (DAO). The community is not a spectator: it takes part in naming the school, prioritizing project locations, viewing invoices, construction photos and progress reports, and contractor and supervision reports — your vote has direct impact. Participation does not end with a transaction; you stay part of the build and its transparency.",
-"community.kicker":"More than a website","community.title":"We are not only collecting donations. We are building a community.","community.description":"The school-building donor community is a valuable social asset. ClassChain aims to connect this culture with younger generations and Iranians around the world through digital tools.",
-"community.item1":"Accessible to donors inside and outside the country.","community.item2":"Giving small contributions meaning alongside larger ones.","community.item3":"Keeping donors connected to projects and the wider community.","community.item4":"Making transparency a natural part of giving.","community.quote":"We do not build the future of education only by building schools; we build it by building a community that takes responsibility for the future.",
-"participation.kicker":"Your way to contribute","participation.title":"You choose how you want to take part.","participation.project.title":"Support a project","participation.project.text":"If a specific project or region matters to you, you can contribute directly to that project.","participation.project.button":"View projects","participation.community.title":"Join the community","participation.community.text":"If you prefer to be part of a collective movement, you can contribute to the community pool.","participation.community.button":"Join & contribute",
-"transparency.kicker":"Transparency","transparency.title":"Transparency lives on-chain — not in paper promises.","transparency.description":"ClassChain is built on smart contracts: funds are not held in personal accounts. Every deposit and every withdrawal is recorded on-chain so the project's money flow stays visible from contribution to construction spend.","transparency.item1":"Full monitoring of transactions — deposits and withdrawals — on-chain and verifiable by anyone","transparency.item2":"Funds managed by smart contracts; no personal wallets and no opaque middlemen","transparency.item3":"Access to invoices, financial documents and construction progress photos","transparency.item4":"Project locations and status on the WebGIS map alongside financial data","transparency.button":"Explore map & project status","transparency.map":"Projects on the map",
-"dashboard.kicker":"Your contribution is not the end","dashboard.title":"Stay connected after you contribute.","dashboard.description":"Follow projects, reports and the impact of your contribution with the community.","dashboard.button":"Explore projects","dashboard.row1":"Your contribution","dashboard.row2":"Selected project","dashboard.row3":"Donor community","dashboard.status":"Recorded","dashboard.follow":"Connected",
-"final.title":"If the future of children matters to you, there is a place for you in this community.","final.description":"You do not have to do something huge alone. Just add your part to a collective movement.","final.button":"How can I help?",
-"footer.description":"A digital donor community building the future, one classroom at a time.","footer.platform":"ClassChain","footer.tools":"Tools","footer.more":"More","footer.whitepaper":"White Paper","footer.adminCol":"Admin Panel","footer.signerDashboard":"Dashboard","footer.admin":"Admin","footer.copy":"© ClassChain — All rights reserved.","footer.motto":"Together, we build the future — one classroom at a time."
-},
-ar:{dir:"rtl",langName:"AR",
-"nav.why":"لماذا كلاس تشين؟","nav.how":"كيف يعمل؟","nav.community":"مجتمع المتبرعين","nav.participation":"طرق المساهمة","nav.transparency":"الشفافية","nav.webgis":"خريطة المشاريع","nav.cta":"ساهم الآن",
-"hero.eyebrow":"مجتمع رقمي للمتبرعين","hero.title":"معًا نبني المستقبل، فصلًا دراسيًا بعد فصل.","hero.description":"تربط كلاس تشين بين المتبرعين والأفراد ومشاريع بناء المدارس، بحيث يستطيع الجميع المساهمة وفق قدراتهم.","hero.primary":"أساهم في الصندوق العام","hero.project":"اختر مشروعًا وساهم","hero.secondary":"كيف يعمل؟","hero.note":"مساهمتك تصبح جزءًا من مجتمع، وليست مجرد عملية دفع.",
-"why.kicker":"لماذا كلاس تشين؟","why.title":"يمكن أن يكون العطاء أبسط وأكثر وضوحًا وارتباطًا بعالم اليوم.","why.description":"تعمل كلاس تشين على جعل المشاركة في بناء المدارس أكثر سهولة ووضوحًا للجيل الجديد.",
-"why.card1.title":"شاهد","why.card1.text":"استكشف المشاريع ومواقعها واعرف أين تتجه مساهمتك…","why.card2.title":"ساهم","why.card2.text":"لا تحتاج إلى رأس مال كبير. كل مساهمة تصبح جزءًا من حركة جماعية…","why.card3.title":"ابقَ على اتصال","why.card3.text":"المشاركة لا تنتهي بالدفع؛ بل تصبح جزءًا من مجتمع يتابع المشاريع…",
-"why.more":"اعرف المزيد","why.less":"إغلاق",
-"why.card1.more":"حالة المشاريع ظاهرة على خريطة WebGIS وتتدفق الأموال على السلسلة بشكل شفاف.","why.card2.more":"تتم المشاركة بإيداع USDT مباشرة — دون توكن محلي. يذهب المبلغ إلى محفظة المشروع أو الصندوق العام.","why.card3.more":"بعد المشاركة تُصدر شهادة رقمية (NFT) كإثبات مشاركة وحق تصويت في مجتمع DAO.",
-"how.kicker":"عملية بسيطة","how.title":"ثلاث خطوات لتصبح جزءًا من بناء المستقبل.","how.description":"التكنولوجيا لا ينبغي أن تعقد العطاء، بل أن تجعل المشاركة أكثر وضوحًا.",
-"how.step1.title":"اختر","how.step1.text":"مساران: دعم مشروع محدد مباشرة، أو الانضمام إلى <a href=\"frontend/donate.html\" class=\"inline-link\">الصندوق العام</a>…","how.step1.more":"الأول: اختيار مشروع مدرسة محدد — استكشف المشاريع على خريطة <a href=\"WebGIS.html\" class=\"inline-link\">WebGIS</a> واعرف الموقع والاحتياج وادعم ذلك المشروع مباشرة. الثاني: الانضمام إلى <a href=\"frontend/donate.html\" class=\"inline-link\">الصندوق العام</a> — إذا فضّلت أن يقرر المجتمع التخصيص، تذهب مساهمتك إلى الصندوق المشترك ويصوّت حاملو الشهادات على المشاريع التالية. في الحالتين الاختيار لك.",
-"how.step2.title":"ساهم","how.step2.text":"المساهمة بإيداع USDT مباشرة على الشبكات المدعومة…","how.step2.more":"تتم المساهمة بإيداع عملة مستقرة (USDT) مباشرة دون الحاجة لشراء توكن محلي. المنصة متعددة السلاسل وتعمل حاليًا على TRON وPolygon، وستُضاف شبكات أخرى لاحقًا لتستخدم المحفظة والسلسلة المناسبة لك (مثل TronLink وMetaMask وWalletConnect). المبلغ، صغيرًا أو كبيرًا، يذهب إلى محفظة المشروع أو الصندوق العام ويمكن تتبعه على السلسلة.",
-"how.step3.title":"ابقَ متابعًا","how.step3.text":"بشهادة رقمية (NFT) تنضم إلى مجتمع القرار وتبقى مشاركًا في مسار المشروع…","how.step3.more":"بعد المساهمة تُصدر شهادة رقمية (NFT) كإثبات مشاركة وحق تصويت وتنضم إلى مجتمع القرار (DAO). المجتمع ليس متفرجًا: يشارك في تسمية المدرسة، وأولوية مواقع المشاريع، ومشاهدة الكشوفات والصور وتقارير التنفيذ وتقارير المقاول والإشراف — وصوتك له أثر مباشر. المشاركة لا تنتهي بمعاملة؛ تبقى جزءًا من مسار البناء وشفافيته.",
-"community.kicker":"أكثر من مجرد موقع","community.title":"نحن لا نجمع التبرعات فقط؛ نحن نبني مجتمعًا.","community.description":"مجتمع المتبرعين لبناء المدارس قيمة اجتماعية مهمة. وتسعى كلاس تشين إلى ربط هذه الثقافة بالجيل الجديد وبالإيرانيين حول العالم من خلال الأدوات الرقمية.",
-"community.item1":"متاح للمتبرعين داخل وخارج البلاد.","community.item2":"إعطاء المساهمات الصغيرة معنى إلى جانب المساهمات الكبيرة.","community.item3":"الحفاظ على ارتباط المتبرعين بالمشاريع والمجتمع.","community.item4":"جعل الشفافية جزءًا طبيعيًا من تجربة العطاء.","community.quote":"لا نبني مستقبل التعليم ببناء المدارس فقط؛ بل نبنيه ببناء مجتمع يتحمل مسؤولية المستقبل.",
-"participation.kicker":"طريقتك للمساهمة","participation.title":"أنت تختار كيف تريد أن تشارك.","participation.project.title":"دعم مشروع","participation.project.text":"إذا كان مشروع أو منطقة معينة مهمة بالنسبة لك، يمكنك المساهمة مباشرة فيه.","participation.project.button":"مشاهدة المشاريع","participation.community.title":"انضم إلى المجتمع","participation.community.text":"إذا كنت تفضل أن تكون جزءًا من حركة جماعية، يمكنك المساهمة في الصندوق العام.","participation.community.button":"انضم وساهم",
-"transparency.kicker":"الشفافية","transparency.title":"الشفافية على السلسلة — لا في الوعود الورقية.","transparency.description":"قلب كلاس تشين هو العقود الذكية: لا تُحفظ الأموال في حسابات شخصية. كل إيداع وكل سحب يُسجَّل على السلسلة (On-chain) ليبقى التدفق المالي شفافًا من المساهمة حتى صرف تكاليف البناء.","transparency.item1":"مراقبة كاملة للمعاملات — الإيداع والسحب — على السلسلة وقابلة للتحقق للجميع","transparency.item2":"إدارة الأموال بعقود ذكية؛ بلا محافظ شخصية وبلا وسطاء غامضين","transparency.item3":"الوصول إلى الكشوفات والمستندات المالية وصور تقدم المشروع","transparency.item4":"عرض مواقع المشاريع وحالتها على خريطة WebGIS إلى جانب البيانات المالية","transparency.button":"استكشاف الخريطة وحالة المشاريع","transparency.map":"المشاريع على الخريطة",
-"dashboard.kicker":"مساهمتك ليست النهاية","dashboard.title":"ابقَ متصلًا بعد مساهمتك.","dashboard.description":"تابع المشاريع والتقارير وأثر مساهمتك مع المجتمع.","dashboard.button":"استكشف المشاريع","dashboard.row1":"مساهمتك","dashboard.row2":"المشروع المختار","dashboard.row3":"مجتمع المتبرعين","dashboard.status":"مسجلة","dashboard.follow":"متصل",
-"final.title":"إذا كان مستقبل الأطفال مهمًا بالنسبة لك، فمكانك موجود في هذا المجتمع.","final.description":"لا تحتاج إلى القيام بشيء ضخم بمفردك؛ أضف مساهمتك إلى حركة جماعية.","final.button":"كيف يمكنني المساعدة؟",
-"footer.description":"مجتمع رقمي للمتبرعين لبناء المستقبل، فصلًا بعد فصل.","footer.platform":"كلاس تشين","footer.tools":"الأدوات","footer.more":"المزيد","footer.whitepaper":"الورقة البيضاء","footer.adminCol":"لوحة الإدارة","footer.signerDashboard":"Dashboard","footer.admin":"Admin","footer.copy":"© ClassChain — جميع الحقوق محفوظة.","footer.motto":"معًا نبني المستقبل، فصلًا دراسيًا بعد فصل."
+/* CLASSCHAIN — language loader + UI interactions */
+
+const SUPPORTED_LANGS = ["fa", "en", "ar"];
+const translations = {};
+let currentLang = "fa";
+
+const languageButton = document.getElementById("languageButton");
+const languageMenu = document.getElementById("languageMenu");
+
+async function loadTranslations() {
+    const results = await Promise.all(
+        SUPPORTED_LANGS.map(async (lang) => {
+            const res = await fetch(`i18n/${lang}.json`, { cache: "no-cache" });
+            if (!res.ok) throw new Error(`Failed to load i18n/${lang}.json`);
+            translations[lang] = await res.json();
+            return lang;
+        })
+    );
+    return results;
 }
-};
-const languageButton=document.getElementById("languageButton");
-const languageMenu=document.getElementById("languageMenu");
-function applyLanguage(lang){if(!translations[lang])lang="fa";const dictionary=translations[lang];document.documentElement.lang=lang;document.documentElement.dir=dictionary.dir;document.querySelectorAll("[data-i18n]").forEach(el=>{const k=el.dataset.i18n;if(dictionary[k]===undefined)return;if(el.hasAttribute("data-i18n-html"))el.innerHTML=dictionary[k];else el.textContent=dictionary[k];});languageButton.textContent=dictionary.langName;localStorage.setItem("classchain-language",lang);languageMenu.classList.remove("open");languageButton.setAttribute("aria-expanded","false");document.title=lang==="fa"?"ClassChain | جامعه خیرین دیجیتال":lang==="en"?"ClassChain | Digital Donor Community":"ClassChain | مجتمع المتبرعين الرقمي";}
-document.querySelectorAll("[data-lang]").forEach(b=>b.addEventListener("click",()=>applyLanguage(b.dataset.lang)));
-languageButton.addEventListener("click",e=>{e.stopPropagation();const o=languageMenu.classList.toggle("open");languageButton.setAttribute("aria-expanded",String(o));});
-document.addEventListener("click",()=>{languageMenu.classList.remove("open");languageButton.setAttribute("aria-expanded","false");});
-const mobileMenuButton=document.getElementById("mobileMenuButton");
-const mobileMenu=document.getElementById("mobileMenu");
-mobileMenuButton.addEventListener("click",()=>mobileMenu.classList.toggle("open"));
-document.querySelectorAll(".mobile-menu a").forEach(l=>l.addEventListener("click",()=>mobileMenu.classList.remove("open")));
-document.querySelectorAll(".card-more-toggle").forEach(button=>{button.addEventListener("click",()=>{const card=button.closest(".info-card, .process-item");if(!card)return;const panel=card.querySelector(".card-more, .process-more");if(!panel)return;const isOpen=card.classList.toggle("is-open");panel.hidden=!isOpen;button.setAttribute("aria-expanded",String(isOpen));const lang=localStorage.getItem("classchain-language")||"fa";const dict=translations[lang]||translations.fa;button.textContent=isOpen?(dict["why.less"]||"بستن"):(dict["why.more"]||"بیشتر بدانید");});});
-const savedLanguage=localStorage.getItem("classchain-language");const browserLanguage=navigator.language?navigator.language.toLowerCase():"fa";let initialLanguage=savedLanguage;if(!initialLanguage){if(browserLanguage.startsWith("en"))initialLanguage="en";else if(browserLanguage.startsWith("ar"))initialLanguage="ar";else initialLanguage="fa";}applyLanguage(initialLanguage);
-(function initHeroNetwork(){const canvas=document.getElementById("heroNetwork");if(!canvas)return;const ctx=canvas.getContext("2d");let width=0,height=0,particles=[],animationId=null;let dpr=Math.min(window.devicePixelRatio||1,2);const isMobile=()=>window.innerWidth<700;const config={particleCount:42,connectionDistance:125,particleSpeed:0.22,particleRadius:2.2,lineWidth:1.05,particleColor:"rgba(40, 115, 91, 0.42)",particleCore:"rgba(200, 155, 60, 0.55)",lineColor:"rgba(23, 72, 58, 0.1)",glowColor:"rgba(200, 155, 60, 0.12)"};function resize(){width=window.innerWidth;height=window.innerHeight;canvas.width=Math.floor(width*dpr);canvas.height=Math.floor(height*dpr);canvas.style.width=width+"px";canvas.style.height=height+"px";ctx.setTransform(dpr,0,0,dpr,0,0);if(isMobile()){config.particleCount=Math.max(18,Math.floor((width*height)/28000));config.connectionDistance=95;config.particleSpeed=0.14;config.particleRadius=1.7;config.lineWidth=0.85;}else{config.particleCount=Math.max(28,Math.min(50,Math.floor((width*height)/22000)));config.connectionDistance=125;config.particleSpeed=0.22;config.particleRadius=2.2;config.lineWidth=1.05;}createParticles();}function createParticles(){particles=[];for(let i=0;i<config.particleCount;i++){particles.push({x:Math.random()*width,y:Math.random()*height,vx:(Math.random()-0.5)*config.particleSpeed,vy:(Math.random()-0.5)*config.particleSpeed,r:config.particleRadius*(0.7+Math.random()*0.8),isAccent:Math.random()<0.18});}}function draw(){ctx.clearRect(0,0,width,height);const gradient=ctx.createRadialGradient(width*0.85,height*0.15,0,width*0.85,height*0.15,width*0.45);gradient.addColorStop(0,"rgba(234, 217, 168, 0.1)");gradient.addColorStop(1,"rgba(234, 217, 168, 0)");ctx.fillStyle=gradient;ctx.fillRect(0,0,width,height);for(let i=0;i<particles.length;i++){for(let j=i+1;j<particles.length;j++){const a=particles[i],b=particles[j];const dx=a.x-b.x,dy=a.y-b.y;const dist=Math.sqrt(dx*dx+dy*dy);if(dist<config.connectionDistance){const alpha=1-dist/config.connectionDistance;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.strokeStyle=`rgba(23, 72, 58, ${0.06+alpha*0.12})`;ctx.lineWidth=config.lineWidth;ctx.stroke();}}}for(const p of particles){if(p.isAccent){ctx.beginPath();ctx.arc(p.x,p.y,p.r*3.5,0,Math.PI*2);ctx.fillStyle=config.glowColor;ctx.fill();}ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle=p.isAccent?config.particleCore:config.particleColor;ctx.fill();}}function update(){for(const p of particles){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>width)p.vx*=-1;if(p.y<0||p.y>height)p.vy*=-1;p.x=Math.max(0,Math.min(width,p.x));p.y=Math.max(0,Math.min(height,p.y));}}function loop(){update();draw();animationId=requestAnimationFrame(loop);}function start(){resize();if(animationId)cancelAnimationFrame(animationId);loop();}const prefersReduced=window.matchMedia("(prefers-reduced-motion: reduce)");if(prefersReduced.matches){resize();draw();}else{start();window.addEventListener("resize",()=>{clearTimeout(window.__heroNetResize);window.__heroNetResize=setTimeout(start,120);});}})();
+
+function applyLanguage(lang) {
+    if (!translations[lang]) lang = "fa";
+    currentLang = lang;
+    const dictionary = translations[lang];
+
+    document.documentElement.lang = lang;
+    document.documentElement.dir = dictionary.dir || "rtl";
+
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+        const key = el.dataset.i18n;
+        if (dictionary[key] === undefined) return;
+        if (el.hasAttribute("data-i18n-html")) {
+            el.innerHTML = dictionary[key];
+        } else {
+            el.textContent = dictionary[key];
+        }
+    });
+
+    if (languageButton) languageButton.textContent = dictionary.langName || lang.toUpperCase();
+    localStorage.setItem("classchain-language", lang);
+
+    if (languageMenu) languageMenu.classList.remove("open");
+    if (languageButton) languageButton.setAttribute("aria-expanded", "false");
+
+    document.title =
+        lang === "fa"
+            ? "ClassChain | جامعه خیرین دیجیتال"
+            : lang === "en"
+              ? "ClassChain | Digital Donor Community"
+              : "ClassChain | مجتمع المتبرعين الرقمي";
+
+    document.querySelectorAll(".card-more-toggle").forEach((button) => {
+        const card = button.closest(".info-card, .process-item");
+        if (card && card.classList.contains("is-open")) {
+            button.textContent = dictionary["why.less"] || button.textContent;
+        } else {
+            button.textContent = dictionary["why.more"] || button.textContent;
+        }
+    });
+}
+
+function bindUi() {
+    document.querySelectorAll("[data-lang]").forEach((btn) => {
+        btn.addEventListener("click", () => applyLanguage(btn.dataset.lang));
+    });
+
+    if (languageButton && languageMenu) {
+        languageButton.addEventListener("click", (e) => {
+            e.stopPropagation();
+            const open = languageMenu.classList.toggle("open");
+            languageButton.setAttribute("aria-expanded", String(open));
+        });
+        document.addEventListener("click", () => {
+            languageMenu.classList.remove("open");
+            languageButton.setAttribute("aria-expanded", "false");
+        });
+    }
+
+    const mobileMenuButton = document.getElementById("mobileMenuButton");
+    const mobileMenu = document.getElementById("mobileMenu");
+    if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener("click", () => mobileMenu.classList.toggle("open"));
+        document.querySelectorAll(".mobile-menu a").forEach((link) => {
+            link.addEventListener("click", () => mobileMenu.classList.remove("open"));
+        });
+    }
+
+    document.querySelectorAll(".card-more-toggle").forEach((button) => {
+        button.addEventListener("click", () => {
+            const card = button.closest(".info-card, .process-item");
+            if (!card) return;
+            const panel = card.querySelector(".card-more, .process-more");
+            if (!panel) return;
+            const isOpen = card.classList.toggle("is-open");
+            panel.hidden = !isOpen;
+            button.setAttribute("aria-expanded", String(isOpen));
+            const dict = translations[currentLang] || translations.fa || {};
+            button.textContent = isOpen
+                ? dict["why.less"] || "بستن"
+                : dict["why.more"] || "بیشتر بدانید";
+        });
+    });
+}
+
+function resolveInitialLanguage() {
+    const saved = localStorage.getItem("classchain-language");
+    if (saved && SUPPORTED_LANGS.includes(saved)) return saved;
+    const browser = (navigator.language || "fa").toLowerCase();
+    if (browser.startsWith("en")) return "en";
+    if (browser.startsWith("ar")) return "ar";
+    return "fa";
+}
+
+function initHeroNetwork() {
+    const canvas = document.getElementById("heroNetwork");
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    let width = 0;
+    let height = 0;
+    let particles = [];
+    let animationId = null;
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const isMobile = () => window.innerWidth < 700;
+
+    const config = {
+        particleCount: 42,
+        connectionDistance: 125,
+        particleSpeed: 0.22,
+        particleRadius: 2.2,
+        lineWidth: 1.05,
+        particleColor: "rgba(40, 115, 91, 0.42)",
+        particleCore: "rgba(200, 155, 60, 0.55)",
+        lineColor: "rgba(23, 72, 58, 0.1)",
+        glowColor: "rgba(200, 155, 60, 0.12)",
+    };
+
+    function resize() {
+        width = window.innerWidth;
+        height = window.innerHeight;
+        canvas.width = Math.floor(width * dpr);
+        canvas.height = Math.floor(height * dpr);
+        canvas.style.width = width + "px";
+        canvas.style.height = height + "px";
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+        if (isMobile()) {
+            config.particleCount = Math.max(18, Math.floor((width * height) / 28000));
+            config.connectionDistance = 95;
+            config.particleSpeed = 0.14;
+            config.particleRadius = 1.7;
+            config.lineWidth = 0.85;
+        } else {
+            config.particleCount = Math.max(28, Math.min(50, Math.floor((width * height) / 22000)));
+            config.connectionDistance = 125;
+            config.particleSpeed = 0.22;
+            config.particleRadius = 2.2;
+            config.lineWidth = 1.05;
+        }
+        createParticles();
+    }
+
+    function createParticles() {
+        particles = [];
+        for (let i = 0; i < config.particleCount; i++) {
+            particles.push({
+                x: Math.random() * width,
+                y: Math.random() * height,
+                vx: (Math.random() - 0.5) * config.particleSpeed,
+                vy: (Math.random() - 0.5) * config.particleSpeed,
+                r: config.particleRadius * (0.7 + Math.random() * 0.8),
+                isAccent: Math.random() < 0.18,
+            });
+        }
+    }
+
+    function draw() {
+        ctx.clearRect(0, 0, width, height);
+        const gradient = ctx.createRadialGradient(
+            width * 0.85,
+            height * 0.15,
+            0,
+            width * 0.85,
+            height * 0.15,
+            width * 0.45
+        );
+        gradient.addColorStop(0, "rgba(234, 217, 168, 0.1)");
+        gradient.addColorStop(1, "rgba(234, 217, 168, 0)");
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, width, height);
+
+        for (let i = 0; i < particles.length; i++) {
+            for (let j = i + 1; j < particles.length; j++) {
+                const a = particles[i];
+                const b = particles[j];
+                const dx = a.x - b.x;
+                const dy = a.y - b.y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                if (dist < config.connectionDistance) {
+                    const alpha = 1 - dist / config.connectionDistance;
+                    ctx.beginPath();
+                    ctx.moveTo(a.x, a.y);
+                    ctx.lineTo(b.x, b.y);
+                    ctx.strokeStyle = `rgba(23, 72, 58, ${0.06 + alpha * 0.12})`;
+                    ctx.lineWidth = config.lineWidth;
+                    ctx.stroke();
+                }
+            }
+        }
+
+        for (const p of particles) {
+            if (p.isAccent) {
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.r * 3.5, 0, Math.PI * 2);
+                ctx.fillStyle = config.glowColor;
+                ctx.fill();
+            }
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+            ctx.fillStyle = p.isAccent ? config.particleCore : config.particleColor;
+            ctx.fill();
+        }
+    }
+
+    function update() {
+        for (const p of particles) {
+            p.x += p.vx;
+            p.y += p.vy;
+            if (p.x < 0 || p.x > width) p.vx *= -1;
+            if (p.y < 0 || p.y > height) p.vy *= -1;
+            p.x = Math.max(0, Math.min(width, p.x));
+            p.y = Math.max(0, Math.min(height, p.y));
+        }
+    }
+
+    function loop() {
+        update();
+        draw();
+        animationId = requestAnimationFrame(loop);
+    }
+
+    function start() {
+        resize();
+        if (animationId) cancelAnimationFrame(animationId);
+        loop();
+    }
+
+    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (prefersReduced.matches) {
+        resize();
+        draw();
+    } else {
+        start();
+        window.addEventListener("resize", () => {
+            clearTimeout(window.__heroNetResize);
+            window.__heroNetResize = setTimeout(start, 120);
+        });
+    }
+}
+
+(async function boot() {
+    bindUi();
+    initHeroNetwork();
+    try {
+        await loadTranslations();
+        applyLanguage(resolveInitialLanguage());
+    } catch (err) {
+        console.error("i18n load failed:", err);
+    }
+})();
