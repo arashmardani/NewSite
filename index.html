@@ -4,496 +4,487 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>کلاس‌چین | جامعه خیرین دیجیتال</title>
+    <title>ClassChain | جامعه خیرین دیجیتال</title>
 
-    <meta
-        name="description"
-        content="کلاس‌چین، جامعه‌ای دیجیتال برای مشارکت شفاف و ماندگار در ساخت آینده آموزش."
-    >
+    <meta name="description"
+          content="کلاس‌چین؛ جامعه خیرین دیجیتال برای ساختن آینده، کلاس به کلاس.">
 
-    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- =========================
-     Header
-========================= -->
-<header class="site-header" id="siteHeader">
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
 
-    <div class="container header-inner">
+<header class="site-header">
+    <div class="container">
 
-        <a href="index.html" class="brand" aria-label="کلاس‌چین">
-            <span class="brand-mark">
-                <span></span>
-                <span></span>
-                <span></span>
-            </span>
+        <nav class="nav">
 
-            <span class="brand-text">
-                <strong>کلاس‌چین</strong>
-                <small>جامعه خیرین دیجیتال</small>
-            </span>
-        </a>
-
-        <button
-            class="menu-toggle"
-            id="menuToggle"
-            type="button"
-            aria-label="باز کردن منو"
-            aria-expanded="false"
-        >
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-
-        <nav class="main-nav" id="mainNav" aria-label="منوی اصلی">
-
-            <a href="#about">کلاس‌چین چیست؟</a>
-            <a href="#how-it-works">چطور کار می‌کند؟</a>
-            <a href="#community">جامعه خیرین</a>
-            <a href="WebGIS.html">نقشه پروژه‌ها</a>
-
-            <div class="nav-language">
-                <button
-                    class="language-toggle"
-                    id="languageToggle"
-                    type="button"
-                    aria-expanded="false"
-                >
-                    <span id="currentLanguage">FA</span>
-                    <span class="language-arrow">⌄</span>
-                </button>
-
-                <div class="language-menu" id="languageMenu">
-                    <button type="button" data-lang="fa">فارسی</button>
-                    <button type="button" data-lang="en">English</button>
-                    <button type="button" data-lang="ar">العربية</button>
-                </div>
-            </div>
-
-            <a href="donate.html" class="nav-cta">
-                من هم می‌خواهم کمک کنم
+            <a href="#top" class="brand" aria-label="ClassChain">
+                <span class="brand-mark">ک</span>
+                <span class="brand-text">کلاس‌چین</span>
             </a>
 
+            <div class="desktop-nav">
+                <a href="#why" data-i18n="nav.why">چرا کلاس‌چین؟</a>
+                <a href="#how" data-i18n="nav.how">چطور کار می‌کند؟</a>
+                <a href="#community" data-i18n="nav.community">جامعه خیرین</a>
+                <a href="#transparency" data-i18n="nav.transparency">شفافیت</a>
+            </div>
+
+            <div class="nav-actions">
+
+                <div class="language-switcher">
+                    <button
+                        class="language-button"
+                        id="languageButton"
+                        aria-label="Language"
+                        aria-expanded="false">
+                        FA
+                    </button>
+
+                    <div class="language-menu" id="languageMenu">
+                        <button data-lang="fa">فارسی</button>
+                        <button data-lang="en">English</button>
+                        <button data-lang="ar">العربية</button>
+                    </div>
+                </div>
+
+                <a
+                    href="frontend/donate.html"
+                    class="btn btn-primary"
+                    data-i18n="nav.cta">
+                    مشارکت
+                </a>
+
+                <button
+                    class="mobile-menu-button"
+                    id="mobileMenuButton"
+                    aria-label="Menu">
+                    ☰
+                </button>
+
+            </div>
         </nav>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#why" data-i18n="nav.why">چرا کلاس‌چین؟</a>
+            <a href="#how" data-i18n="nav.how">چطور کار می‌کند؟</a>
+            <a href="#community" data-i18n="nav.community">جامعه خیرین</a>
+            <a href="#transparency" data-i18n="nav.transparency">شفافیت</a>
+            <a href="WebGIS.html" data-i18n="nav.webgis">نقشه پروژه‌ها</a>
+            <a href="frontend/dashboard.html" data-i18n="nav.dashboard">داشبورد من</a>
+        </div>
 
     </div>
 </header>
 
 
-<main>
+<main id="top">
 
-<!-- =========================
-     Hero
-========================= -->
-<section class="hero">
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
 
-    <div class="hero-background-shape hero-shape-one"></div>
-    <div class="hero-background-shape hero-shape-two"></div>
+    <section class="hero">
 
-    <div class="container hero-grid">
+        <div class="container hero-grid">
 
-        <div class="hero-content">
+            <div class="hero-content">
 
-            <div class="eyebrow">
-                جامعه خیرین دیجیتال
-            </div>
-
-            <h1>
-                با هم، آینده را می‌سازیم؛
-                <span>کلاس به کلاس.</span>
-            </h1>
-
-            <p class="hero-description">
-                کلاس‌چین بستری است برای پیوند خیرین، مردم و پروژه‌های آموزشی؛
-                جایی که هرکس می‌تواند به اندازه توان خود در ساختن فضای بهتر
-                برای یادگیری کودکان و نوجوانان سهیم باشد.
-            </p>
-
-            <div class="hero-actions">
-
-                <a href="donate.html" class="btn btn-primary">
-                    من هم می‌خواهم کمک کنم
-                    <span>←</span>
-                </a>
-
-                <a href="#how-it-works" class="btn btn-secondary">
-                    ببینم چطور کار می‌کند
-                </a>
-
-            </div>
-
-            <div class="hero-note">
-                <span class="note-icon">✓</span>
-                <span>
-                    مشارکت شما بخشی از یک جامعه است، نه فقط یک پرداخت.
-                </span>
-            </div>
-
-        </div>
-
-
-        <!-- Hero Illustration -->
-        <div class="hero-visual">
-
-            <div class="visual-card">
-
-                <div class="visual-card-header">
-                    <span>یک کلاس جدید</span>
-                    <span class="status-dot">در حال شکل‌گیری</span>
+                <div class="eyebrow">
+                    <span class="eyebrow-dot"></span>
+                    <span data-i18n="hero.eyebrow">
+                        جامعه خیرین دیجیتال
+                    </span>
                 </div>
 
-                <div class="school-illustration">
+                <h1 data-i18n="hero.title">
+                    با هم، آینده را می‌سازیم؛
+                    <span>کلاس به کلاس.</span>
+                </h1>
 
-                    <div class="sun"></div>
+                <p class="hero-lead" data-i18n="hero.description">
+                    کلاس‌چین پلی است میان خیرین، مردم و پروژه‌های مدرسه‌سازی؛
+                    جایی که هرکس می‌تواند به اندازه توان خود در ساختن
+                    محیطی بهتر برای آموزش کودکان مشارکت کند.
+                </p>
 
-                    <div class="cloud cloud-one"></div>
-                    <div class="cloud cloud-two"></div>
+                <div class="hero-actions">
+
+                    <a
+                        href="frontend/donate.html"
+                        class="btn btn-primary"
+                        data-i18n="hero.primary">
+                        من هم می‌خواهم کمک کنم
+                    </a>
+
+                    <a
+                        href="#how"
+                        class="btn btn-secondary"
+                        data-i18n="hero.secondary">
+                        چطور کار می‌کند؟
+                    </a>
+
+                </div>
+
+                <p class="hero-note" data-i18n="hero.note">
+                    مشارکت شما بخشی از یک جامعه است؛ نه فقط یک پرداخت.
+                </p>
+
+            </div>
+
+
+            <div class="hero-visual" aria-hidden="true">
+
+                <div class="community-card">
 
                     <div class="school">
 
                         <div class="school-roof"></div>
 
-                        <div class="school-building">
+                        <div class="school-body">
 
-                            <div class="school-window">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
+                            <div class="school-window one"></div>
+                            <div class="school-window two"></div>
 
                             <div class="school-door"></div>
 
                         </div>
 
-                        <div class="school-ground"></div>
-
                     </div>
 
-                    <div class="tree tree-one">
-                        <div class="tree-top"></div>
-                        <div class="tree-trunk"></div>
-                    </div>
-
-                    <div class="tree tree-two">
-                        <div class="tree-top"></div>
-                        <div class="tree-trunk"></div>
-                    </div>
-
-                </div>
-
-                <div class="visual-card-footer">
-
-                    <div>
-                        <strong>هدف</strong>
-                        <span>ساختن فضای بهتر برای یادگیری</span>
-                    </div>
-
-                    <div class="visual-arrow">
-                        →
+                    <div class="people">
+                        <div class="person"></div>
+                        <div class="person"></div>
+                        <div class="person"></div>
+                        <div class="person"></div>
                     </div>
 
                 </div>
 
             </div>
 
-            <div class="floating-card floating-card-top">
-                <span class="floating-icon">♡</span>
-                <div>
-                    <strong>هر مشارکت مهم است</strong>
-                    <small>به اندازه توان خود</small>
-                </div>
-            </div>
-
-            <div class="floating-card floating-card-bottom">
-                <span class="floating-icon">◎</span>
-                <div>
-                    <strong>شفاف و قابل مشاهده</strong>
-                    <small>پروژه‌ها روی نقشه</small>
-                </div>
-            </div>
-
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
-<!-- =========================
-     About
-========================= -->
-<section class="section about-section" id="about">
+    <!-- =====================================================
+         WHY CLASSCHAIN
+         ===================================================== -->
 
-    <div class="container">
+    <section class="why-section" id="why">
 
-        <div class="section-heading centered">
+        <div class="container">
 
-            <span class="section-label">
-                کلاس‌چین چیست؟
-            </span>
+            <div class="section-header">
 
-            <h2>
-                کمک کردن را از یک
-                <span>حرکت فردی</span>
-                به یک حرکت جمعی تبدیل کنیم.
-            </h2>
-
-            <p>
-                کلاس‌چین تلاش می‌کند خیرین و افراد دغدغه‌مند را در یک جامعه
-                دیجیتال کنار هم قرار دهد تا مشارکت در پروژه‌های آموزشی
-                ساده‌تر، شفاف‌تر و ماندگارتر شود.
-            </p>
-
-        </div>
-
-
-        <div class="principles-grid">
-
-            <article class="principle-card">
-
-                <div class="principle-number">01</div>
-
-                <div class="principle-icon">◌</div>
-
-                <h3>می‌بینید</h3>
-
-                <p>
-                    پروژه‌ها و نیازهای واقعی را می‌بینید و می‌توانید بدانید
-                    مشارکت شما در کجا و برای چه هدفی استفاده می‌شود.
-                </p>
-
-            </article>
-
-
-            <article class="principle-card">
-
-                <div class="principle-number">02</div>
-
-                <div class="principle-icon">↗</div>
-
-                <h3>مشارکت می‌کنید</h3>
-
-                <p>
-                    لازم نیست کمک شما بزرگ باشد. مشارکت‌های کوچک و بزرگ،
-                    وقتی کنار هم قرار می‌گیرند، می‌توانند یک تغییر واقعی بسازند.
-                </p>
-
-            </article>
-
-
-            <article class="principle-card">
-
-                <div class="principle-number">03</div>
-
-                <div class="principle-icon">∞</div>
-
-                <h3>همراه می‌مانید</h3>
-
-                <p>
-                    مشارکت شما پایان مسیر نیست. می‌توانید روند پروژه را دنبال
-                    کنید و بخشی از جامعه‌ای باشید که آینده آموزش را می‌سازد.
-                </p>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     How It Works
-========================= -->
-<section class="section process-section" id="how-it-works">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <span class="section-label">
-                چطور کار می‌کند؟
-            </span>
-
-            <h2>
-                ساده است؛
-                <span>انتخاب کنید، مشارکت کنید، همراه بمانید.</span>
-            </h2>
-
-            <p>
-                قرار نیست برای کمک کردن با فرآیندهای پیچیده روبه‌رو شوید.
-                کلاس‌چین تلاش می‌کند مسیر مشارکت را تا جای ممکن ساده و قابل فهم کند.
-            </p>
-
-        </div>
-
-
-        <div class="process-grid">
-
-            <div class="process-line"></div>
-
-
-            <article class="process-step">
-
-                <div class="step-number">
-                    ۱
+                <div class="section-kicker"
+                     data-i18n="why.kicker">
+                    چرا کلاس‌چین؟
                 </div>
 
-                <div class="step-content">
-
-                    <span>گام اول</span>
-
-                    <h3>یک پروژه را انتخاب کنید</h3>
-
-                    <p>
-                        پروژه‌ای را که با دغدغه شما هم‌راستاست پیدا کنید؛
-                        از ساخت و تجهیز یک کلاس تا مشارکت در برنامه‌های آموزشی.
-                    </p>
-
-                    <a href="WebGIS.html">
-                        مشاهده پروژه‌ها ←
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <article class="process-step">
-
-                <div class="step-number">
-                    ۲
-                </div>
-
-                <div class="step-content">
-
-                    <span>گام دوم</span>
-
-                    <h3>به اندازه توان خود مشارکت کنید</h3>
-
-                    <p>
-                        مبلغ یا نوع مشارکت خود را انتخاب کنید.
-                        مهم نیست مشارکت شما چقدر است؛ مهم این است که بخشی از حرکت باشید.
-                    </p>
-
-                    <a href="donate.html">
-                        شروع مشارکت ←
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <article class="process-step">
-
-                <div class="step-number">
-                    ۳
-                </div>
-
-                <div class="step-content">
-
-                    <span>گام سوم</span>
-
-                    <h3>در جریان بمانید</h3>
-
-                    <p>
-                        پس از مشارکت، می‌توانید مسیر پروژه‌ها و فعالیت‌های جامعه
-                        خیرین دیجیتال را دنبال کنید.
-                    </p>
-
-                    <a href="dashboard.html">
-                        داشبورد من ←
-                    </a>
-
-                </div>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     Participation Models
-========================= -->
-<section class="section participation-section">
-
-    <div class="container">
-
-        <div class="participation-grid">
-
-            <div class="participation-intro">
-
-                <span class="section-label">
-                    شکل‌های مختلف مشارکت
-                </span>
-
-                <h2>
-                    هرکس می‌تواند
-                    <span>به شیوه خودش</span>
-                    همراه شود.
+                <h2 class="section-title"
+                    data-i18n="why.title">
+                    خیر بودن می‌تواند ساده‌تر، شفاف‌تر و امروزی‌تر باشد.
                 </h2>
 
-                <p>
-                    همه افراد یک دغدغه، توان مالی یا فرصت یکسان ندارند.
-                    جامعه خیرین دیجیتال باید برای مشارکت‌های مختلف جا داشته باشد.
+                <p class="section-description"
+                   data-i18n="why.description">
+                    کلاس‌چین تلاش می‌کند تجربه مشارکت در مدرسه‌سازی را
+                    برای نسل امروز قابل دسترس و قابل مشاهده کند.
                 </p>
 
             </div>
 
 
-            <div class="participation-cards">
+            <div class="cards">
+
+                <article class="info-card">
+
+                    <div class="icon">⌖</div>
+
+                    <h3 data-i18n="why.card1.title">
+                        می‌بینید
+                    </h3>
+
+                    <p data-i18n="why.card1.text">
+                        می‌توانید پروژه‌ها و محل اجرای آن‌ها را ببینید
+                        و بدانید مشارکت شما در چه مسیری قرار گرفته است.
+                    </p>
+
+                </article>
+
+
+                <article class="info-card">
+
+                    <div class="icon">◎</div>
+
+                    <h3 data-i18n="why.card2.title">
+                        مشارکت می‌کنید
+                    </h3>
+
+                    <p data-i18n="why.card2.text">
+                        لازم نیست سرمایه بزرگی داشته باشید.
+                        هر مشارکت، بخشی از حرکت جمعی برای ساختن آینده است.
+                    </p>
+
+                </article>
+
+
+                <article class="info-card">
+
+                    <div class="icon">♧</div>
+
+                    <h3 data-i18n="why.card3.title">
+                        همراه می‌مانید
+                    </h3>
+
+                    <p data-i18n="why.card3.text">
+                        مشارکت با پرداخت تمام نمی‌شود؛
+                        شما بخشی از جامعه‌ای می‌شوید که مسیر پروژه‌ها را دنبال می‌کند.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         HOW IT WORKS
+         ===================================================== -->
+
+    <section id="how">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <div class="section-kicker"
+                     data-i18n="how.kicker">
+                    فرآیند ساده است
+                </div>
+
+                <h2 class="section-title"
+                    data-i18n="how.title">
+                    سه قدم برای اینکه بخشی از ساختن باشید.
+                </h2>
+
+                <p class="section-description"
+                   data-i18n="how.description">
+                    قرار نیست فناوری مسیر خیرخواهی را پیچیده کند؛
+                    فناوری باید کمک کند مسیر مشارکت روشن‌تر باشد.
+                </p>
+
+            </div>
+
+
+            <div class="process">
+
+                <article class="process-item">
+
+                    <h3 data-i18n="how.step1.title">
+                        انتخاب کنید
+                    </h3>
+
+                    <p data-i18n="how.step1.text">
+                        پروژه‌ای را که با آن ارتباط دارید پیدا کنید
+                        یا به جامعه عمومی خیرین بپیوندید.
+                    </p>
+
+                </article>
+
+
+                <article class="process-item">
+
+                    <h3 data-i18n="how.step2.title">
+                        مشارکت کنید
+                    </h3>
+
+                    <p data-i18n="how.step2.text">
+                        به اندازه‌ای که برایتان ممکن است مشارکت کنید.
+                        کوچک یا بزرگ بودن مشارکت، اصل ماجرا نیست؛
+                        همراه شدن مهم است.
+                    </p>
+
+                </article>
+
+
+                <article class="process-item">
+
+                    <h3 data-i18n="how.step3.title">
+                        همراه بمانید
+                    </h3>
+
+                    <p data-i18n="how.step3.text">
+                        مسیر پروژه و اثر مشارکت جامعه را دنبال کنید
+                        و در شکل‌گیری آینده این حرکت سهیم باشید.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         COMMUNITY
+         ===================================================== -->
+
+    <section class="community-section" id="community">
+
+        <div class="container community-layout">
+
+            <div class="community-text">
+
+                <div class="section-kicker"
+                     data-i18n="community.kicker">
+                    فراتر از یک سایت
+                </div>
+
+                <h2 class="section-title"
+                    data-i18n="community.title">
+                    ما نمی‌خواهیم فقط کمک جمع کنیم؛
+                    می‌خواهیم یک جامعه بسازیم.
+                </h2>
+
+                <p data-i18n="community.description">
+                    جامعه خیرین مدرسه‌ساز سرمایه ارزشمندی است.
+                    کلاس‌چین می‌خواهد همین فرهنگ ارزشمند را با ابزارهای
+                    دیجیتال به نسل جدید و ایرانیان سراسر جهان نزدیک‌تر کند.
+                </p>
+
+                <ul class="community-list">
+
+                    <li>
+                        <span class="check">✓</span>
+                        <span data-i18n="community.item1">
+                            برای خیرین داخل و خارج از کشور قابل دسترس باشد.
+                        </span>
+                    </li>
+
+                    <li>
+                        <span class="check">✓</span>
+                        <span data-i18n="community.item2">
+                            مشارکت‌های کوچک را در کنار مشارکت‌های بزرگ معنا کند.
+                        </span>
+                    </li>
+
+                    <li>
+                        <span class="check">✓</span>
+                        <span data-i18n="community.item3">
+                            ارتباط خیرین با پروژه‌ها و جامعه را حفظ کند.
+                        </span>
+                    </li>
+
+                    <li>
+                        <span class="check">✓</span>
+                        <span data-i18n="community.item4">
+                            شفافیت را به بخشی طبیعی از تجربه خیرخواهی تبدیل کند.
+                        </span>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <aside class="community-quote">
+
+                <div class="community-quote-mark">“</div>
+
+                <p data-i18n="community.quote">
+                    آینده آموزش را فقط با ساختن ساختمان نمی‌سازیم؛
+                    با ساختن جامعه‌ای که برای آینده مسئولیت می‌پذیرد،
+                    آن را می‌سازیم.
+                </p>
+
+            </aside>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PARTICIPATION
+         ===================================================== -->
+
+    <section>
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <div class="section-kicker"
+                     data-i18n="participation.kicker">
+                    راه مشارکت شما
+                </div>
+
+                <h2 class="section-title"
+                    data-i18n="participation.title">
+                    شما انتخاب می‌کنید چگونه همراه شوید.
+                </h2>
+
+            </div>
+
+
+            <div class="participation-grid">
+
+                <article class="participation-card featured">
+
+                    <h3 data-i18n="participation.project.title">
+                        حمایت از یک پروژه
+                    </h3>
+
+                    <p data-i18n="participation.project.text">
+                        اگر پروژه یا منطقه‌ای برای شما اهمیت ویژه دارد،
+                        می‌توانید مستقیماً در همان پروژه مشارکت کنید.
+                    </p>
+
+                    <a
+                        href="frontend/donate.html"
+                        class="btn btn-light"
+                        data-i18n="participation.project.button">
+                        مشاهده پروژه‌ها
+                    </a>
+
+                </article>
+
 
                 <article class="participation-card">
 
-                    <div class="card-icon">
-                        □
-                    </div>
-
-                    <h3>
-                        مشارکت در یک پروژه
+                    <h3 data-i18n="participation.community.title">
+                        پیوستن به جامعه
                     </h3>
 
-                    <p>
-                        اگر پروژه مشخصی برایتان اهمیت دارد، می‌توانید مستقیماً
-                        در همان پروژه مشارکت کنید.
+                    <p data-i18n="participation.community.text">
+                        اگر ترجیح می‌دهید بخشی از یک حرکت جمعی باشید،
+                        می‌توانید در صندوق عمومی جامعه مشارکت کنید.
                     </p>
 
-                    <a href="WebGIS.html">
-                        انتخاب پروژه
-                        <span>←</span>
-                    </a>
-
-                </article>
-
-
-                <article class="participation-card highlighted">
-
-                    <div class="card-icon">
-                        ◇
-                    </div>
-
-                    <h3>
-                        همراهی با جامعه
-                    </h3>
-
-                    <p>
-                        اگر ترجیح می‌دهید بخشی از یک حرکت گسترده‌تر باشید،
-                        می‌توانید به جامعه خیرین دیجیتال بپیوندید.
-                    </p>
-
-                    <a href="donate.html">
-                        من هم همراه می‌شوم
-                        <span>←</span>
+                    <a
+                        href="frontend/donate.html"
+                        class="btn btn-secondary"
+                        data-i18n="participation.community.button">
+                        عضویت و مشارکت
                     </a>
 
                 </article>
@@ -502,195 +493,167 @@
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
-<!-- =========================
-     Community
-========================= -->
-<section class="section community-section" id="community">
+    <!-- =====================================================
+         TRANSPARENCY / WEBGIS
+         ===================================================== -->
 
-    <div class="container community-grid">
+    <section class="transparency" id="transparency">
 
-        <div class="community-visual">
+        <div class="container">
 
-            <div class="community-orbit orbit-one"></div>
-            <div class="community-orbit orbit-two"></div>
+            <div class="transparency-box">
 
-            <div class="community-center">
-                <span>کلاس‌چین</span>
-                <small>یک جامعه</small>
-            </div>
+                <div>
 
-            <div class="community-person person-one">
-                <span>خیر</span>
-            </div>
+                    <div class="section-kicker"
+                         style="color: var(--gold-light);"
+                         data-i18n="transparency.kicker">
+                        شفافیت
+                    </div>
 
-            <div class="community-person person-two">
-                <span>همراه</span>
-            </div>
+                    <h2 data-i18n="transparency.title">
+                        شفافیت نباید یک وعده باشد؛
+                        باید قابل مشاهده باشد.
+                    </h2>
 
-            <div class="community-person person-three">
-                <span>سازنده</span>
-            </div>
+                    <p data-i18n="transparency.description">
+                        WebGIS کلاس‌چین کمک می‌کند پروژه‌ها را روی نقشه ببینید،
+                        موقعیت آن‌ها را بشناسید و اطلاعات پروژه‌ها را دنبال کنید.
+                    </p>
 
-            <div class="community-person person-four">
-                <span>آموزش</span>
+                    <a
+                        href="WebGIS.html"
+                        class="btn btn-light"
+                        style="margin-top:22px;"
+                        data-i18n="transparency.button">
+                        مشاهده نقشه پروژه‌ها
+                    </a>
+
+                </div>
+
+
+                <div class="map-preview">
+
+                    <span class="map-point"></span>
+                    <span class="map-point"></span>
+                    <span class="map-point"></span>
+
+                    <span class="map-label"
+                          data-i18n="transparency.map">
+                        پروژه‌ها روی نقشه
+                    </span>
+
+                </div>
+
             </div>
 
         </div>
 
-
-        <div class="community-content">
-
-            <span class="section-label">
-                جامعه خیرین دیجیتال
-            </span>
-
-            <h2>
-                قرار نیست فقط
-                <span>کمک‌کننده</span>
-                باشیم؛
-                قرار است همراه باشیم.
-            </h2>
-
-            <p>
-                کلاس‌چین یک صفحه پرداخت دیگر نیست.
-                هدف این است که انسان‌هایی که به آینده آموزش اهمیت می‌دهند
-                بتوانند یکدیگر را پیدا کنند، پروژه‌ها را ببینند و در یک حرکت
-                مشترک سهیم شوند.
-            </p>
-
-            <ul class="community-list">
-
-                <li>
-                    <span>✓</span>
-                    مشارکت از هر نقطه دنیا
-                </li>
-
-                <li>
-                    <span>✓</span>
-                    مشارکت متناسب با توان هر فرد
-                </li>
-
-                <li>
-                    <span>✓</span>
-                    ارتباط مستقیم‌تر با پروژه‌ها
-                </li>
-
-                <li>
-                    <span>✓</span>
-                    همراهی بلندمدت با یک حرکت اجتماعی
-                </li>
-
-            </ul>
-
-        </div>
-
-    </div>
-
-</section>
+    </section>
 
 
-<!-- =========================
-     Transparency
-========================= -->
-<section class="section transparency-section">
+    <!-- =====================================================
+         AFTER DONATION / DASHBOARD
+         ===================================================== -->
 
-    <div class="container">
+    <section>
 
-        <div class="transparency-box">
+        <div class="container after-donation">
 
-            <div class="transparency-content">
+            <div class="after-donation-content">
 
-                <span class="section-label">
-                    شفافیت
-                </span>
+                <div class="section-kicker"
+                     data-i18n="dashboard.kicker">
+                    مشارکت شما پایان داستان نیست
+                </div>
 
-                <h2>
-                    شفافیت نباید
-                    <span>یک وعده</span>
-                    باشد؛
-                    باید قابل مشاهده باشد.
+                <h2 class="section-title"
+                    data-i18n="dashboard.title">
+                    بعد از مشارکت، می‌توانید همراه مسیر بمانید.
                 </h2>
 
-                <p>
-                    نقشه پروژه‌ها کمک می‌کند بدانید فعالیت‌های کلاس‌چین
-                    در کجا جریان دارد و بتوانید مسیر پروژه‌ها را دنبال کنید.
+                <p data-i18n="dashboard.description">
+                    داشبورد شخصی شما برای دنبال کردن مشارکت‌ها و
+                    ارتباط با پروژه‌هایی است که در آن‌ها همراه شده‌اید.
                 </p>
 
-                <a href="WebGIS.html" class="btn btn-light">
-                    مشاهده نقشه پروژه‌ها
-                    <span>←</span>
+                <a
+                    href="frontend/dashboard.html"
+                    class="btn btn-primary"
+                    data-i18n="dashboard.button">
+                    ورود به داشبورد
                 </a>
 
             </div>
 
 
-            <div class="map-preview">
+            <div class="dashboard-card">
 
-                <div class="map-grid"></div>
+                <div class="dashboard-card-row">
+                    <span class="dashboard-dot"></span>
+                    <span data-i18n="dashboard.row1">مشارکت شما</span>
+                    <span data-i18n="dashboard.status">ثبت شده</span>
+                </div>
 
-                <span class="map-location location-one"></span>
-                <span class="map-location location-two"></span>
-                <span class="map-location location-three"></span>
-                <span class="map-location location-four"></span>
+                <div class="dashboard-card-row">
+                    <span class="dashboard-dot"></span>
+                    <span data-i18n="dashboard.row2">پروژه انتخابی</span>
+                    <span data-i18n="dashboard.follow">در حال پیگیری</span>
+                </div>
 
-                <div class="map-label">
-                    WebGIS
-                    <small>پروژه‌های کلاس‌چین</small>
+                <div class="dashboard-card-row">
+                    <span class="dashboard-dot"></span>
+                    <span data-i18n="dashboard.row3">جامعه خیرین</span>
+                    <span data-i18n="dashboard.follow">همراه</span>
                 </div>
 
             </div>
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
-<!-- =========================
-     Final CTA
-========================= -->
-<section class="final-cta">
+    <!-- =====================================================
+         FINAL CTA
+         ===================================================== -->
 
-    <div class="container">
+    <section class="final-cta">
 
-        <div class="final-cta-inner">
+        <div class="container final-cta-inner">
 
-            <span class="final-quote">«</span>
-
-            <h2>
+            <h2 data-i18n="final.title">
                 اگر آینده کودکان برایتان مهم است،
-                <span>جای شما در این جامعه خالی است.</span>
+                جای شما در این جامعه خالی است.
             </h2>
 
-            <p>
-                همین امروز به جمع کسانی بپیوندید که می‌خواهند
-                سهمی واقعی در ساختن آینده داشته باشند.
+            <p data-i18n="final.description">
+                لازم نیست کار بزرگی را به تنهایی انجام دهید.
+                کافی است سهم خودتان را به یک حرکت جمعی اضافه کنید.
             </p>
 
-            <a href="donate.html" class="btn btn-primary btn-large">
-                من هم می‌خواهم کمک کنم
-                <span>←</span>
+            <a
+                href="frontend/donate.html"
+                class="btn btn-light"
+                data-i18n="final.button">
+                من چطور می‌توانم کمک کنم؟
             </a>
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 </main>
 
 
-<!-- =========================
-     Footer
-========================= -->
-<footer class="site-footer">
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer>
 
     <div class="container">
 
@@ -698,57 +661,78 @@
 
             <div class="footer-brand">
 
-                <a href="index.html" class="brand">
-                    <span class="brand-mark">
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                <div class="brand">
+                    <span class="brand-mark">ک</span>
+                    <span class="brand-text" style="color:white;">
+                        کلاس‌چین
                     </span>
+                </div>
 
-                    <span class="brand-text">
-                        <strong>کلاس‌چین</strong>
-                        <small>جامعه خیرین دیجیتال</small>
-                    </span>
-                </a>
-
-                <p>
-                    با هم، آینده را می‌سازیم؛ کلاس به کلاس.
+                <p data-i18n="footer.description">
+                    جامعه خیرین دیجیتال برای ساختن آینده،
+                    کلاس به کلاس.
                 </p>
 
             </div>
 
 
-            <div class="footer-column">
+            <div class="footer-links">
 
-                <h4>کلاس‌چین</h4>
+                <h4 data-i18n="footer.platform">
+                    کلاس‌چین
+                </h4>
 
-                <a href="#about">کلاس‌چین چیست؟</a>
-                <a href="#how-it-works">چطور کار می‌کند؟</a>
-                <a href="#community">جامعه خیرین</a>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h4>دسترسی</h4>
-
-                <a href="WebGIS.html">WebGIS</a>
-                <a href="donate.html">مشارکت</a>
-                <a href="dashboard.html">داشبورد</a>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h4>اطلاعات</h4>
-
-                <a href="../ClassChain_WhitePaper_Updated.docx">
-                    سند پروژه
+                <a href="#why" data-i18n="nav.why">
+                    چرا کلاس‌چین؟
                 </a>
 
-                <a href="../Admin/index.html">
+                <a href="#how" data-i18n="nav.how">
+                    چطور کار می‌کند؟
+                </a>
+
+                <a href="#community" data-i18n="nav.community">
+                    جامعه خیرین
+                </a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4 data-i18n="footer.tools">
+                    ابزارها
+                </h4>
+
+                <a href="WebGIS.html" data-i18n="nav.webgis">
+                    WebGIS
+                </a>
+
+                <a href="frontend/dashboard.html"
+                   data-i18n="nav.dashboard">
+                    داشبورد
+                </a>
+
+                <a href="frontend/donate.html"
+                   data-i18n="nav.cta">
+                    مشارکت
+                </a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4 data-i18n="footer.more">
+                    اطلاعات بیشتر
+                </h4>
+
+                <a href="ClassChain_WhitePaper_Updated.docx"
+                   data-i18n="footer.whitepaper">
+                    White Paper
+                </a>
+
+                <a href="Admin/index.html"
+                   data-i18n="footer.admin">
                     پنل مدیریت
                 </a>
 
@@ -759,12 +743,12 @@
 
         <div class="footer-bottom">
 
-            <span>
-                © <span id="currentYear"></span> ClassChain
+            <span data-i18n="footer.copy">
+                © ClassChain — همه حقوق محفوظ است.
             </span>
 
-            <span>
-                ساخته شده برای ساختن آینده آموزش
+            <span data-i18n="footer.motto">
+                با هم، آینده را می‌سازیم؛ کلاس به کلاس.
             </span>
 
         </div>
@@ -774,7 +758,7 @@
 </footer>
 
 
-<script src="index.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
