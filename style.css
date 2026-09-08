@@ -175,6 +175,29 @@ section { padding: 72px 0; }
     position: relative; z-index: 1;
 }
 
+/* Expandable process steps */
+.process-item .card-more-toggle,
+.process-item .process-more-toggle {
+    color: var(--gold-light);
+    margin-top: 16px;
+}
+.process-item .card-more-toggle:hover,
+.process-item .process-more-toggle:hover {
+    color: #fff;
+}
+.process-item .card-more,
+.process-item .process-more {
+    border-top-color: rgba(255,255,255,.18);
+}
+.process-item .card-more p,
+.process-item .process-more p {
+    color: rgba(255,255,255,.82);
+    font-size: .86rem;
+}
+.process-item.is-open .card-more-toggle {
+    color: #fff;
+}
+
 .community-section { background: var(--cream-dark); }
 .community-layout { display: grid; gap: 30px; align-items: center; }
 .community-text p { color: var(--text-soft); margin-bottom: 18px; }
