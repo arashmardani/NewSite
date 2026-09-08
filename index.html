@@ -4,954 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>کلاس‌چین | جامعه دیجیتال حامیان آموزش</title>
+    <title>کلاس‌چین | جامعه خیرین دیجیتال</title>
 
     <meta
         name="description"
-        content="کلاس‌چین، بستری برای ارتباط شفاف میان حامیان، پروژه‌های آموزشی و مسیر واقعی پیشرفت آن‌ها."
+        content="کلاس‌چین، جامعه‌ای دیجیتال برای مشارکت شفاف و ماندگار در ساخت آینده آموزش."
     >
 
-    <style>
-        :root {
-            --paper: #fbfaf5;
-            --paper-2: #f2f0e7;
-            --ink: #17352d;
-            --ink-soft: #52645e;
-            --green: #2e6b59;
-            --green-dark: #204e41;
-            --mint: #dfeee7;
-            --gold: #d3a84b;
-            --gold-soft: #f4e8c9;
-            --coral: #d97862;
-            --coral-soft: #f6ddd7;
-            --white: #ffffff;
-            --line: rgba(23, 53, 45, 0.12);
-            --shadow: 0 18px 50px rgba(23, 53, 45, 0.09);
-            --radius: 24px;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family:
-                Tahoma,
-                "Segoe UI",
-                Arial,
-                sans-serif;
-            background: var(--paper);
-            color: var(--ink);
-            line-height: 1.8;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        button {
-            font: inherit;
-        }
-
-        .container {
-            width: min(1160px, calc(100% - 40px));
-            margin: 0 auto;
-        }
-
-        /* =========================
-           Header
-        ========================= */
-
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: rgba(251, 250, 245, 0.94);
-            backdrop-filter: blur(14px);
-            border-bottom: 1px solid var(--line);
-        }
-
-        .nav {
-            min-height: 76px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 24px;
-        }
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-weight: 900;
-            font-size: 1.25rem;
-            white-space: nowrap;
-        }
-
-        .brand-mark {
-            width: 42px;
-            height: 42px;
-            border-radius: 13px;
-            display: grid;
-            place-items: center;
-            background: var(--green);
-            color: white;
-            font-weight: 900;
-            box-shadow: 0 8px 22px rgba(46, 107, 89, 0.2);
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 24px;
-        }
-
-        .nav-links a {
-            color: var(--ink-soft);
-            font-size: 0.92rem;
-            transition: color 0.2s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--green);
-        }
-
-        .nav-actions {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .language-btn,
-        .menu-btn {
-            border: 1px solid var(--line);
-            background: var(--white);
-            color: var(--ink);
-            border-radius: 12px;
-            padding: 8px 12px;
-            cursor: pointer;
-        }
-
-        .menu-btn {
-            display: none;
-        }
-
-        /* =========================
-           Buttons
-        ========================= */
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            min-height: 48px;
-            padding: 0 22px;
-            border-radius: 14px;
-            border: 1px solid transparent;
-            font-weight: 800;
-            cursor: pointer;
-            transition:
-                transform 0.2s ease,
-                box-shadow 0.2s ease,
-                background 0.2s ease;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-        }
-
-        .btn-primary {
-            background: var(--green);
-            color: white;
-            box-shadow: 0 12px 26px rgba(46, 107, 89, 0.18);
-        }
-
-        .btn-primary:hover {
-            background: var(--green-dark);
-        }
-
-        .btn-secondary {
-            background: white;
-            border-color: var(--line);
-            color: var(--ink);
-        }
-
-        /* =========================
-           Hero
-        ========================= */
-
-        .hero {
-            padding: 72px 0 54px;
-        }
-
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 0.92fr 1.08fr;
-            align-items: center;
-            gap: 52px;
-        }
-
-        .eyebrow {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--mint);
-            color: var(--green-dark);
-            border-radius: 999px;
-            padding: 7px 14px;
-            font-size: 0.82rem;
-            font-weight: 800;
-            margin-bottom: 20px;
-        }
-
-        .eyebrow-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: var(--gold);
-        }
-
-        h1 {
-            font-size: clamp(2.5rem, 5vw, 4.7rem);
-            line-height: 1.18;
-            letter-spacing: -0.04em;
-            margin-bottom: 22px;
-        }
-
-        .hero-title-accent {
-            color: var(--green);
-        }
-
-        .hero-text {
-            max-width: 620px;
-            color: var(--ink-soft);
-            font-size: 1.1rem;
-            margin-bottom: 28px;
-        }
-
-        .hero-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 25px;
-        }
-
-        .hero-note {
-            color: var(--ink-soft);
-            font-size: 0.84rem;
-        }
-
-        /* =========================
-           Network illustration
-        ========================= */
-
-        .network-card {
-            position: relative;
-            background:
-                radial-gradient(circle at 70% 20%, rgba(211, 168, 75, 0.12), transparent 30%),
-                linear-gradient(145deg, #f2f5ed, #e5eee7);
-            border: 1px solid rgba(46, 107, 89, 0.12);
-            border-radius: 34px;
-            min-height: 480px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-        }
-
-        .network-card::before {
-            content: "";
-            position: absolute;
-            width: 220px;
-            height: 220px;
-            border-radius: 50%;
-            background: rgba(217, 120, 98, 0.07);
-            left: -80px;
-            bottom: -80px;
-        }
-
-        .network-card svg {
-            width: 100%;
-            height: 100%;
-            min-height: 480px;
-            display: block;
-        }
-
-        .network-line {
-            stroke: rgba(46, 107, 89, 0.22);
-            stroke-width: 1.7;
-        }
-
-        .school-node {
-            fill: var(--green);
-        }
-
-        .donor-node {
-            fill: var(--coral);
-        }
-
-        .main-node {
-            fill: var(--white);
-            stroke: var(--green);
-            stroke-width: 5;
-        }
-
-        .node-ring {
-            fill: none;
-            stroke: var(--gold);
-            stroke-width: 2;
-            stroke-dasharray: 5 7;
-            opacity: 0.75;
-        }
-
-        .node-pulse {
-            animation: softPulse 4s ease-in-out infinite;
-            transform-box: fill-box;
-            transform-origin: center;
-        }
-
-        .node-pulse.delay-1 {
-            animation-delay: 1.1s;
-        }
-
-        .node-pulse.delay-2 {
-            animation-delay: 2.2s;
-        }
-
-        @keyframes softPulse {
-            0%, 100% {
-                opacity: 0.82;
-                transform: scale(1);
-            }
-
-            50% {
-                opacity: 1;
-                transform: scale(1.08);
-            }
-        }
-
-        .network-label {
-            position: absolute;
-            right: 24px;
-            bottom: 22px;
-            left: 24px;
-            padding: 15px 17px;
-            background: rgba(255,255,255,0.84);
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(23,53,45,0.08);
-            border-radius: 16px;
-            font-size: 0.85rem;
-            color: var(--ink-soft);
-        }
-
-        .network-label strong {
-            color: var(--ink);
-        }
-
-        /* =========================
-           Sections
-        ========================= */
-
-        section {
-            padding: 90px 0;
-        }
-
-        .section-head {
-            max-width: 720px;
-            margin-bottom: 38px;
-        }
-
-        .section-kicker {
-            color: var(--green);
-            font-weight: 900;
-            font-size: 0.84rem;
-            margin-bottom: 8px;
-        }
-
-        h2 {
-            font-size: clamp(2rem, 4vw, 3.1rem);
-            line-height: 1.25;
-            margin-bottom: 15px;
-            letter-spacing: -0.025em;
-        }
-
-        .section-description {
-            color: var(--ink-soft);
-            font-size: 1rem;
-        }
-
-        /* =========================
-           Cards
-        ========================= */
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
-        }
-
-        .card {
-            background: var(--white);
-            border: 1px solid var(--line);
-            border-radius: var(--radius);
-            padding: 27px;
-            box-shadow: 0 8px 30px rgba(23,53,45,0.04);
-        }
-
-        .card-icon {
-            width: 48px;
-            height: 48px;
-            display: grid;
-            place-items: center;
-            border-radius: 15px;
-            background: var(--mint);
-            color: var(--green-dark);
-            font-weight: 900;
-            margin-bottom: 19px;
-        }
-
-        .card h3 {
-            font-size: 1.18rem;
-            margin-bottom: 10px;
-        }
-
-        .card p {
-            color: var(--ink-soft);
-            font-size: 0.94rem;
-        }
-
-        .more-btn {
-            border: 0;
-            background: transparent;
-            color: var(--green);
-            font-weight: 900;
-            cursor: pointer;
-            padding: 12px 0 0;
-        }
-
-        .more-content {
-            display: none;
-            margin-top: 14px;
-            padding-top: 14px;
-            border-top: 1px solid var(--line);
-            color: var(--ink-soft);
-            font-size: 0.9rem;
-        }
-
-        .more-content.open {
-            display: block;
-        }
-
-        /* =========================
-           Process
-        ========================= */
-
-        .process {
-            background: var(--paper-2);
-        }
-
-        .process-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .step {
-            position: relative;
-            background: white;
-            border-radius: var(--radius);
-            padding: 28px;
-            border: 1px solid var(--line);
-        }
-
-        .step-number {
-            width: 42px;
-            height: 42px;
-            border-radius: 50%;
-            display: grid;
-            place-items: center;
-            background: var(--gold-soft);
-            color: #795d1e;
-            font-weight: 900;
-            margin-bottom: 18px;
-        }
-
-        .step h3 {
-            margin-bottom: 9px;
-        }
-
-        .step p {
-            color: var(--ink-soft);
-            font-size: 0.93rem;
-        }
-
-        /* =========================
-           Technology
-        ========================= */
-
-        .technology {
-            background: var(--green-dark);
-            color: white;
-        }
-
-        .technology .section-kicker {
-            color: var(--gold);
-        }
-
-        .technology .section-description {
-            color: rgba(255,255,255,0.72);
-        }
-
-        .tech-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
-        }
-
-        .tech-card {
-            background: rgba(255,255,255,0.07);
-            border: 1px solid rgba(255,255,255,0.12);
-            border-radius: var(--radius);
-            padding: 27px;
-        }
-
-        .tech-card h3 {
-            margin-bottom: 10px;
-        }
-
-        .tech-card p {
-            color: rgba(255,255,255,0.72);
-            font-size: 0.92rem;
-        }
-
-        .tech-card .more-btn {
-            color: var(--gold);
-        }
-
-        .tech-card .more-content {
-            border-color: rgba(255,255,255,0.13);
-            color: rgba(255,255,255,0.7);
-        }
-
-        /* =========================
-           Transparency
-        ========================= */
-
-        .transparency-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 22px;
-        }
-
-        .transparency-card {
-            border-radius: 28px;
-            padding: 34px;
-            border: 1px solid var(--line);
-        }
-
-        .financial {
-            background: var(--gold-soft);
-        }
-
-        .physical {
-            background: var(--mint);
-        }
-
-        .transparency-card .small-title {
-            font-size: 0.82rem;
-            font-weight: 900;
-            margin-bottom: 8px;
-            opacity: 0.7;
-        }
-
-        .transparency-card h3 {
-            font-size: 1.55rem;
-            margin-bottom: 13px;
-        }
-
-        .transparency-card p {
-            color: var(--ink-soft);
-            font-size: 0.94rem;
-        }
-
-        /* =========================
-           Admin
-        ========================= */
-
-        .admin-box {
-            display: grid;
-            grid-template-columns: 0.85fr 1.15fr;
-            gap: 32px;
-            align-items: center;
-            background: white;
-            border: 1px solid var(--line);
-            border-radius: 32px;
-            padding: 38px;
-            box-shadow: var(--shadow);
-        }
-
-        .admin-visual {
-            min-height: 250px;
-            border-radius: 22px;
-            background: var(--paper-2);
-            display: grid;
-            place-items: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .admin-visual::before,
-        .admin-visual::after {
-            content: "";
-            position: absolute;
-            border-radius: 50%;
-        }
-
-        .admin-visual::before {
-            width: 180px;
-            height: 180px;
-            background: var(--mint);
-            top: -60px;
-            right: -40px;
-        }
-
-        .admin-visual::after {
-            width: 120px;
-            height: 120px;
-            background: var(--gold-soft);
-            bottom: -35px;
-            left: -25px;
-        }
-
-        .admin-symbol {
-            position: relative;
-            z-index: 1;
-            width: 100px;
-            height: 100px;
-            border-radius: 28px;
-            background: var(--green);
-            color: white;
-            display: grid;
-            place-items: center;
-            font-size: 2.4rem;
-            box-shadow: 0 20px 40px rgba(46,107,89,0.18);
-        }
-
-        .admin-content p {
-            color: var(--ink-soft);
-            margin-bottom: 20px;
-        }
-
-        .admin-list {
-            list-style: none;
-            display: grid;
-            gap: 9px;
-            margin-bottom: 22px;
-        }
-
-        .admin-list li {
-            position: relative;
-            padding-right: 24px;
-            color: var(--ink-soft);
-            font-size: 0.92rem;
-        }
-
-        .admin-list li::before {
-            content: "✓";
-            position: absolute;
-            right: 0;
-            color: var(--green);
-            font-weight: 900;
-        }
-
-        /* =========================
-           Community
-        ========================= */
-
-        .community {
-            background: var(--paper-2);
-        }
-
-        .community-box {
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .community-box p {
-            color: var(--ink-soft);
-            font-size: 1.04rem;
-        }
-
-        .community-more {
-            max-width: 760px;
-            margin: 20px auto 0;
-        }
-
-        /* =========================
-           CTA
-        ========================= */
-
-        .cta {
-            padding: 90px 0 100px;
-        }
-
-        .cta-box {
-            background:
-                radial-gradient(circle at 80% 15%, rgba(211,168,75,0.22), transparent 28%),
-                linear-gradient(135deg, var(--green), var(--green-dark));
-            color: white;
-            border-radius: 34px;
-            padding: 55px;
-            text-align: center;
-            overflow: hidden;
-        }
-
-        .cta-box h2 {
-            max-width: 700px;
-            margin: 0 auto 15px;
-        }
-
-        .cta-box p {
-            max-width: 620px;
-            margin: 0 auto 27px;
-            color: rgba(255,255,255,0.75);
-        }
-
-        .cta-actions {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .cta .btn-primary {
-            background: white;
-            color: var(--green-dark);
-        }
-
-        .cta .btn-secondary {
-            background: transparent;
-            color: white;
-            border-color: rgba(255,255,255,0.25);
-        }
-
-        /* =========================
-           Footer
-        ========================= */
-
-        footer {
-            border-top: 1px solid var(--line);
-            padding: 35px 0;
-        }
-
-        .footer-grid {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 30px;
-        }
-
-        .footer-brand {
-            font-weight: 900;
-        }
-
-        .footer-note {
-            color: var(--ink-soft);
-            font-size: 0.82rem;
-            margin-top: 5px;
-        }
-
-        .footer-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 18px;
-            color: var(--ink-soft);
-            font-size: 0.84rem;
-        }
-
-        .footer-links a:hover {
-            color: var(--green);
-        }
-
-        /* =========================
-           Responsive
-        ========================= */
-
-        @media (max-width: 900px) {
-            .hero-grid,
-            .admin-box {
-                grid-template-columns: 1fr;
-            }
-
-            .cards,
-            .process-grid,
-            .tech-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .network-card {
-                min-height: 410px;
-            }
-
-            .network-card svg {
-                min-height: 410px;
-            }
-
-            .nav-links {
-                position: absolute;
-                top: 76px;
-                right: 20px;
-                left: 20px;
-                display: none;
-                flex-direction: column;
-                align-items: stretch;
-                background: white;
-                padding: 18px;
-                border-radius: 18px;
-                border: 1px solid var(--line);
-                box-shadow: var(--shadow);
-            }
-
-            .nav-links.open {
-                display: flex;
-            }
-
-            .menu-btn {
-                display: inline-flex;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .container {
-                width: min(100% - 26px, 1160px);
-            }
-
-            .hero {
-                padding-top: 45px;
-            }
-
-            section {
-                padding: 65px 0;
-            }
-
-            .cards,
-            .process-grid,
-            .tech-grid,
-            .transparency-grid {
-                grid-template-columns: 1fr;
-            }
-
-            h1 {
-                font-size: 2.45rem;
-            }
-
-            .hero-text {
-                font-size: 1rem;
-            }
-
-            .network-card,
-            .network-card svg {
-                min-height: 360px;
-            }
-
-            .admin-box {
-                padding: 22px;
-            }
-
-            .cta-box {
-                padding: 35px 22px;
-                border-radius: 25px;
-            }
-
-            .footer-grid {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .nav-actions {
-                margin-right: auto;
-            }
-
-            [dir="ltr"] .nav-actions {
-                margin-right: 0;
-                margin-left: auto;
-            }
-        }
-
-        /* =========================
-           LTR adjustments
-        ========================= */
-
-        [dir="ltr"] body {
-            font-family:
-                Inter,
-                "Segoe UI",
-                Arial,
-                sans-serif;
-        }
-
-        [dir="ltr"] .admin-list li {
-            padding-right: 0;
-            padding-left: 24px;
-        }
-
-        [dir="ltr"] .admin-list li::before {
-            right: auto;
-            left: 0;
-        }
-
-        [dir="ltr"] .network-label {
-            right: 24px;
-            left: 24px;
-        }
-    </style>
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
 
-<header>
-    <div class="container nav">
+<!-- =========================
+     Header
+========================= -->
+<header class="site-header" id="siteHeader">
 
-        <a class="brand" href="index.html" aria-label="ClassChain Home">
-            <span class="brand-mark">چ</span>
-            <span data-t="brand">کلاس‌چین</span>
+    <div class="container header-inner">
+
+        <a href="index.html" class="brand" aria-label="کلاس‌چین">
+            <span class="brand-mark">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+
+            <span class="brand-text">
+                <strong>کلاس‌چین</strong>
+                <small>جامعه خیرین دیجیتال</small>
+            </span>
         </a>
 
-        <nav class="nav-links" id="navLinks">
-            <a href="#why" data-t="navWhy">چرا کلاس‌چین؟</a>
-            <a href="#how" data-t="navHow">چطور کار می‌کند؟</a>
-            <a href="#technology" data-t="navTech">فناوری</a>
-            <a href="#transparency" data-t="navTransparency">شفافیت</a>
-            <a href="WebGIS.html" data-t="navWebGIS">WebGIS</a>
-            <a href="Admin/index.html" data-t="navAdmin">مدیریت پروژه</a>
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="باز کردن منو"
+            aria-expanded="false"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="main-nav" id="mainNav" aria-label="منوی اصلی">
+
+            <a href="#about">کلاس‌چین چیست؟</a>
+            <a href="#how-it-works">چطور کار می‌کند؟</a>
+            <a href="#community">جامعه خیرین</a>
+            <a href="WebGIS.html">نقشه پروژه‌ها</a>
+
+            <div class="nav-language">
+                <button
+                    class="language-toggle"
+                    id="languageToggle"
+                    type="button"
+                    aria-expanded="false"
+                >
+                    <span id="currentLanguage">FA</span>
+                    <span class="language-arrow">⌄</span>
+                </button>
+
+                <div class="language-menu" id="languageMenu">
+                    <button type="button" data-lang="fa">فارسی</button>
+                    <button type="button" data-lang="en">English</button>
+                    <button type="button" data-lang="ar">العربية</button>
+                </div>
+            </div>
+
+            <a href="donate.html" class="nav-cta">
+                من هم می‌خواهم کمک کنم
+            </a>
+
         </nav>
-
-        <div class="nav-actions">
-            <button
-                class="language-btn"
-                id="languageBtn"
-                type="button"
-                aria-label="Change language"
-            >
-                EN
-            </button>
-
-            <button
-                class="menu-btn"
-                id="menuBtn"
-                type="button"
-                aria-label="Open menu"
-            >
-                ☰
-            </button>
-        </div>
 
     </div>
 </header>
@@ -959,859 +85,687 @@
 
 <main>
 
-    <!-- =========================
-         HERO
-    ========================== -->
+<!-- =========================
+     Hero
+========================= -->
+<section class="hero">
 
-    <section class="hero">
-        <div class="container hero-grid">
+    <div class="hero-background-shape hero-shape-one"></div>
+    <div class="hero-background-shape hero-shape-two"></div>
 
-            <div>
-                <div class="eyebrow">
-                    <span class="eyebrow-dot"></span>
-                    <span data-t="heroEyebrow">
-                        جامعه دیجیتال حامیان آموزش
-                    </span>
-                </div>
+    <div class="container hero-grid">
 
-                <h1 data-t="heroTitle">
-                    با هم، آینده را می‌سازیم؛
-                    <span class="hero-title-accent">کلاس به کلاس.</span>
-                </h1>
+        <div class="hero-content">
 
-                <p class="hero-text" data-t="heroText">
-                    کلاس‌چین بستری است برای پیوند دادن حامیان با پروژه‌های
-                    واقعی آموزشی؛ جایی که مشارکت شما فقط یک پرداخت نیست،
-                    بلکه بخشی از یک مسیر شفاف و قابل پیگیری است.
-                </p>
-
-                <div class="hero-actions">
-                    <a
-                        class="btn btn-primary"
-                        href="donate.html"
-                        data-t="heroPrimary"
-                    >
-                        من چطور می‌توانم کمک کنم؟
-                    </a>
-
-                    <a
-                        class="btn btn-secondary"
-                        href="#how"
-                        data-t="heroSecondary"
-                    >
-                        مسیر مشارکت را ببینید
-                    </a>
-                </div>
-
-                <div class="hero-note" data-t="heroNote">
-                    بدون وعده‌های بزرگ؛ با تمرکز بر پروژه، شفافیت و اثر واقعی.
-                </div>
+            <div class="eyebrow">
+                جامعه خیرین دیجیتال
             </div>
 
+            <h1>
+                با هم، آینده را می‌سازیم؛
+                <span>کلاس به کلاس.</span>
+            </h1>
 
-            <!-- Network -->
-            <div class="network-card">
+            <p class="hero-description">
+                کلاس‌چین بستری است برای پیوند خیرین، مردم و پروژه‌های آموزشی؛
+                جایی که هرکس می‌تواند به اندازه توان خود در ساختن فضای بهتر
+                برای یادگیری کودکان و نوجوانان سهیم باشد.
+            </p>
 
-                <svg
-                    viewBox="0 0 700 500"
-                    role="img"
-                    aria-label="Digital donor and educational project network"
-                >
+            <div class="hero-actions">
 
-                    <!-- connections -->
+                <a href="donate.html" class="btn btn-primary">
+                    من هم می‌خواهم کمک کنم
+                    <span>←</span>
+                </a>
 
-                    <line class="network-line" x1="350" y1="250" x2="130" y2="110"/>
-                    <line class="network-line" x1="350" y1="250" x2="570" y2="110"/>
-                    <line class="network-line" x1="350" y1="250" x2="120" y2="350"/>
-                    <line class="network-line" x1="350" y1="250" x2="575" y2="350"/>
+                <a href="#how-it-works" class="btn btn-secondary">
+                    ببینم چطور کار می‌کند
+                </a>
 
-                    <line class="network-line" x1="130" y1="110" x2="70" y2="235"/>
-                    <line class="network-line" x1="130" y1="110" x2="260" y2="70"/>
+            </div>
 
-                    <line class="network-line" x1="570" y1="110" x2="630" y2="225"/>
-                    <line class="network-line" x1="570" y1="110" x2="450" y2="70"/>
-
-                    <line class="network-line" x1="120" y1="350" x2="65" y2="420"/>
-                    <line class="network-line" x1="120" y1="350" x2="245" y2="430"/>
-
-                    <line class="network-line" x1="575" y1="350" x2="635" y2="420"/>
-                    <line class="network-line" x1="575" y1="350" x2="455" y2="430"/>
-
-
-                    <!-- central project -->
-
-                    <circle
-                        class="node-ring"
-                        cx="350"
-                        cy="250"
-                        r="78"
-                    />
-
-                    <circle
-                        class="main-node"
-                        cx="350"
-                        cy="250"
-                        r="49"
-                    />
-
-                    <text
-                        x="350"
-                        y="245"
-                        text-anchor="middle"
-                        font-size="23"
-                        font-weight="900"
-                        fill="#2e6b59"
-                    >
-                        چ
-                    </text>
-
-                    <text
-                        x="350"
-                        y="270"
-                        text-anchor="middle"
-                        font-size="13"
-                        fill="#52645e"
-                    >
-                        پروژه آموزشی
-                    </text>
-
-
-                    <!-- school / project nodes -->
-
-                    <circle
-                        class="school-node node-pulse"
-                        cx="130"
-                        cy="110"
-                        r="18"
-                    />
-
-                    <circle
-                        class="school-node node-pulse delay-1"
-                        cx="570"
-                        cy="110"
-                        r="18"
-                    />
-
-                    <circle
-                        class="school-node node-pulse delay-2"
-                        cx="120"
-                        cy="350"
-                        r="18"
-                    />
-
-                    <circle
-                        class="school-node node-pulse"
-                        cx="575"
-                        cy="350"
-                        r="18"
-                    />
-
-
-                    <!-- donor nodes -->
-
-                    <circle
-                        class="donor-node node-pulse delay-1"
-                        cx="70"
-                        cy="235"
-                        r="11"
-                    />
-
-                    <circle
-                        class="donor-node node-pulse delay-2"
-                        cx="260"
-                        cy="70"
-                        r="11"
-                    />
-
-                    <circle
-                        class="donor-node node-pulse"
-                        cx="630"
-                        cy="225"
-                        r="11"
-                    />
-
-                    <circle
-                        class="donor-node node-pulse delay-1"
-                        cx="450"
-                        cy="70"
-                        r="11"
-                    />
-
-                    <circle
-                        class="donor-node node-pulse delay-2"
-                        cx="65"
-                        cy="420"
-                        r="11"
-                    />
-
-                    <circle
-                        class="donor-node node-pulse"
-                        cx="245"
-                        cy="430"
-                        r="11"
-                    />
-
-                    <circle
-                        class="donor-node node-pulse delay-1"
-                        cx="635"
-                        cy="420"
-                        r="11"
-                    />
-
-                    <circle
-                        class="donor-node node-pulse delay-2"
-                        cx="455"
-                        cy="430"
-                        r="11"
-                    />
-
-                </svg>
-
-                <div class="network-label">
-                    <strong data-t="networkTitle">
-                        یک شبکه از آدم‌ها و پروژه‌ها
-                    </strong>
-                    <span data-t="networkText">
-                        نقطه‌های سبز، پروژه‌ها و مدارس را نشان می‌دهند؛
-                        نقطه‌های مرجانی، حامیانی را که به این مسیر متصل شده‌اند.
-                    </span>
-                </div>
-
+            <div class="hero-note">
+                <span class="note-icon">✓</span>
+                <span>
+                    مشارکت شما بخشی از یک جامعه است، نه فقط یک پرداخت.
+                </span>
             </div>
 
         </div>
-    </section>
 
 
-    <!-- =========================
-         WHY
-    ========================== -->
+        <!-- Hero Illustration -->
+        <div class="hero-visual">
 
-    <section id="why">
-        <div class="container">
+            <div class="visual-card">
 
-            <div class="section-head">
-                <div class="section-kicker" data-t="whyKicker">
-                    چرا کلاس‌چین؟
+                <div class="visual-card-header">
+                    <span>یک کلاس جدید</span>
+                    <span class="status-dot">در حال شکل‌گیری</span>
                 </div>
 
-                <h2 data-t="whyTitle">
-                    مشارکت، فقط انتقال پول نیست.
-                </h2>
+                <div class="school-illustration">
 
-                <p class="section-description" data-t="whyDescription">
-                    هدف کلاس‌چین ساختن رابطه‌ای روشن میان حامی، پروژه و
-                    نتیجه‌ای است که در دنیای واقعی اتفاق می‌افتد.
-                </p>
+                    <div class="sun"></div>
+
+                    <div class="cloud cloud-one"></div>
+                    <div class="cloud cloud-two"></div>
+
+                    <div class="school">
+
+                        <div class="school-roof"></div>
+
+                        <div class="school-building">
+
+                            <div class="school-window">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                            <div class="school-door"></div>
+
+                        </div>
+
+                        <div class="school-ground"></div>
+
+                    </div>
+
+                    <div class="tree tree-one">
+                        <div class="tree-top"></div>
+                        <div class="tree-trunk"></div>
+                    </div>
+
+                    <div class="tree tree-two">
+                        <div class="tree-top"></div>
+                        <div class="tree-trunk"></div>
+                    </div>
+
+                </div>
+
+                <div class="visual-card-footer">
+
+                    <div>
+                        <strong>هدف</strong>
+                        <span>ساختن فضای بهتر برای یادگیری</span>
+                    </div>
+
+                    <div class="visual-arrow">
+                        →
+                    </div>
+
+                </div>
+
             </div>
 
+            <div class="floating-card floating-card-top">
+                <span class="floating-icon">♡</span>
+                <div>
+                    <strong>هر مشارکت مهم است</strong>
+                    <small>به اندازه توان خود</small>
+                </div>
+            </div>
 
-            <div class="cards">
-
-                <article class="card">
-                    <div class="card-icon">۱</div>
-
-                    <h3 data-t="whyCard1Title">
-                        پروژه را ببینید
-                    </h3>
-
-                    <p data-t="whyCard1Text">
-                        پروژه‌های آموزشی را بشناسید و قبل از مشارکت،
-                        بدانید قرار است چه کاری انجام شود.
-                    </p>
-
-                    <button
-                        class="more-btn"
-                        type="button"
-                        data-more
-                        data-t-more="بیشتر ..."
-                        data-t-less="بستن"
-                    >
-                        بیشتر ...
-                    </button>
-
-                    <div class="more-content">
-                        <span data-t="whyCard1More">
-                            اطلاعات پروژه، هدف، وضعیت و مسیر پیشرفت آن
-                            می‌تواند در کنار ابزارهای دیداری مانند WebGIS
-                            در اختیار شما قرار گیرد.
-                        </span>
-                    </div>
-                </article>
-
-
-                <article class="card">
-                    <div class="card-icon">۲</div>
-
-                    <h3 data-t="whyCard2Title">
-                        مشارکت کنید
-                    </h3>
-
-                    <p data-t="whyCard2Text">
-                        در پروژه‌ای که برایتان اهمیت دارد، به اندازه‌ای
-                        که می‌توانید مشارکت کنید.
-                    </p>
-
-                    <button
-                        class="more-btn"
-                        type="button"
-                        data-more
-                        data-t-more="بیشتر ..."
-                        data-t-less="بستن"
-                    >
-                        بیشتر ...
-                    </button>
-
-                    <div class="more-content">
-                        <span data-t="whyCard2More">
-                            ساختار مشارکت می‌تواند از فناوری‌های بلاکچین
-                            برای ثبت و قابل‌پیگیری‌کردن تراکنش‌های مالی
-                            استفاده کند.
-                        </span>
-                    </div>
-                </article>
-
-
-                <article class="card">
-                    <div class="card-icon">۳</div>
-
-                    <h3 data-t="whyCard3Title">
-                        در مسیر بمانید
-                    </h3>
-
-                    <p data-t="whyCard3Text">
-                        مشارکت شما پایان مسیر نیست؛ می‌توانید روند پروژه
-                        و نتیجه کار را دنبال کنید.
-                    </p>
-
-                    <button
-                        class="more-btn"
-                        type="button"
-                        data-more
-                        data-t-more="بیشتر ..."
-                        data-t-less="بستن"
-                    >
-                        بیشتر ...
-                    </button>
-
-                    <div class="more-content">
-                        <span data-t="whyCard3More">
-                            در بخش فیزیکی و اجرایی، وضعیت پروژه و پیشرفت
-                            آن می‌تواند از طریق WebGIS و گزارش‌های پروژه
-                            قابل مشاهده باشد.
-                        </span>
-                    </div>
-                </article>
-
+            <div class="floating-card floating-card-bottom">
+                <span class="floating-icon">◎</span>
+                <div>
+                    <strong>شفاف و قابل مشاهده</strong>
+                    <small>پروژه‌ها روی نقشه</small>
+                </div>
             </div>
 
         </div>
-    </section>
+
+    </div>
+
+</section>
 
 
-    <!-- =========================
-         HOW IT WORKS
-    ========================== -->
+<!-- =========================
+     About
+========================= -->
+<section class="section about-section" id="about">
 
-    <section class="process" id="how">
-        <div class="container">
+    <div class="container">
 
-            <div class="section-head">
-                <div class="section-kicker" data-t="howKicker">
-                    مسیر ساده است
-                </div>
+        <div class="section-heading centered">
 
-                <h2 data-t="howTitle">
-                    از انتخاب پروژه تا دیدن نتیجه
-                </h2>
+            <span class="section-label">
+                کلاس‌چین چیست؟
+            </span>
 
-                <p class="section-description" data-t="howDescription">
-                    قرار نیست برای مشارکت در یک کار خوب، با فرآیندی پیچیده
-                    روبه‌رو شوید.
-                </p>
-            </div>
+            <h2>
+                کمک کردن را از یک
+                <span>حرکت فردی</span>
+                به یک حرکت جمعی تبدیل کنیم.
+            </h2>
 
-
-            <div class="process-grid">
-
-                <article class="step">
-                    <div class="step-number">۱</div>
-
-                    <h3 data-t="step1Title">
-                        پروژه را انتخاب کنید
-                    </h3>
-
-                    <p data-t="step1Text">
-                        پروژه‌ای را پیدا کنید که هدف و اثر آن برای شما
-                        معنادار است.
-                    </p>
-                </article>
-
-
-                <article class="step">
-                    <div class="step-number">۲</div>
-
-                    <h3 data-t="step2Title">
-                        مشارکت کنید
-                    </h3>
-
-                    <p data-t="step2Text">
-                        از مسیر مشارکت، کمک خود را به پروژه اختصاص دهید.
-                    </p>
-                </article>
-
-
-                <article class="step">
-                    <div class="step-number">۳</div>
-
-                    <h3 data-t="step3Title">
-                        مسیر را دنبال کنید
-                    </h3>
-
-                    <p data-t="step3Text">
-                        تراکنش‌های مالی و پیشرفت واقعی پروژه را در
-                        لایه‌های مختلف شفافیت دنبال کنید.
-                    </p>
-                </article>
-
-            </div>
+            <p>
+                کلاس‌چین تلاش می‌کند خیرین و افراد دغدغه‌مند را در یک جامعه
+                دیجیتال کنار هم قرار دهد تا مشارکت در پروژه‌های آموزشی
+                ساده‌تر، شفاف‌تر و ماندگارتر شود.
+            </p>
 
         </div>
-    </section>
 
 
-    <!-- =========================
-         TECHNOLOGY
-    ========================== -->
+        <div class="principles-grid">
 
-    <section class="technology" id="technology">
+            <article class="principle-card">
 
-        <div class="container">
+                <div class="principle-number">01</div>
 
-            <div class="section-head">
+                <div class="principle-icon">◌</div>
 
-                <div class="section-kicker" data-t="techKicker">
-                    فناوری در خدمت اعتماد
-                </div>
+                <h3>می‌بینید</h3>
 
-                <h2 data-t="techTitle">
-                    فناوری قرار نیست جای انسان را بگیرد.
-                </h2>
-
-                <p class="section-description" data-t="techDescription">
-                    بلاکچین و فناوری‌های مرتبط در کلاس‌چین ابزارهایی برای
-                    شفافیت و ثبت مشارکت هستند، نه هدف اصلی پروژه.
+                <p>
+                    پروژه‌ها و نیازهای واقعی را می‌بینید و می‌توانید بدانید
+                    مشارکت شما در کجا و برای چه هدفی استفاده می‌شود.
                 </p>
 
-            </div>
+            </article>
 
 
-            <div class="tech-grid">
+            <article class="principle-card">
 
-                <article class="tech-card">
+                <div class="principle-number">02</div>
 
-                    <h3 data-t="blockchainTitle">
-                        Blockchain
-                    </h3>
+                <div class="principle-icon">↗</div>
 
-                    <p data-t="blockchainText">
-                        برای ثبت تراکنش‌های مالی به شکلی قابل‌ردگیری و
-                        قابل بررسی.
-                    </p>
+                <h3>مشارکت می‌کنید</h3>
 
-                    <button
-                        class="more-btn"
-                        type="button"
-                        data-more
-                    >
-                        بیشتر ...
-                    </button>
-
-                    <div class="more-content">
-                        <span data-t="blockchainMore">
-                            بلاکچین یک دفتر ثبت توزیع‌شده است. استفاده از آن
-                            می‌تواند امکان بررسی مسیر برخی تراکنش‌های مالی
-                            مانند دریافت، انتقال و برداشت را فراهم کند.
-                            هدف، ایجاد شفافیت است؛ نه نمایش یک محصول سرمایه‌گذاری.
-                        </span>
-                    </div>
-
-                </article>
-
-
-                <article class="tech-card">
-
-                    <h3 data-t="web3Title">
-                        Web3
-                    </h3>
-
-                    <p data-t="web3Text">
-                        مجموعه‌ای از فناوری‌ها که امکان تعامل مستقیم‌تر
-                        کاربران با خدمات دیجیتال را فراهم می‌کنند.
-                    </p>
-
-                    <button
-                        class="more-btn"
-                        type="button"
-                        data-more
-                    >
-                        بیشتر ...
-                    </button>
-
-                    <div class="more-content">
-                        <span data-t="web3More">
-                            Web3 در این پروژه به معنای استفاده هدفمند از
-                            کیف پول‌های دیجیتال، قراردادهای هوشمند و
-                            زیرساخت‌های غیرمتمرکز در بخش‌هایی از سیستم است.
-                        </span>
-                    </div>
-
-                </article>
-
-
-                <article class="tech-card">
-
-                    <h3 data-t="nftTitle">
-                        NFT و گواهی دیجیتال
-                    </h3>
-
-                    <p data-t="nftText">
-                        در صورت استفاده، NFT می‌تواند به عنوان یک گواهی
-                        دیجیتال مشارکت یا یادبود تعریف شود.
-                    </p>
-
-                    <button
-                        class="more-btn"
-                        type="button"
-                        data-more
-                    >
-                        بیشتر ...
-                    </button>
-
-                    <div class="more-content">
-                        <span data-t="nftMore">
-                            NFT در اینجا قرار نیست یک دارایی سفته‌بازانه باشد.
-                            می‌توان از این فناوری برای ایجاد یک گواهی دیجیتال
-                            منحصربه‌فرد از مشارکت یا ارتباط فرد با یک پروژه
-                            استفاده کرد.
-                        </span>
-                    </div>
-
-                </article>
-
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- =========================
-         TRANSPARENCY
-    ========================== -->
-
-    <section id="transparency">
-
-        <div class="container">
-
-            <div class="section-head">
-
-                <div class="section-kicker" data-t="transparencyKicker">
-                    شفافیت در دو لایه
-                </div>
-
-                <h2 data-t="transparencyTitle">
-                    بدانید پول کجاست؛ ببینید پروژه کجاست.
-                </h2>
-
-                <p class="section-description" data-t="transparencyDescription">
-                    شفافیت فقط درباره تراکنش مالی نیست. باید بتوان نتیجه
-                    و وضعیت واقعی پروژه را نیز دید.
+                <p>
+                    لازم نیست کمک شما بزرگ باشد. مشارکت‌های کوچک و بزرگ،
+                    وقتی کنار هم قرار می‌گیرند، می‌توانند یک تغییر واقعی بسازند.
                 </p>
 
-            </div>
+            </article>
 
 
-            <div class="transparency-grid">
+            <article class="principle-card">
 
-                <article class="transparency-card financial">
+                <div class="principle-number">03</div>
 
-                    <div
-                        class="small-title"
-                        data-t="financialSmall"
-                    >
-                        لایه اول
-                    </div>
+                <div class="principle-icon">∞</div>
 
-                    <h3 data-t="financialTitle">
-                        شفافیت مالی
-                    </h3>
+                <h3>همراه می‌مانید</h3>
 
-                    <p data-t="financialText">
-                        دریافت‌ها، پرداخت‌ها و برداشت‌هایی که روی زیرساخت
-                        بلاکچین ثبت می‌شوند، قابلیت رهگیری دارند.
-                        این لایه کمک می‌کند مسیر مالی مشارکت قابل بررسی باشد.
-                    </p>
+                <p>
+                    مشارکت شما پایان مسیر نیست. می‌توانید روند پروژه را دنبال
+                    کنید و بخشی از جامعه‌ای باشید که آینده آموزش را می‌سازد.
+                </p>
 
-                </article>
-
-
-                <article class="transparency-card physical">
-
-                    <div
-                        class="small-title"
-                        data-t="physicalSmall"
-                    >
-                        لایه دوم
-                    </div>
-
-                    <h3 data-t="physicalTitle">
-                        شفافیت فیزیکی و پروژه‌ای
-                    </h3>
-
-                    <p data-t="physicalText">
-                        وضعیت پروژه، گزارش‌ها و پیشرفت فیزیکی آن می‌تواند
-                        از طریق WebGIS و اطلاعات پروژه در اختیار حامیان قرار گیرد.
-                        یعنی فقط نمی‌گوییم چه اتفاقی افتاده؛ تا جای ممکن
-                        نشان می‌دهیم کجا و در چه مرحله‌ای قرار دارد.
-                    </p>
-
-                </article>
-
-            </div>
+            </article>
 
         </div>
-    </section>
+
+    </div>
+
+</section>
 
 
-    <!-- =========================
-         ADMIN
-    ========================== -->
+<!-- =========================
+     How It Works
+========================= -->
+<section class="section process-section" id="how-it-works">
 
-    <section>
+    <div class="container">
 
-        <div class="container">
+        <div class="section-heading">
 
-            <div class="admin-box">
+            <span class="section-label">
+                چطور کار می‌کند؟
+            </span>
 
-                <div class="admin-visual">
+            <h2>
+                ساده است؛
+                <span>انتخاب کنید، مشارکت کنید، همراه بمانید.</span>
+            </h2>
 
-                    <div class="admin-symbol">
-                        ⚙
-                    </div>
+            <p>
+                قرار نیست برای کمک کردن با فرآیندهای پیچیده روبه‌رو شوید.
+                کلاس‌چین تلاش می‌کند مسیر مشارکت را تا جای ممکن ساده و قابل فهم کند.
+            </p>
 
+        </div>
+
+
+        <div class="process-grid">
+
+            <div class="process-line"></div>
+
+
+            <article class="process-step">
+
+                <div class="step-number">
+                    ۱
                 </div>
 
+                <div class="step-content">
 
-                <div class="admin-content">
+                    <span>گام اول</span>
 
-                    <div class="section-kicker" data-t="adminKicker">
-                        پشت صحنه پروژه
-                    </div>
+                    <h3>یک پروژه را انتخاب کنید</h3>
 
-                    <h2 data-t="adminTitle">
-                        مدیریت پروژه برای مجریان، نه داشبورد شخصی حامیان
-                    </h2>
-
-                    <p data-t="adminText">
-                        کلاس‌چین یک داشبورد شخصی برای مدیریت سرمایه یا
-                        حساب حامیان طراحی نکرده است. بخش مدیریت برای
-                        اپراتورها و مدیران پروژه است تا فرآیندهای اجرایی
-                        و مالی را مدیریت کنند.
+                    <p>
+                        پروژه‌ای را که با دغدغه شما هم‌راستاست پیدا کنید؛
+                        از ساخت و تجهیز یک کلاس تا مشارکت در برنامه‌های آموزشی.
                     </p>
 
-                    <ul class="admin-list">
-
-                        <li data-t="adminItem1">
-                            مدیریت پروژه‌ها و ساختارهای مالی
-                        </li>
-
-                        <li data-t="adminItem2">
-                            مدیریت تعاملات مالی پروژه
-                        </li>
-
-                        <li data-t="adminItem3">
-                            بررسی و تأیید گزارش‌ها و صورت‌وضعیت‌ها
-                        </li>
-
-                        <li data-t="adminItem4">
-                            پرداخت به پیمانکاران و مدیریت عملیات پروژه
-                        </li>
-
-                    </ul>
-
-                    <a
-                        class="btn btn-secondary"
-                        href="Admin/index.html"
-                        data-t="adminButton"
-                    >
-                        ورود به بخش مدیریت
+                    <a href="WebGIS.html">
+                        مشاهده پروژه‌ها ←
                     </a>
 
                 </div>
 
-            </div>
+            </article>
+
+
+            <article class="process-step">
+
+                <div class="step-number">
+                    ۲
+                </div>
+
+                <div class="step-content">
+
+                    <span>گام دوم</span>
+
+                    <h3>به اندازه توان خود مشارکت کنید</h3>
+
+                    <p>
+                        مبلغ یا نوع مشارکت خود را انتخاب کنید.
+                        مهم نیست مشارکت شما چقدر است؛ مهم این است که بخشی از حرکت باشید.
+                    </p>
+
+                    <a href="donate.html">
+                        شروع مشارکت ←
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <article class="process-step">
+
+                <div class="step-number">
+                    ۳
+                </div>
+
+                <div class="step-content">
+
+                    <span>گام سوم</span>
+
+                    <h3>در جریان بمانید</h3>
+
+                    <p>
+                        پس از مشارکت، می‌توانید مسیر پروژه‌ها و فعالیت‌های جامعه
+                        خیرین دیجیتال را دنبال کنید.
+                    </p>
+
+                    <a href="dashboard.html">
+                        داشبورد من ←
+                    </a>
+
+                </div>
+
+            </article>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- =========================
-         COMMUNITY
-    ========================== -->
+<!-- =========================
+     Participation Models
+========================= -->
+<section class="section participation-section">
 
-    <section class="community">
+    <div class="container">
 
-        <div class="container">
+        <div class="participation-grid">
 
-            <div class="community-box">
+            <div class="participation-intro">
 
-                <div class="section-kicker" data-t="communityKicker">
-                    یک جامعه، نه فقط یک وب‌سایت
-                </div>
+                <span class="section-label">
+                    شکل‌های مختلف مشارکت
+                </span>
 
-                <h2 data-t="communityTitle">
-                    حامیان می‌توانند بخشی از مسیر باشند.
+                <h2>
+                    هرکس می‌تواند
+                    <span>به شیوه خودش</span>
+                    همراه شود.
                 </h2>
 
-                <p data-t="communityText">
-                    کلاس‌چین می‌خواهد میان آدم‌هایی که می‌خواهند کمک کنند
-                    و پروژه‌هایی که به کمک نیاز دارند، یک ارتباط ماندگار
-                    ایجاد کند.
+                <p>
+                    همه افراد یک دغدغه، توان مالی یا فرصت یکسان ندارند.
+                    جامعه خیرین دیجیتال باید برای مشارکت‌های مختلف جا داشته باشد.
                 </p>
 
+            </div>
 
-                <div class="community-more">
 
-                    <button
-                        class="more-btn"
-                        type="button"
-                        data-more
-                        data-t-more="بیشتر درباره جامعه کلاس‌چین"
-                        data-t-less="بستن"
-                    >
-                        بیشتر درباره جامعه کلاس‌چین
-                    </button>
+            <div class="participation-cards">
 
-                    <div class="more-content">
+                <article class="participation-card">
 
-                        <span data-t="communityMore">
-                            در این نگاه، حامی فقط یک تراکنش انجام نمی‌دهد.
-                            او می‌تواند پروژه را بشناسد، در آن مشارکت کند،
-                            مسیر پیشرفت را دنبال کند و در آینده دوباره
-                            به پروژه‌های دیگری از این جامعه متصل شود.
-                            فناوری در پس‌زمینه قرار می‌گیرد تا این ارتباط
-                            ساده‌تر و شفاف‌تر شود.
-                        </span>
-
+                    <div class="card-icon">
+                        □
                     </div>
 
-                </div>
+                    <h3>
+                        مشارکت در یک پروژه
+                    </h3>
+
+                    <p>
+                        اگر پروژه مشخصی برایتان اهمیت دارد، می‌توانید مستقیماً
+                        در همان پروژه مشارکت کنید.
+                    </p>
+
+                    <a href="WebGIS.html">
+                        انتخاب پروژه
+                        <span>←</span>
+                    </a>
+
+                </article>
+
+
+                <article class="participation-card highlighted">
+
+                    <div class="card-icon">
+                        ◇
+                    </div>
+
+                    <h3>
+                        همراهی با جامعه
+                    </h3>
+
+                    <p>
+                        اگر ترجیح می‌دهید بخشی از یک حرکت گسترده‌تر باشید،
+                        می‌توانید به جامعه خیرین دیجیتال بپیوندید.
+                    </p>
+
+                    <a href="donate.html">
+                        من هم همراه می‌شوم
+                        <span>←</span>
+                    </a>
+
+                </article>
 
             </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- =========================
-         CTA
-    ========================== -->
+<!-- =========================
+     Community
+========================= -->
+<section class="section community-section" id="community">
 
-    <section class="cta">
+    <div class="container community-grid">
 
-        <div class="container">
+        <div class="community-visual">
 
-            <div class="cta-box">
+            <div class="community-orbit orbit-one"></div>
+            <div class="community-orbit orbit-two"></div>
 
-                <h2 data-t="ctaTitle">
-                    آینده کودکان، با یک نفر ساخته نمی‌شود.
+            <div class="community-center">
+                <span>کلاس‌چین</span>
+                <small>یک جامعه</small>
+            </div>
+
+            <div class="community-person person-one">
+                <span>خیر</span>
+            </div>
+
+            <div class="community-person person-two">
+                <span>همراه</span>
+            </div>
+
+            <div class="community-person person-three">
+                <span>سازنده</span>
+            </div>
+
+            <div class="community-person person-four">
+                <span>آموزش</span>
+            </div>
+
+        </div>
+
+
+        <div class="community-content">
+
+            <span class="section-label">
+                جامعه خیرین دیجیتال
+            </span>
+
+            <h2>
+                قرار نیست فقط
+                <span>کمک‌کننده</span>
+                باشیم؛
+                قرار است همراه باشیم.
+            </h2>
+
+            <p>
+                کلاس‌چین یک صفحه پرداخت دیگر نیست.
+                هدف این است که انسان‌هایی که به آینده آموزش اهمیت می‌دهند
+                بتوانند یکدیگر را پیدا کنند، پروژه‌ها را ببینند و در یک حرکت
+                مشترک سهیم شوند.
+            </p>
+
+            <ul class="community-list">
+
+                <li>
+                    <span>✓</span>
+                    مشارکت از هر نقطه دنیا
+                </li>
+
+                <li>
+                    <span>✓</span>
+                    مشارکت متناسب با توان هر فرد
+                </li>
+
+                <li>
+                    <span>✓</span>
+                    ارتباط مستقیم‌تر با پروژه‌ها
+                </li>
+
+                <li>
+                    <span>✓</span>
+                    همراهی بلندمدت با یک حرکت اجتماعی
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     Transparency
+========================= -->
+<section class="section transparency-section">
+
+    <div class="container">
+
+        <div class="transparency-box">
+
+            <div class="transparency-content">
+
+                <span class="section-label">
+                    شفافیت
+                </span>
+
+                <h2>
+                    شفافیت نباید
+                    <span>یک وعده</span>
+                    باشد؛
+                    باید قابل مشاهده باشد.
                 </h2>
 
-                <p data-t="ctaText">
-                    یک پروژه را بشناسید، مسیرش را ببینید و اگر با هدف آن
-                    همراه هستید، بخشی از این زنجیره باشید.
+                <p>
+                    نقشه پروژه‌ها کمک می‌کند بدانید فعالیت‌های کلاس‌چین
+                    در کجا جریان دارد و بتوانید مسیر پروژه‌ها را دنبال کنید.
                 </p>
 
-                <div class="cta-actions">
+                <a href="WebGIS.html" class="btn btn-light">
+                    مشاهده نقشه پروژه‌ها
+                    <span>←</span>
+                </a>
 
-                    <a
-                        class="btn btn-primary"
-                        href="donate.html"
-                        data-t="ctaPrimary"
-                    >
-                        من چطور می‌توانم کمک کنم؟
-                    </a>
+            </div>
 
-                    <a
-                        class="btn btn-secondary"
-                        href="WebGIS.html"
-                        data-t="ctaSecondary"
-                    >
-                        مشاهده پروژه‌ها در WebGIS
-                    </a>
 
+            <div class="map-preview">
+
+                <div class="map-grid"></div>
+
+                <span class="map-location location-one"></span>
+                <span class="map-location location-two"></span>
+                <span class="map-location location-three"></span>
+                <span class="map-location location-four"></span>
+
+                <div class="map-label">
+                    WebGIS
+                    <small>پروژه‌های کلاس‌چین</small>
                 </div>
 
             </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
+
+
+<!-- =========================
+     Final CTA
+========================= -->
+<section class="final-cta">
+
+    <div class="container">
+
+        <div class="final-cta-inner">
+
+            <span class="final-quote">«</span>
+
+            <h2>
+                اگر آینده کودکان برایتان مهم است،
+                <span>جای شما در این جامعه خالی است.</span>
+            </h2>
+
+            <p>
+                همین امروز به جمع کسانی بپیوندید که می‌خواهند
+                سهمی واقعی در ساختن آینده داشته باشند.
+            </p>
+
+            <a href="donate.html" class="btn btn-primary btn-large">
+                من هم می‌خواهم کمک کنم
+                <span>←</span>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
 
 </main>
 
 
 <!-- =========================
-     FOOTER
-========================== -->
+     Footer
+========================= -->
+<footer class="site-footer">
 
-<footer>
+    <div class="container">
 
-    <div class="container footer-grid">
+        <div class="footer-grid">
 
-        <div>
+            <div class="footer-brand">
 
-            <div class="footer-brand" data-t="footerBrand">
-                کلاس‌چین
+                <a href="index.html" class="brand">
+                    <span class="brand-mark">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+
+                    <span class="brand-text">
+                        <strong>کلاس‌چین</strong>
+                        <small>جامعه خیرین دیجیتال</small>
+                    </span>
+                </a>
+
+                <p>
+                    با هم، آینده را می‌سازیم؛ کلاس به کلاس.
+                </p>
+
             </div>
 
-            <div class="footer-note" data-t="footerNote">
-                جامعه دیجیتال حامیان پروژه‌های آموزشی
+
+            <div class="footer-column">
+
+                <h4>کلاس‌چین</h4>
+
+                <a href="#about">کلاس‌چین چیست؟</a>
+                <a href="#how-it-works">چطور کار می‌کند؟</a>
+                <a href="#community">جامعه خیرین</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>دسترسی</h4>
+
+                <a href="WebGIS.html">WebGIS</a>
+                <a href="donate.html">مشارکت</a>
+                <a href="dashboard.html">داشبورد</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>اطلاعات</h4>
+
+                <a href="../ClassChain_WhitePaper_Updated.docx">
+                    سند پروژه
+                </a>
+
+                <a href="../Admin/index.html">
+                    پنل مدیریت
+                </a>
+
             </div>
 
         </div>
 
 
-        <div class="footer-links">
+        <div class="footer-bottom">
 
-            <a href="WebGIS.html" data-t="footerWebGIS">
-                WebGIS
-            </a>
+            <span>
+                © <span id="currentYear"></span> ClassChain
+            </span>
 
-            <a href="donate.html" data-t="footerDonate">
-                مشارکت
-            </a>
-
-            <a href="Admin/index.html" data-t="footerAdmin">
-                مدیریت
-            </a>
-
-            <a href="#technology" data-t="footerTechnology">
-                فناوری
-            </a>
-
-            <a href="#transparency" data-t="footerTransparency">
-                شفافیت
-            </a>
-
-            <a
-                href="ClassChain_WhitePaper_Updated.docx"
-                data-t="footerWhitepaper"
-            >
-                White Paper
-            </a>
+            <span>
+                ساخته شده برای ساختن آینده آموزش
+            </span>
 
         </div>
 
@@ -1820,883 +774,7 @@
 </footer>
 
 
-<script>
-
-    /* =========================
-       Mobile menu
-    ========================== */
-
-    const menuBtn = document.getElementById("menuBtn");
-    const navLinks = document.getElementById("navLinks");
-
-    menuBtn.addEventListener("click", () => {
-        navLinks.classList.toggle("open");
-    });
-
-
-    navLinks.querySelectorAll("a").forEach(link => {
-        link.addEventListener("click", () => {
-            navLinks.classList.remove("open");
-        });
-    });
-
-
-    /* =========================
-       Expand / collapse cards
-    ========================== */
-
-    document.querySelectorAll("[data-more]").forEach(button => {
-
-        button.addEventListener("click", () => {
-
-            const content = button.nextElementSibling;
-
-            if (!content) {
-                return;
-            }
-
-            const isOpen = content.classList.toggle("open");
-
-            button.textContent = isOpen
-                ? (button.dataset.tLess || "بستن")
-                : (button.dataset.tMore || "بیشتر ...");
-
-        });
-
-    });
-
-
-    /* =========================
-       Multilingual system
-    ========================== */
-
-    const translations = {
-
-        fa: {
-
-            brand: "کلاس‌چین",
-
-            navWhy: "چرا کلاس‌چین؟",
-            navHow: "چطور کار می‌کند؟",
-            navTech: "فناوری",
-            navTransparency: "شفافیت",
-            navWebGIS: "WebGIS",
-            navAdmin: "مدیریت پروژه",
-
-            heroEyebrow: "جامعه دیجیتال حامیان آموزش",
-
-            heroTitle:
-                "با هم، آینده را می‌سازیم؛ کلاس به کلاس.",
-
-            heroText:
-                "کلاس‌چین بستری است برای پیوند دادن حامیان با پروژه‌های واقعی آموزشی؛ جایی که مشارکت شما فقط یک پرداخت نیست، بلکه بخشی از یک مسیر شفاف و قابل پیگیری است.",
-
-            heroPrimary:
-                "من چطور می‌توانم کمک کنم؟",
-
-            heroSecondary:
-                "مسیر مشارکت را ببینید",
-
-            heroNote:
-                "بدون وعده‌های بزرگ؛ با تمرکز بر پروژه، شفافیت و اثر واقعی.",
-
-            networkTitle:
-                "یک شبکه از آدم‌ها و پروژه‌ها",
-
-            networkText:
-                " نقطه‌های سبز، پروژه‌ها و مدارس را نشان می‌دهند؛ نقطه‌های مرجانی، حامیانی را که به این مسیر متصل شده‌اند.",
-
-            whyKicker:
-                "چرا کلاس‌چین؟",
-
-            whyTitle:
-                "مشارکت، فقط انتقال پول نیست.",
-
-            whyDescription:
-                "هدف کلاس‌چین ساختن رابطه‌ای روشن میان حامی، پروژه و نتیجه‌ای است که در دنیای واقعی اتفاق می‌افتد.",
-
-            whyCard1Title:
-                "پروژه را ببینید",
-
-            whyCard1Text:
-                "پروژه‌های آموزشی را بشناسید و قبل از مشارکت، بدانید قرار است چه کاری انجام شود.",
-
-            whyCard1More:
-                "اطلاعات پروژه، هدف، وضعیت و مسیر پیشرفت آن می‌تواند در کنار ابزارهای دیداری مانند WebGIS در اختیار شما قرار گیرد.",
-
-            whyCard2Title:
-                "مشارکت کنید",
-
-            whyCard2Text:
-                "در پروژه‌ای که برایتان اهمیت دارد، به اندازه‌ای که می‌توانید مشارکت کنید.",
-
-            whyCard2More:
-                "ساختار مشارکت می‌تواند از فناوری‌های بلاکچین برای ثبت و قابل‌پیگیری‌کردن تراکنش‌های مالی استفاده کند.",
-
-            whyCard3Title:
-                "در مسیر بمانید",
-
-            whyCard3Text:
-                "مشارکت شما پایان مسیر نیست؛ می‌توانید روند پروژه و نتیجه کار را دنبال کنید.",
-
-            whyCard3More:
-                "در بخش فیزیکی و اجرایی، وضعیت پروژه و پیشرفت آن می‌تواند از طریق WebGIS و گزارش‌های پروژه قابل مشاهده باشد.",
-
-            howKicker:
-                "مسیر ساده است",
-
-            howTitle:
-                "از انتخاب پروژه تا دیدن نتیجه",
-
-            howDescription:
-                "قرار نیست برای مشارکت در یک کار خوب، با فرآیندی پیچیده روبه‌رو شوید.",
-
-            step1Title:
-                "پروژه را انتخاب کنید",
-
-            step1Text:
-                "پروژه‌ای را پیدا کنید که هدف و اثر آن برای شما معنادار است.",
-
-            step2Title:
-                "مشارکت کنید",
-
-            step2Text:
-                "از مسیر مشارکت، کمک خود را به پروژه اختصاص دهید.",
-
-            step3Title:
-                "مسیر را دنبال کنید",
-
-            step3Text:
-                "تراکنش‌های مالی و پیشرفت واقعی پروژه را در لایه‌های مختلف شفافیت دنبال کنید.",
-
-            techKicker:
-                "فناوری در خدمت اعتماد",
-
-            techTitle:
-                "فناوری قرار نیست جای انسان را بگیرد.",
-
-            techDescription:
-                "بلاکچین و فناوری‌های مرتبط در کلاس‌چین ابزارهایی برای شفافیت و ثبت مشارکت هستند، نه هدف اصلی پروژه.",
-
-            blockchainTitle:
-                "Blockchain",
-
-            blockchainText:
-                "برای ثبت تراکنش‌های مالی به شکلی قابل‌ردگیری و قابل بررسی.",
-
-            blockchainMore:
-                "بلاکچین یک دفتر ثبت توزیع‌شده است. استفاده از آن می‌تواند امکان بررسی مسیر برخی تراکنش‌های مالی مانند دریافت، انتقال و برداشت را فراهم کند. هدف، ایجاد شفافیت است؛ نه نمایش یک محصول سرمایه‌گذاری.",
-
-            web3Title:
-                "Web3",
-
-            web3Text:
-                "مجموعه‌ای از فناوری‌ها که امکان تعامل مستقیم‌تر کاربران با خدمات دیجیتال را فراهم می‌کنند.",
-
-            web3More:
-                "Web3 در این پروژه به معنای استفاده هدفمند از کیف پول‌های دیجیتال، قراردادهای هوشمند و زیرساخت‌های غیرمتمرکز در بخش‌هایی از سیستم است.",
-
-            nftTitle:
-                "NFT و گواهی دیجیتال",
-
-            nftText:
-                "در صورت استفاده، NFT می‌تواند به عنوان یک گواهی دیجیتال مشارکت یا یادبود تعریف شود.",
-
-            nftMore:
-                "NFT در اینجا قرار نیست یک دارایی سفته‌بازانه باشد. می‌توان از این فناوری برای ایجاد یک گواهی دیجیتال منحصربه‌فرد از مشارکت یا ارتباط فرد با یک پروژه استفاده کرد.",
-
-            transparencyKicker:
-                "شفافیت در دو لایه",
-
-            transparencyTitle:
-                "بدانید پول کجاست؛ ببینید پروژه کجاست.",
-
-            transparencyDescription:
-                "شفافیت فقط درباره تراکنش مالی نیست. باید بتوان نتیجه و وضعیت واقعی پروژه را نیز دید.",
-
-            financialSmall:
-                "لایه اول",
-
-            financialTitle:
-                "شفافیت مالی",
-
-            financialText:
-                "دریافت‌ها، پرداخت‌ها و برداشت‌هایی که روی زیرساخت بلاکچین ثبت می‌شوند، قابلیت رهگیری دارند. این لایه کمک می‌کند مسیر مالی مشارکت قابل بررسی باشد.",
-
-            physicalSmall:
-                "لایه دوم",
-
-            physicalTitle:
-                "شفافیت فیزیکی و پروژه‌ای",
-
-            physicalText:
-                "وضعیت پروژه، گزارش‌ها و پیشرفت فیزیکی آن می‌تواند از طریق WebGIS و اطلاعات پروژه در اختیار حامیان قرار گیرد. یعنی فقط نمی‌گوییم چه اتفاقی افتاده؛ تا جای ممکن نشان می‌دهیم کجا و در چه مرحله‌ای قرار دارد.",
-
-            adminKicker:
-                "پشت صحنه پروژه",
-
-            adminTitle:
-                "مدیریت پروژه برای مجریان، نه داشبورد شخصی حامیان",
-
-            adminText:
-                "کلاس‌چین یک داشبورد شخصی برای مدیریت سرمایه یا حساب حامیان طراحی نکرده است. بخش مدیریت برای اپراتورها و مدیران پروژه است تا فرآیندهای اجرایی و مالی را مدیریت کنند.",
-
-            adminItem1:
-                "مدیریت پروژه‌ها و ساختارهای مالی",
-
-            adminItem2:
-                "مدیریت تعاملات مالی پروژه",
-
-            adminItem3:
-                "بررسی و تأیید گزارش‌ها و صورت‌وضعیت‌ها",
-
-            adminItem4:
-                "پرداخت به پیمانکاران و مدیریت عملیات پروژه",
-
-            adminButton:
-                "ورود به بخش مدیریت",
-
-            communityKicker:
-                "یک جامعه، نه فقط یک وب‌سایت",
-
-            communityTitle:
-                "حامیان می‌توانند بخشی از مسیر باشند.",
-
-            communityText:
-                "کلاس‌چین می‌خواهد میان آدم‌هایی که می‌خواهند کمک کنند و پروژه‌هایی که به کمک نیاز دارند، یک ارتباط ماندگار ایجاد کند.",
-
-            communityMore:
-                "در این نگاه، حامی فقط یک تراکنش انجام نمی‌دهد. او می‌تواند پروژه را بشناسد، در آن مشارکت کند، مسیر پیشرفت را دنبال کند و در آینده دوباره به پروژه‌های دیگری از این جامعه متصل شود. فناوری در پس‌زمینه قرار می‌گیرد تا این ارتباط ساده‌تر و شفاف‌تر شود.",
-
-            ctaTitle:
-                "آینده کودکان، با یک نفر ساخته نمی‌شود.",
-
-            ctaText:
-                "یک پروژه را بشناسید، مسیرش را ببینید و اگر با هدف آن همراه هستید، بخشی از این زنجیره باشید.",
-
-            ctaPrimary:
-                "من چطور می‌توانم کمک کنم؟",
-
-            ctaSecondary:
-                "مشاهده پروژه‌ها در WebGIS",
-
-            footerBrand:
-                "کلاس‌چین",
-
-            footerNote:
-                "جامعه دیجیتال حامیان پروژه‌های آموزشی",
-
-            footerWebGIS:
-                "WebGIS",
-
-            footerDonate:
-                "مشارکت",
-
-            footerAdmin:
-                "مدیریت",
-
-            footerTechnology:
-                "فناوری",
-
-            footerTransparency:
-                "شفافیت",
-
-            footerWhitepaper:
-                "White Paper"
-        },
-
-
-        en: {
-
-            brand: "ClassChain",
-
-            navWhy: "Why ClassChain?",
-            navHow: "How it works",
-            navTech: "Technology",
-            navTransparency: "Transparency",
-            navWebGIS: "WebGIS",
-            navAdmin: "Project Admin",
-
-            heroEyebrow:
-                "Digital community of education supporters",
-
-            heroTitle:
-                "Together, we build the future — class by class.",
-
-            heroText:
-                "ClassChain connects supporters with real educational projects. Your contribution is not just a payment; it becomes part of a transparent and traceable journey.",
-
-            heroPrimary:
-                "How can I help?",
-
-            heroSecondary:
-                "See how it works",
-
-            heroNote:
-                "No inflated promises — just projects, transparency, and real-world impact.",
-
-            networkTitle:
-                "A network of people and projects",
-
-            networkText:
-                "Green nodes represent schools and projects. Coral nodes represent supporters connected to the journey.",
-
-            whyKicker:
-                "Why ClassChain?",
-
-            whyTitle:
-                "Participation is more than transferring money.",
-
-            whyDescription:
-                "ClassChain aims to create a clear relationship between supporters, projects, and real-world outcomes.",
-
-            whyCard1Title:
-                "See the project",
-
-            whyCard1Text:
-                "Explore educational projects and understand what is planned before you contribute.",
-
-            whyCard1More:
-                "Project goals, status, and progress can be presented alongside visual tools such as WebGIS.",
-
-            whyCard2Title:
-                "Contribute",
-
-            whyCard2Text:
-                "Support a project that matters to you, at a level you are comfortable with.",
-
-            whyCard2More:
-                "The contribution structure can use blockchain technology to record and make financial transactions traceable.",
-
-            whyCard3Title:
-                "Stay connected",
-
-            whyCard3Text:
-                "Your contribution is not the end of the journey. You can follow the project's progress and outcome.",
-
-            whyCard3More:
-                "Physical and operational progress can be presented through WebGIS and project reports.",
-
-            howKicker:
-                "A simple path",
-
-            howTitle:
-                "From choosing a project to seeing the result",
-
-            howDescription:
-                "Supporting a good project should not require a complicated process.",
-
-            step1Title:
-                "Choose a project",
-
-            step1Text:
-                "Find a project whose purpose and expected impact matter to you.",
-
-            step2Title:
-                "Contribute",
-
-            step2Text:
-                "Use the contribution flow to support the project.",
-
-            step3Title:
-                "Follow the journey",
-
-            step3Text:
-                "Follow financial transactions and real project progress through different transparency layers.",
-
-            techKicker:
-                "Technology in service of trust",
-
-            techTitle:
-                "Technology should not replace people.",
-
-            techDescription:
-                "Blockchain and related technologies are tools for transparency and participation — not the main purpose of ClassChain.",
-
-            blockchainTitle:
-                "Blockchain",
-
-            blockchainText:
-                "For recording financial transactions in a traceable and reviewable way.",
-
-            blockchainMore:
-                "Blockchain is a distributed ledger. Its use can make certain financial transactions, such as receiving, transferring, and withdrawing funds, traceable. The goal is transparency, not presenting an investment product.",
-
-            web3Title:
-                "Web3",
-
-            web3Text:
-                "A group of technologies that can enable more direct interaction with digital services.",
-
-            web3More:
-                "In this project, Web3 refers to the purposeful use of digital wallets, smart contracts, and decentralized infrastructure in parts of the system.",
-
-            nftTitle:
-                "NFT & Digital Certificates",
-
-            nftText:
-                "If used, an NFT can serve as a digital certificate of participation or a digital keepsake.",
-
-            nftMore:
-                "NFTs are not intended here as speculative assets. The technology can be used to create a unique digital certificate representing participation or connection to a project.",
-
-            transparencyKicker:
-                "Two layers of transparency",
-
-            transparencyTitle:
-                "Know where the money goes; see where the project stands.",
-
-            transparencyDescription:
-                "Transparency is not only about financial transactions. People should also be able to see the real status of a project.",
-
-            financialSmall:
-                "Layer One",
-
-            financialTitle:
-                "Financial transparency",
-
-            financialText:
-                "Receipts, payments, and withdrawals recorded on blockchain infrastructure can be traced. This layer helps make the financial path of a contribution reviewable.",
-
-            physicalSmall:
-                "Layer Two",
-
-            physicalTitle:
-                "Physical & project transparency",
-
-            physicalText:
-                "Project status, reports, and physical progress can be presented through WebGIS and project information. The goal is not only to say what happened, but to show where the project is and what stage it has reached.",
-
-            adminKicker:
-                "Behind the project",
-
-            adminTitle:
-                "Project management for operators — not a personal donor dashboard",
-
-            adminText:
-                "ClassChain does not provide a personal investment or donor-account dashboard. The management area is designed for project operators and administrators to handle operational and financial processes.",
-
-            adminItem1:
-                "Project and financial structure management",
-
-            adminItem2:
-                "Project financial interactions",
-
-            adminItem3:
-                "Reviewing and approving reports and statements",
-
-            adminItem4:
-                "Contractor payments and project operations",
-
-            adminButton:
-                "Open management area",
-
-            communityKicker:
-                "A community, not just a website",
-
-            communityTitle:
-                "Supporters can become part of the journey.",
-
-            communityText:
-                "ClassChain aims to create a lasting connection between people who want to help and projects that need support.",
-
-            communityMore:
-                "In this model, a supporter does more than make a transaction. They can discover a project, contribute, follow its progress, and later connect with other projects in the community. Technology stays in the background to make this relationship simpler and more transparent.",
-
-            ctaTitle:
-                "The future of children cannot be built by one person alone.",
-
-            ctaText:
-                "Discover a project, see its journey, and if its mission matters to you, become part of the chain.",
-
-            ctaPrimary:
-                "How can I help?",
-
-            ctaSecondary:
-                "View projects in WebGIS",
-
-            footerBrand:
-                "ClassChain",
-
-            footerNote:
-                "Digital community of educational project supporters",
-
-            footerWebGIS:
-                "WebGIS",
-
-            footerDonate:
-                "Contribute",
-
-            footerAdmin:
-                "Management",
-
-            footerTechnology:
-                "Technology",
-
-            footerTransparency:
-                "Transparency",
-
-            footerWhitepaper:
-                "White Paper"
-        },
-
-
-        ar: {
-
-            brand: "كلاس تشين",
-
-            navWhy: "لماذا كلاس تشين؟",
-            navHow: "كيف يعمل؟",
-            navTech: "التقنية",
-            navTransparency: "الشفافية",
-            navWebGIS: "WebGIS",
-            navAdmin: "إدارة المشروع",
-
-            heroEyebrow:
-                "مجتمع رقمي لداعمي التعليم",
-
-            heroTitle:
-                "معًا نبني المستقبل، فصلًا بعد فصل.",
-
-            heroText:
-                "تربط كلاس تشين الداعمين بالمشاريع التعليمية الحقيقية. مساهمتك ليست مجرد دفعة مالية، بل جزء من مسار واضح وقابل للتتبع.",
-
-            heroPrimary:
-                "كيف يمكنني المساعدة؟",
-
-            heroSecondary:
-                "تعرف على طريقة العمل",
-
-            heroNote:
-                "بدون وعود مبالغ فيها؛ التركيز على المشروع والشفافية والأثر الحقيقي.",
-
-            networkTitle:
-                "شبكة من الأشخاص والمشاريع",
-
-            networkText:
-                "النقاط الخضراء تمثل المشاريع والمدارس، والنقاط المرجانية تمثل الداعمين المرتبطين بالمسار.",
-
-            whyKicker:
-                "لماذا كلاس تشين؟",
-
-            whyTitle:
-                "المساهمة ليست مجرد تحويل أموال.",
-
-            whyDescription:
-                "تهدف كلاس تشين إلى إنشاء علاقة واضحة بين الداعم والمشروع والنتيجة الحقيقية على أرض الواقع.",
-
-            whyCard1Title:
-                "شاهد المشروع",
-
-            whyCard1Text:
-                "تعرف على المشاريع التعليمية وافهم ما الذي سيتم تنفيذه قبل المساهمة.",
-
-            whyCard1More:
-                "يمكن عرض أهداف المشروع وحالته وتقدمه باستخدام أدوات مرئية مثل WebGIS.",
-
-            whyCard2Title:
-                "ساهم",
-
-            whyCard2Text:
-                "ادعم المشروع الذي يهمك بالمقدار الذي يناسبك.",
-
-            whyCard2More:
-                "يمكن استخدام تقنية البلوك تشين لتسجيل المعاملات المالية وجعلها قابلة للتتبع.",
-
-            whyCard3Title:
-                "تابع الرحلة",
-
-            whyCard3Text:
-                "مساهمتك ليست نهاية الرحلة؛ يمكنك متابعة تقدم المشروع ونتيجته.",
-
-            whyCard3More:
-                "يمكن عرض التقدم الفعلي والتشغيلي للمشروع عبر WebGIS وتقارير المشروع.",
-
-            howKicker:
-                "مسار بسيط",
-
-            howTitle:
-                "من اختيار المشروع إلى رؤية النتيجة",
-
-            howDescription:
-                "المساهمة في مشروع جيد لا يجب أن تتطلب عملية معقدة.",
-
-            step1Title:
-                "اختر مشروعًا",
-
-            step1Text:
-                "ابحث عن مشروع يهمك هدفه وأثره المتوقع.",
-
-            step2Title:
-                "ساهم",
-
-            step2Text:
-                "استخدم مسار المساهمة لدعم المشروع.",
-
-            step3Title:
-                "تابع الرحلة",
-
-            step3Text:
-                "تابع المعاملات المالية والتقدم الحقيقي للمشروع عبر طبقات الشفافية المختلفة.",
-
-            techKicker:
-                "التقنية في خدمة الثقة",
-
-            techTitle:
-                "التقنية لا تحل محل الإنسان.",
-
-            techDescription:
-                "البلوك تشين والتقنيات المرتبطة بها هي أدوات للشفافية وتسجيل المساهمات، وليست الهدف الرئيسي للمشروع.",
-
-            blockchainTitle:
-                "Blockchain",
-
-            blockchainText:
-                "لتسجيل المعاملات المالية بطريقة قابلة للتتبع والمراجعة.",
-
-            blockchainMore:
-                "البلوك تشين هو سجل موزع. يمكن أن يساعد استخدامه في تتبع بعض المعاملات المالية مثل الاستلام والتحويل والسحب. الهدف هو الشفافية وليس تقديم منتج استثماري.",
-
-            web3Title:
-                "Web3",
-
-            web3Text:
-                "مجموعة من التقنيات التي تتيح تفاعلًا مباشرًا مع الخدمات الرقمية.",
-
-            web3More:
-                "يشير Web3 في هذا المشروع إلى الاستخدام الهادف للمحافظ الرقمية والعقود الذكية والبنية اللامركزية في أجزاء من النظام.",
-
-            nftTitle:
-                "NFT والشهادة الرقمية",
-
-            nftText:
-                "عند استخدامها، يمكن أن تكون NFT شهادة رقمية للمشاركة أو تذكارًا رقميًا.",
-
-            nftMore:
-                "لا تهدف NFT هنا إلى أن تكون أصلًا للمضاربة. يمكن استخدام التقنية لإنشاء شهادة رقمية فريدة تمثل مشاركة الشخص أو ارتباطه بمشروع.",
-
-            transparencyKicker:
-                "طبقتان من الشفافية",
-
-            transparencyTitle:
-                "اعرف أين تذهب الأموال، وشاهد أين وصل المشروع.",
-
-            transparencyDescription:
-                "الشفافية لا تتعلق فقط بالمعاملات المالية؛ بل يجب أن يكون من الممكن رؤية الحالة الحقيقية للمشروع.",
-
-            financialSmall:
-                "الطبقة الأولى",
-
-            financialTitle:
-                "الشفافية المالية",
-
-            financialText:
-                "يمكن تتبع عمليات الاستلام والدفع والسحب المسجلة على البلوك تشين. تساعد هذه الطبقة على جعل المسار المالي للمساهمة قابلًا للمراجعة.",
-
-            physicalSmall:
-                "الطبقة الثانية",
-
-            physicalTitle:
-                "الشفافية الميدانية والمشروع",
-
-            physicalText:
-                "يمكن عرض حالة المشروع والتقارير والتقدم الميداني عبر WebGIS ومعلومات المشروع، لإظهار مكان المشروع والمرحلة التي وصل إليها.",
-
-            adminKicker:
-                "خلف المشروع",
-
-            adminTitle:
-                "إدارة المشروع للمشغلين، وليست لوحة شخصية للداعمين",
-
-            adminText:
-                "لا توفر كلاس تشين لوحة شخصية لإدارة استثمارات أو حسابات الداعمين. منطقة الإدارة مخصصة للمشغلين ومديري المشاريع لإدارة العمليات المالية والتنفيذية.",
-
-            adminItem1:
-                "إدارة المشاريع والهياكل المالية",
-
-            adminItem2:
-                "إدارة التفاعلات المالية للمشروع",
-
-            adminItem3:
-                "مراجعة واعتماد التقارير وكشوف الأعمال",
-
-            adminItem4:
-                "مدفوعات المقاولين وعمليات المشروع",
-
-            adminButton:
-                "فتح منطقة الإدارة",
-
-            communityKicker:
-                "مجتمع، وليس مجرد موقع",
-
-            communityTitle:
-                "يمكن للداعمين أن يصبحوا جزءًا من الرحلة.",
-
-            communityText:
-                "تهدف كلاس تشين إلى بناء علاقة مستمرة بين الأشخاص الذين يريدون المساعدة والمشاريع التي تحتاج إلى الدعم.",
-
-            communityMore:
-                "في هذا النموذج، لا يقوم الداعم بمجرد إجراء معاملة. يمكنه اكتشاف المشروع والمساهمة فيه ومتابعة تقدمه ثم التواصل لاحقًا مع مشاريع أخرى داخل المجتمع. تبقى التقنية في الخلفية لتجعل هذه العلاقة أبسط وأكثر شفافية.",
-
-            ctaTitle:
-                "مستقبل الأطفال لا يمكن أن يبنيه شخص واحد.",
-
-            ctaText:
-                "تعرف على مشروع، شاهد مساره، وإذا كانت رسالته تهمك، كن جزءًا من هذه السلسلة.",
-
-            ctaPrimary:
-                "كيف يمكنني المساعدة؟",
-
-            ctaSecondary:
-                "مشاهدة المشاريع عبر WebGIS",
-
-            footerBrand:
-                "كلاس تشين",
-
-            footerNote:
-                "مجتمع رقمي لداعمي المشاريع التعليمية",
-
-            footerWebGIS:
-                "WebGIS",
-
-            footerDonate:
-                "المساهمة",
-
-            footerAdmin:
-                "الإدارة",
-
-            footerTechnology:
-                "التقنية",
-
-            footerTransparency:
-                "الشفافية",
-
-            footerWhitepaper:
-                "White Paper"
-        }
-
-    };
-
-
-    /* =========================
-       Language state
-    ========================== */
-
-    const languageBtn =
-        document.getElementById("languageBtn");
-
-    let currentLanguage =
-        localStorage.getItem("classchain-language") || "fa";
-
-
-    function applyLanguage(language) {
-
-        const dictionary =
-            translations[language];
-
-        if (!dictionary) {
-            return;
-        }
-
-        document.documentElement.lang = language;
-
-        document.documentElement.dir =
-            language === "en"
-                ? "ltr"
-                : "rtl";
-
-
-        document.querySelectorAll("[data-t]").forEach(element => {
-
-            const key = element.dataset.t;
-
-            if (
-                dictionary[key] !== undefined
-            ) {
-                element.textContent =
-                    dictionary[key];
-            }
-
-        });
-
-
-        document.querySelectorAll("[data-more]").forEach(button => {
-
-            const isOpen =
-                button.nextElementSibling &&
-                button.nextElementSibling.classList.contains("open");
-
-            if (isOpen) {
-
-                button.textContent =
-                    button.dataset.tLess ||
-                    (
-                        language === "en"
-                            ? "Close"
-                            : language === "ar"
-                                ? "إغلاق"
-                                : "بستن"
-                    );
-
-            } else {
-
-                button.textContent =
-                    language === "en"
-                        ? "Read more ..."
-                        : language === "ar"
-                            ? "المزيد ..."
-                            : "بیشتر ...";
-
-            }
-
-        });
-
-
-        if (language === "fa") {
-            languageBtn.textContent = "EN";
-        }
-        else if (language === "en") {
-            languageBtn.textContent = "ع";
-        }
-        else {
-            languageBtn.textContent = "فا";
-        }
-
-
-        localStorage.setItem(
-            "classchain-language",
-            language
-        );
-
-    }
-
-
-    languageBtn.addEventListener(
-        "click",
-        () => {
-
-            const order =
-                ["fa", "en", "ar"];
-
-            const index =
-                order.indexOf(currentLanguage);
-
-            currentLanguage =
-                order[
-                    (index + 1) % order.length
-                ];
-
-            applyLanguage(
-                currentLanguage
-            );
-
-        }
-    );
-
-
-    applyLanguage(currentLanguage);
-
-</script>
+<script src="index.js"></script>
 
 </body>
 </html>
