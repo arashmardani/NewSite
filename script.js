@@ -525,15 +525,15 @@ applyLanguage(initialLanguage);
     const isMobile = () => window.innerWidth < 700;
 
     const config = {
-        particleCount: 40,
-        connectionDistance: 120,
-        particleSpeed: 0.2,
-        particleRadius: 1.7,
-        lineWidth: 0.65,
-        particleColor: "rgba(40, 115, 91, 0.26)",
-        particleCore: "rgba(200, 155, 60, 0.35)",
-        lineColor: "rgba(23, 72, 58, 0.06)",
-        glowColor: "rgba(200, 155, 60, 0.07)"
+        particleCount: 42,
+        connectionDistance: 125,
+        particleSpeed: 0.22,
+        particleRadius: 2.2,
+        lineWidth: 1.05,
+        particleColor: "rgba(40, 115, 91, 0.42)",
+        particleCore: "rgba(200, 155, 60, 0.55)",
+        lineColor: "rgba(23, 72, 58, 0.1)",
+        glowColor: "rgba(200, 155, 60, 0.12)"
     };
 
     function resize() {
@@ -547,17 +547,17 @@ applyLanguage(initialLanguage);
         ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
         if (isMobile()) {
-            config.particleCount = Math.max(16, Math.floor((width * height) / 30000));
-            config.connectionDistance = 85;
-            config.particleSpeed = 0.12;
-            config.particleRadius = 1.3;
-            config.lineWidth = 0.5;
-        } else {
-            config.particleCount = Math.max(26, Math.min(45, Math.floor((width * height) / 24000)));
-            config.connectionDistance = 120;
-            config.particleSpeed = 0.2;
+            config.particleCount = Math.max(18, Math.floor((width * height) / 28000));
+            config.connectionDistance = 95;
+            config.particleSpeed = 0.14;
             config.particleRadius = 1.7;
-            config.lineWidth = 0.65;
+            config.lineWidth = 0.85;
+        } else {
+            config.particleCount = Math.max(28, Math.min(50, Math.floor((width * height) / 22000)));
+            config.connectionDistance = 125;
+            config.particleSpeed = 0.22;
+            config.particleRadius = 2.2;
+            config.lineWidth = 1.05;
         }
         createParticles();
     }
@@ -601,7 +601,7 @@ applyLanguage(initialLanguage);
                     ctx.beginPath();
                     ctx.moveTo(a.x, a.y);
                     ctx.lineTo(b.x, b.y);
-                    ctx.strokeStyle = `rgba(23, 72, 58, ${0.035 + alpha * 0.07})`;
+                    ctx.strokeStyle = `rgba(23, 72, 58, ${0.06 + alpha * 0.12})`;
                     ctx.lineWidth = config.lineWidth;
                     ctx.stroke();
                 }
