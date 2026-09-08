@@ -20,7 +20,8 @@ const translations = {
         "hero.title": "با هم، آینده را می‌سازیم؛ کلاس به کلاس.",
         "hero.description":
             "کلاس‌چین پلی است میان خیرین، مردم و پروژه‌های مدرسه‌سازی؛ جایی که هرکس می‌تواند به اندازه توان خود در ساختن محیطی بهتر برای آموزش کودکان مشارکت کند.",
-        "hero.primary": "من هم می‌خواهم کمک کنم",
+        "hero.primary": "به خزانه عمومی کمک می‌کنم",
+        "hero.project": "انتخاب پروژه و مشارکت",
         "hero.secondary": "چطور کار می‌کند؟",
         "hero.note": "مشارکت شما بخشی از یک جامعه است؛ نه فقط یک پرداخت.",
 
@@ -143,7 +144,8 @@ const translations = {
         "hero.title": "Together, we build the future — one classroom at a time.",
         "hero.description":
             "ClassChain connects donors, people and school-building projects, making it possible for everyone to contribute according to their ability.",
-        "hero.primary": "I want to help",
+        "hero.primary": "Contribute to the common fund",
+        "hero.project": "Choose a project & contribute",
         "hero.secondary": "How does it work?",
         "hero.note": "Your contribution becomes part of a community — not just a payment.",
 
@@ -267,7 +269,8 @@ const translations = {
         "hero.title": "معًا نبني المستقبل، فصلًا دراسيًا بعد فصل.",
         "hero.description":
             "تربط كلاس تشين بين المتبرعين والأفراد ومشاريع بناء المدارس، بحيث يستطيع الجميع المساهمة وفق قدراتهم.",
-        "hero.primary": "أريد المساعدة",
+        "hero.primary": "أساهم في الصندوق العام",
+        "hero.project": "اختر مشروعًا وساهم",
         "hero.secondary": "كيف يعمل؟",
         "hero.note": "مساهمتك تصبح جزءًا من مجتمع، وليست مجرد عملية دفع.",
 
