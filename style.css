@@ -45,11 +45,7 @@ img { max-width: 100%; display: block; }
 .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; color: var(--green-900); white-space: nowrap; }
 .brand-mark {
     width: 38px; height: 38px; border-radius: 12px; background: var(--green-900); color: white;
-    display: grid; place-items: center; font-weight: 800; position: relative;
-}
-.brand-mark::after {
-    content: ""; position: absolute; width: 9px; height: 9px; border-radius: 50%;
-    background: var(--gold); bottom: 6px; left: 6px;
+    display: grid; place-items: center; position: relative;
 }
 .brand-text { font-size: 1.05rem; }
 .desktop-nav { display: none; align-items: center; gap: 18px; flex-wrap: wrap; }
@@ -215,9 +211,7 @@ section { padding: 72px 0; }
 }
 .transparency-box h2 { font-size: clamp(1.6rem, 5vw, 2.5rem); line-height: 1.4; margin-bottom: 12px; }
 .transparency-box p { color: rgba(255,255,255,.72); max-width: none; }
-.transparency-list {
-    list-style: none; margin-top: 18px; display: grid; gap: 12px;
-}
+.transparency-list { list-style: none; margin-top: 18px; display: grid; gap: 12px; }
 .transparency-list li {
     position: relative; padding-inline-start: 22px;
     color: rgba(255,255,255,.8); font-size: .9rem; line-height: 1.75;
