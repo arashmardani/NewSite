@@ -22,7 +22,7 @@
                 <a href="#why" data-i18n="nav.why">چرا کلاس‌چین؟</a>
                 <a href="#how" data-i18n="nav.how">چطور کار می‌کند؟</a>
                 <a href="#community" data-i18n="nav.community">جامعه خیرین</a>
-                <a href="#participation" data-i18n="nav.participation">راه مشارکت</a>
+                <a href="#participate" data-i18n="nav.participation">راه مشارکت</a>
                 <a href="#transparency" data-i18n="nav.transparency">شفافیت</a>
             </div>
             <div class="nav-actions">
@@ -42,7 +42,7 @@
             <a href="#why" data-i18n="nav.why">چرا کلاس‌چین؟</a>
             <a href="#how" data-i18n="nav.how">چطور کار می‌کند؟</a>
             <a href="#community" data-i18n="nav.community">جامعه خیرین</a>
-            <a href="#participation" data-i18n="nav.participation">راه مشارکت</a>
+            <a href="#participate" data-i18n="nav.participation">راه مشارکت</a>
             <a href="#transparency" data-i18n="nav.transparency">شفافیت</a>
             <a href="WebGIS.html" data-i18n="nav.webgis">نقشه پروژه‌ها</a>
             <a href="frontend/dashboard.html" data-i18n="nav.dashboard">داشبورد من</a>
@@ -54,7 +54,10 @@
         <canvas id="heroNetwork" class="hero-network" aria-hidden="true"></canvas>
         <div class="container hero-grid">
             <div class="hero-content">
-                <div class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="hero.eyebrow">جامعه خیرین دیجیتال</span></div>
+                <div class="eyebrow">
+                    <span class="eyebrow-dot"></span>
+                    <span data-i18n="hero.eyebrow">جامعه خیرین دیجیتال</span>
+                </div>
                 <h1 data-i18n="hero.title">با هم، آینده را می‌سازیم؛ <span>کلاس به کلاس.</span></h1>
                 <p class="hero-lead" data-i18n="hero.description">کلاس‌چین پلی است میان خیرین، مردم و پروژه‌های مدرسه‌سازی؛ جایی که هرکس می‌تواند به اندازه توان خود در ساختن محیطی بهتر برای آموزش کودکان مشارکت کند.</p>
                 <div class="hero-actions">
@@ -108,10 +111,10 @@
             <div class="process">
                 <article class="process-item">
                     <h3 data-i18n="how.step1.title">انتخاب کنید</h3>
-                    <p data-i18n-html="how.step1.text">دو مسیر دارید: حمایت مستقیم از یک پروژه مشخص، یا پیوستن به <a href="frontend/donate.html">خزانه عمومی جامعه</a>…</p>
+                    <p data-i18n="how.step1.text" data-i18n-html="true">دو مسیر دارید: حمایت مستقیم از یک پروژه مشخص، یا پیوستن به <a href="frontend/donate.html" class="inline-link">خزانه عمومی جامعه</a>…</p>
                     <button type="button" class="card-more-toggle process-more-toggle" aria-expanded="false" data-i18n="why.more">بیشتر بدانید</button>
                     <div class="card-more process-more" hidden>
-                        <p data-i18n-html="how.step1.more">مسیر اول: انتخاب یک پروژه مشخص مدرسه‌سازی — روی نقشه <a href="WebGIS.html">WebGIS</a> پروژه‌ها را ببینید، موقعیت و نیاز هر کدام را بشناسید و مستقیماً همان پروژه را حمایت کنید. مسیر دوم: پیوستن به <a href="frontend/donate.html">خزانه عمومی جامعه</a> — اگر ترجیح می‌دهید تصمیم تخصیص را به جمع بسپارید، مشارکت شما وارد صندوق مشترک می‌شود و جامعه دارندگان گواهی، از طریق رأی، پروژه‌های بعدی را انتخاب می‌کند. در هر دو حالت، انتخاب با شماست.</p>
+                        <p data-i18n="how.step1.more" data-i18n-html="true">مسیر اول: انتخاب یک پروژه مشخص مدرسه‌سازی — روی نقشه <a href="WebGIS.html" class="inline-link">WebGIS</a> پروژه‌ها را ببینید، موقعیت و نیاز هر کدام را بشناسید و مستقیماً همان پروژه را حمایت کنید. مسیر دوم: پیوستن به <a href="frontend/donate.html" class="inline-link">خزانه عمومی جامعه</a> — اگر ترجیح می‌دهید تصمیم تخصیص را به جمع بسپارید، مشارکت شما وارد صندوق مشترک می‌شود و جامعه دارندگان گواهی، از طریق رأی، پروژه‌های بعدی را انتخاب می‌کند. در هر دو حالت، انتخاب با شماست.</p>
                     </div>
                 </article>
                 <article class="process-item">
@@ -145,10 +148,19 @@
                     <li><span class="check">✓</span><span data-i18n="community.item3">ارتباط خیرین با پروژه‌ها و جامعه را حفظ کند.</span></li>
                     <li><span class="check">✓</span><span data-i18n="community.item4">شفافیت را به بخشی طبیعی از تجربه خیرخواهی تبدیل کند.</span></li>
                 </ul>
-                <div class="community-social">
-                    <a href="https://t.me/classchain" class="social-link" aria-label="Telegram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.15 1.568-.788 5.37-1.114 7.125-.138.742-.41 1.002-.67 1.03-.567.06-1-.375-1.552-.734-.86-.56-1.347-.907-2.182-1.453-.966-.631-.34-1.004.21-1.59.144-.154 2.64-2.42 2.69-2.63.006-.026.014-.125-.047-.177-.061-.053-.152-.035-.218-.02-.093.025-1.555 1.013-4.388 2.96-.415.285-.79.423-1.126.416-.37-.01-1.081-.209-1.61-.38-.648-.21-1.163-.322-1.119-.682.023-.188.357-.38 1.002-.577 3.958-1.72 6.597-2.854 7.916-3.405 3.78-1.576 4.563-1.85 5.072-1.863z"/></svg></a>
-                    <a href="https://instagram.com/classchain" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
-                    <a href="https://x.com/classchain" class="social-link" aria-label="X" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.727-8.831L1.24 2.25h7.914l4.259 5.699L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                <div class="social-links" aria-label="شبکه‌های اجتماعی">
+                    <a class="social-link" href="https://t.me/ClassChain" target="_blank" rel="noopener noreferrer" aria-label="تلگرام" title="تلگرام">
+                        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.6 6.8-1.55 7.3c-.12.53-.43.66-.87.41l-2.4-1.77-1.16 1.12c-.13.13-.24.24-.49.24l.17-2.43 4.47-4.04c.19-.17-.04-.27-.3-.1l-5.52 3.47-2.38-.74c-.52-.16-.53-.52.11-.77l9.3-3.59c.43-.2.81.1.62.8z"/></svg>
+                    </a>
+                    <a class="social-link" href="https://instagram.com/ClassChain" target="_blank" rel="noopener noreferrer" aria-label="اینستاگرام" title="اینستاگرام">
+                        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4c0 3.2-2.6 5.8-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8C2 4.6 4.6 2 7.8 2zm-.2 2C5.74 4 4 5.74 4 7.6v8.8C4 18.26 5.74 20 7.6 20h8.8c1.86 0 3.6-1.74 3.6-3.6V7.6C20 5.74 18.26 4 16.4 4H7.6zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm4.9-2.1a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2z"/></svg>
+                    </a>
+                    <a class="social-link" href="https://x.com/ClassChain" target="_blank" rel="noopener noreferrer" aria-label="X" title="X">
+                        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M18.244 2H21.5l-6.84 7.82L22.5 22h-6.59l-5.16-6.74L5.25 22H2l7.32-8.37L1.5 2h6.75l4.66 6.18L18.244 2zm-1.16 18h1.82L7.01 3.94H5.08L17.084 20z"/></svg>
+                    </a>
+                    <a class="social-link" href="https://linkedin.com/company/ClassChain" target="_blank" rel="noopener noreferrer" aria-label="لینکدین" title="لینکدین">
+                        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M6.5 6.25a1.75 1.75 0 1 1-3.5 0 1.75 1.75 0 0 1 3.5 0zM3.25 9h3.25v11.5H3.25V9zM9.5 9h3.1v1.57h.04c.43-.82 1.5-1.68 3.08-1.68 3.3 0 3.91 2.17 3.91 5v6.61h-3.25v-5.87c0-1.4-.03-3.2-1.95-3.2-1.95 0-2.25 1.52-2.25 3.1v5.97H9.5V9z"/></svg>
+                    </a>
                 </div>
             </div>
             <aside class="community-quote">
@@ -157,7 +169,7 @@
             </aside>
         </div>
     </section>
-    <section id="participation">
+    <section id="participate">
         <div class="container">
             <div class="section-header">
                 <div class="section-kicker" data-i18n="participation.kicker">راه مشارکت شما</div>
